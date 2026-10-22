@@ -1,0 +1,25 @@
+{
+  "job_id": "20261022-144732-aa_bleronbaftiu_26",
+  "title": "aa_bleronbaftiu_26",
+  "created": "2026-10-22T14:47:32",
+  "groups": [
+    {
+      "name": "aa_bleronbaftiu_26",
+      "repos": [
+        "https://github.com/bleronbaftiu21/aa_bleronbaftiu_26"
+      ]
+    }
+  ],
+  "requirements_file": "C:\\Users\\bleron.baftiu\\PycharmProjects\\PythonProject\\audit-reports\\20261022-144732-aa_bleronbaftiu_26\\brief.pdf",
+  "requirements_name": "Questionnaire_Dependency_Assignment.pdf",
+  "requirements_text": "",
+  "comparison": [],
+  "base": [],
+  "ai_policy": "unspecified",
+  "deadline": null,
+  "start": null,
+  "language": "shqip",
+  "output_dir": "C:\\Users\\bleron.baftiu\\PycharmProjects\\PythonProject\\audit-reports\\20261022-144732-aa_bleronbaftiu_26",
+  "workspace": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-144732",
+  "run_claude": true
+}

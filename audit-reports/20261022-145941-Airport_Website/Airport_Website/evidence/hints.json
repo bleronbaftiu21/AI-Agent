@@ -1,0 +1,637 @@
+{
+  "hints": [
+    {
+      "id": "R1",
+      "title": "Mundesi për të vazhduar me projektin nga uebi I",
+      "section": "Listë kontrolluese për mbrojtjen e projektit në lëndën Programimi në ueb II",
+      "rule": null,
+      "status": "manual",
+      "evidence": [],
+      "note": "Asnjë rregull automatik; vlerësohet me dorë."
+    },
+    {
+      "id": "R2",
+      "title": "Numri i studenteve ne grup 4-5",
+      "section": "Listë kontrolluese për mbrojtjen e projektit në lëndën Programimi në ueb II",
+      "rule": "team",
+      "status": "likely_met",
+      "evidence": [
+        "5 persona në historinë e git-it: oltikrasniqi21, Olsa Domi, Valmir Mustafa, bleronbaftiu21, Rreze Ejupi"
+      ],
+      "note": "Kërkohen 4-5. Identitetet e bashkuara duhen konfirmuar."
+    },
+    {
+      "id": "R3",
+      "title": "Dokumentimi duke u bazuar ne kerkesat specifike",
+      "section": "Listë kontrolluese për mbrojtjen e projektit në lëndën Programimi në ueb II",
+      "rule": "docs",
+      "status": "manual",
+      "evidence": [
+        "README.md"
+      ],
+      "note": "Kontrollo saktësinë e README-së kundrejt kodit."
+    },
+    {
+      "id": "R4",
+      "title": "Të gjitha kërkesat e listuara më poshtë duhet të përshtaten dhe të implementohen në kuadër të domenit që e keni zgjedhur për projektin tuaj.",
+      "section": "Përshkrimi i Projektit",
+      "rule": null,
+      "status": "manual",
+      "evidence": [],
+      "note": "Asnjë rregull automatik; vlerësohet me dorë."
+    },
+    {
+      "id": "R5",
+      "title": "Variablat, qasja e tyre, var_dump(), funksionet, perdorimi i string funksioneve, përdorimi i konstanteve, operatorët,",
+      "section": "Pjesa e parë › Konceptet themelore të PHP-së",
+      "rule": "php_basics",
+      "status": "likely_met",
+      "evidence": [
+        "✗ var_dump(): nuk u gjet",
+        "✓ funksione: 79× (admin_dashboard.php:49, email_sender.php:11, flights.php:105)",
+        "✓ string funksione: 43× (about_us.php:15, flights.php:220, flights.php:220)",
+        "✓ konstante: 9× (includes/config.php:3, includes/config.php:4, includes/config.php:5)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R6",
+      "title": "Përdorimi i kushtëzimeve (if..else, swithch, etj.)",
+      "section": "Pjesa e parë › Konceptet themelore të PHP-së",
+      "rule": "conditions",
+      "status": "likely_met",
+      "evidence": [
+        "✓ if / else: 109× (about_us.php:19, about_us.php:356, admin_contact.php:46)",
+        "✓ switch: 2× (news.php:218, services.php:127)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R7",
+      "title": "Përdorimi i vargjeve (arrays) – numeric arrays, associative arrays, multidimensional arrays",
+      "section": "Pjesa e parë › Konceptet themelore të PHP-së",
+      "rule": "arrays",
+      "status": "likely_met",
+      "evidence": [
+        "✓ numeric: 11× (about_us.php:4, process_contact.php:7, process_contact.php:37)",
+        "✓ associative: 94× (flights.php:36, flights.php:37, flights.php:38)",
+        "✓ multidimensional: 59× (admin_sponsors.php:19, admin_sponsors.php:21, admin_sponsors.php:24)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R8",
+      "title": "Sortimet në PHP – sort(), rsort(), asort(), ksort(), arsort(), krsort(),",
+      "section": "Pjesa e parë › Konceptet themelore të PHP-së",
+      "rule": "sorting",
+      "status": "partial",
+      "evidence": [
+        "✗ sort(): nuk u gjet",
+        "✗ rsort(): nuk u gjet",
+        "✓ asort(): 2× (news.php:161, news.php:183)",
+        "✗ ksort(): nuk u gjet",
+        "✓ arsort(): 2× (news.php:163, news.php:181)",
+        "✗ krsort(): nuk u gjet"
+      ],
+      "note": "U gjetën 2 nga 6 pjesë."
+    },
+    {
+      "id": "R9",
+      "title": "Përdorimi i variablave golbale të PHP-së",
+      "section": "Pjesa e parë › Konceptet themelore të PHP-së",
+      "rule": "globals",
+      "status": "likely_met",
+      "evidence": [
+        "✓ $GLOBALS / superglobals / global: 112× (about_us.php:2, about_us.php:14, about_us.php:15)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R10",
+      "title": "Definimi dhe përdorimi i klasave në PHP – me veti dhe metoda",
+      "section": "Pjesa e parë › OOP PHP",
+      "rule": "classes",
+      "status": "likely_met",
+      "evidence": [
+        "✓ class: 7× (flights.php:103, index.php:34, news.php:93)",
+        "✓ metoda: 126× (about_us.php:13, about_us.php:331, admin_sponsors.php:37)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R11",
+      "title": "Përdorimi i konstruktorëve (destruktorëve)",
+      "section": "Pjesa e parë › OOP PHP",
+      "rule": "constructors",
+      "status": "likely_met",
+      "evidence": [
+        "✓ __construct: 3× (index.php:39, news.php:103, services.php:338)",
+        "✓ __destruct: 1× (services.php:375)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R12",
+      "title": "Përdorimi i atributeve të klasës dhe i funkioneve Get dhe Set",
+      "section": "Pjesa e parë › OOP PHP",
+      "rule": "get_set",
+      "status": "likely_met",
+      "evidence": [
+        "✓ get…(): 22× (flights.php:105, index.php:45, index.php:48)",
+        "✓ set…(): 3× (services.php:350, services.php:360, services.php:370)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R13",
+      "title": "Manipulimi me mdoifikatorë: public, private, protected",
+      "section": "Pjesa e parë › OOP PHP",
+      "rule": "modifiers",
+      "status": "partial",
+      "evidence": [
+        "✓ public: 22× (flights.php:105, news.php:103, news.php:114)",
+        "✓ private: 14× (index.php:35, index.php:36, index.php:37)",
+        "✗ protected: nuk u gjet"
+      ],
+      "note": "U gjetën 2 nga 3 pjesë."
+    },
+    {
+      "id": "R14",
+      "title": "Implementimi i trashëgimisë në PHP dhe klasa",
+      "section": "Pjesa e parë › OOP PHP",
+      "rule": "inheritance",
+      "status": "likely_met",
+      "evidence": [
+        "✓ class … extends …: 2× (process_contact.php:5, services.php:381)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R15",
+      "title": "Kuptimi dhe përdorimi i RegEx në raste të ndryshme si psh. Validim, kontroll të dhënave për dërgim në server",
+      "section": "Pjesa e parë › PHP Shprehjet e rregullta (RegEx)",
+      "rule": "regex",
+      "status": "likely_met",
+      "evidence": [
+        "✓ preg_match / preg_replace / RegExp: 11× (about_us.php:17, process_contact.php:21, process_contact.php:25)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R16",
+      "title": "Validime me RegEx të email-it, datave, ndonjë vlere numerike",
+      "section": "Pjesa e parë › PHP Shprehjet e rregullta (RegEx)",
+      "rule": "regex",
+      "status": "likely_met",
+      "evidence": [
+        "✓ preg_match / preg_replace / RegExp: 11× (about_us.php:17, process_contact.php:21, process_contact.php:25)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R17",
+      "title": "Manipulime ne numra (psh ndarja e disa numrave, - ne mes, etj)",
+      "section": "Pjesa e parë › PHP Shprehjet e rregullta (RegEx)",
+      "rule": "regex",
+      "status": "likely_met",
+      "evidence": [
+        "✓ preg_match / preg_replace / RegExp: 11× (about_us.php:17, process_contact.php:21, process_contact.php:25)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R18",
+      "title": "Përdorimi i RegEx për të rregulluar përmbajtje të stringjeve",
+      "section": "Pjesa e parë › PHP Shprehjet e rregullta (RegEx)",
+      "rule": "regex",
+      "status": "likely_met",
+      "evidence": [
+        "✓ preg_match / preg_replace / RegExp: 11× (about_us.php:17, process_contact.php:21, process_contact.php:25)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R19",
+      "title": "Faza e parë e projektit duhet të përfshijë strukturën kryesore me menytë dhe faqet përkatëse. Pasi nuk ka ende lidhje me databazë, të dhë…",
+      "section": "Pjesa e parë › PHP Shprehjet e rregullta (RegEx)",
+      "rule": "menu",
+      "status": "likely_met",
+      "evidence": [
+        "✓ menu / <nav>: 8× (about_us.php:47, admin_dashboard.php:27, index.php:17)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R20",
+      "title": "Definimi dhe përdorimi i COOKIES me të gjitha specifikat (krijim, fshirja, ruajtja në varg).",
+      "section": "Pjesa e dytë › PHP Sessions dhe Cookies",
+      "rule": "cookies",
+      "status": "likely_met",
+      "evidence": [
+        "✓ setcookie (krijim): 1× (post-details.php:20)",
+        "✓ $_COOKIE (lexim): 2× (post-details.php:12, post-details.php:12)",
+        "✗ fshirje (skadim në të kaluarën): nuk u gjet"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R21",
+      "title": "Ndryshimi i përmbjatjes varësisht nga gjendja e cookies (psh ndryshimi i background, ndryshim i fotografive etj)",
+      "section": "Pjesa e dytë › PHP Sessions dhe Cookies",
+      "rule": "cookies",
+      "status": "likely_met",
+      "evidence": [
+        "✓ setcookie (krijim): 1× (post-details.php:20)",
+        "✓ $_COOKIE (lexim): 2× (post-details.php:12, post-details.php:12)",
+        "✗ fshirje (skadim në të kaluarën): nuk u gjet"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R22",
+      "title": "Definimi dhe përdorimi i SESSIONS në PHP me të gjitha specifikat (krijimi, ruajtja e vlerave, leximi i vlerave etj)",
+      "section": "Pjesa e dytë › PHP Sessions dhe Cookies",
+      "rule": "sessions",
+      "status": "likely_met",
+      "evidence": [
+        "✓ session_start: 10× (admin_dashboard.php:2, edit-news.php:3, email_sender.php:2)",
+        "✓ $_SESSION (ruajtje/lexim): 17× (admin_dashboard.php:4, admin_dashboard.php:4, admin_dashboard.php:9)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R23",
+      "title": "Përdorimi i sesioneve për ndonjë qëllim të numërimit (psh numri i vizitave në një faqe apo formë të caktuar etj.)",
+      "section": "Pjesa e dytë › PHP Sessions dhe Cookies",
+      "rule": "sessions",
+      "status": "likely_met",
+      "evidence": [
+        "✓ session_start: 10× (admin_dashboard.php:2, edit-news.php:3, email_sender.php:2)",
+        "✓ $_SESSION (ruajtje/lexim): 17× (admin_dashboard.php:4, admin_dashboard.php:4, admin_dashboard.php:9)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R24",
+      "title": "Shembull i përdorimit të funskionit brenda një PHP sesioni",
+      "section": "Pjesa e dytë › PHP Sessions dhe Cookies",
+      "rule": "sessions",
+      "status": "likely_met",
+      "evidence": [
+        "✓ session_start: 10× (admin_dashboard.php:2, edit-news.php:3, email_sender.php:2)",
+        "✓ $_SESSION (ruajtje/lexim): 17× (admin_dashboard.php:4, admin_dashboard.php:4, admin_dashboard.php:9)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R25",
+      "title": "Manipulimi me PHP Sesione (psh ruajtje të ndryshme të vlerave, pastaj ndryshim i tyre dhe manipulime të tilla)",
+      "section": "Pjesa e dytë › PHP Sessions dhe Cookies",
+      "rule": "sessions",
+      "status": "likely_met",
+      "evidence": [
+        "✓ session_start: 10× (admin_dashboard.php:2, edit-news.php:3, email_sender.php:2)",
+        "✓ $_SESSION (ruajtje/lexim): 17× (admin_dashboard.php:4, admin_dashboard.php:4, admin_dashboard.php:9)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R26",
+      "title": "Definimi dhe kuptimi i kodit të PHP-së për konseksion me bazën e të dhënave",
+      "section": "Pjesa e dytë › PHP dhe MySQL",
+      "rule": "db_connect",
+      "status": "likely_met",
+      "evidence": [
+        "✓ lidhja me DB (mysqli / PDO): 6× (create_newsletter_subscribers_table.php:7, create_news_table.php:7, create_superadmin.php:7)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R27",
+      "title": "Krijimi i tabelave të ndryshme përmes PHP-së dhe të ruhen në DB",
+      "section": "Pjesa e dytë › PHP dhe MySQL",
+      "rule": "db_tables",
+      "status": "likely_met",
+      "evidence": [
+        "✓ CREATE TABLE: 7× (create_contact_table.php:3, create_newsletter_subscribers_table.php:13, create_news_table.php:13)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R28",
+      "title": "Insertimi, Fshirja, Update-imi i DB nga PHP",
+      "section": "Pjesa e dytë › PHP dhe MySQL",
+      "rule": "db_crud",
+      "status": "likely_met",
+      "evidence": [
+        "✓ INSERT: 9× (admin_sponsors.php:25, create_sponsors_table.php:10, create_superadmin.php:28)",
+        "✓ UPDATE: 3× (edit-news.php:26, edit-news.php:29, reply_rental.php:33)",
+        "✓ DELETE: 2× (admin_sponsors.php:39, delete-news.php:7)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R29",
+      "title": "Opsionale: Lidhja me DB përmes një PHP skripte të jashtme",
+      "section": "Pjesa e dytë › PHP dhe MySQL",
+      "rule": "db_connect",
+      "status": "likely_met",
+      "evidence": [
+        "✓ lidhja me DB (mysqli / PDO): 6× (create_newsletter_subscribers_table.php:7, create_news_table.php:7, create_superadmin.php:7)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R30",
+      "title": "Përdorimi dhe kuptimi i pointerëve në PHP",
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "rule": "references",
+      "status": "likely_met",
+      "evidence": [
+        "✓ &$ (përcjellje me referencë): 14× (admin_sponsors.php:19, contact.php:97, edit-news.php:18)",
+        "✗ function &f (kthim me referencë): nuk u gjet"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R31",
+      "title": "Përcjellja përmes referencës",
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "rule": "references",
+      "status": "likely_met",
+      "evidence": [
+        "✓ &$ (përcjellje me referencë): 14× (admin_sponsors.php:19, contact.php:97, edit-news.php:18)",
+        "✗ function &f (kthim me referencë): nuk u gjet"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R32",
+      "title": "Vendosja e referencave në mes të anëtarëve të vargut",
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "rule": "references",
+      "status": "likely_met",
+      "evidence": [
+        "✓ &$ (përcjellje me referencë): 14× (admin_sponsors.php:19, contact.php:97, edit-news.php:18)",
+        "✗ function &f (kthim me referencë): nuk u gjet"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R33",
+      "title": "Përcjellja e vlerës përmes referencës",
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "rule": "references",
+      "status": "likely_met",
+      "evidence": [
+        "✓ &$ (përcjellje me referencë): 14× (admin_sponsors.php:19, contact.php:97, edit-news.php:18)",
+        "✗ function &f (kthim me referencë): nuk u gjet"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R34",
+      "title": "Përdorimi i funksioneve me referencë",
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "rule": "references",
+      "status": "likely_met",
+      "evidence": [
+        "✓ &$ (përcjellje me referencë): 14× (admin_sponsors.php:19, contact.php:97, edit-news.php:18)",
+        "✗ function &f (kthim me referencë): nuk u gjet"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R35",
+      "title": "Kthimi përmes referencës",
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "rule": "references",
+      "status": "likely_met",
+      "evidence": [
+        "✓ &$ (përcjellje me referencë): 14× (admin_sponsors.php:19, contact.php:97, edit-news.php:18)",
+        "✗ function &f (kthim me referencë): nuk u gjet"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R36",
+      "title": "Psh Çasje në variablat globale etj.",
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "rule": "globals",
+      "status": "likely_met",
+      "evidence": [
+        "✓ $GLOBALS / superglobals / global: 112× (about_us.php:2, about_us.php:14, about_us.php:15)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R37",
+      "title": "Largimi i referencës",
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "rule": "unset",
+      "status": "likely_met",
+      "evidence": [
+        "✓ unset(): 1× (services.php:98)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R38",
+      "title": "Përdorimi i funksionit unset()",
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "rule": "unset",
+      "status": "likely_met",
+      "evidence": [
+        "✓ unset(): 1× (services.php:98)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R39",
+      "title": "MySQL Injection",
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "rule": "sql_injection",
+      "status": "likely_met",
+      "evidence": [
+        "✓ prepared statements: 21× (admin_sponsors.php:25, admin_sponsors.php:39, create_superadmin.php:20)",
+        "✓ parametra të lidhur (bind): 54× (admin_sponsors.php:25, admin_sponsors.php:25, admin_sponsors.php:26)",
+        "✓ escape / htmlspecialchars: 53× (admin_contact.php:32, admin_contact.php:33, admin_contact.php:34)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R40",
+      "title": "Çfarë metoda janë përdorur për t’u mbrojtur nga SQL Injection",
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "rule": "sql_injection",
+      "status": "likely_met",
+      "evidence": [
+        "✓ prepared statements: 21× (admin_sponsors.php:25, admin_sponsors.php:39, create_superadmin.php:20)",
+        "✓ parametra të lidhur (bind): 54× (admin_sponsors.php:25, admin_sponsors.php:25, admin_sponsors.php:26)",
+        "✓ escape / htmlspecialchars: 53× (admin_contact.php:32, admin_contact.php:33, admin_contact.php:34)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R41",
+      "title": "Çfarë është OBLIGATIVE të përdorim gjithmonë kur dërgojmë të dhëna në server nga format apo skriptat në PHP?",
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "rule": "sql_injection",
+      "status": "likely_met",
+      "evidence": [
+        "✓ prepared statements: 21× (admin_sponsors.php:25, admin_sponsors.php:39, create_superadmin.php:20)",
+        "✓ parametra të lidhur (bind): 54× (admin_sponsors.php:25, admin_sponsors.php:25, admin_sponsors.php:26)",
+        "✓ escape / htmlspecialchars: 53× (admin_contact.php:32, admin_contact.php:33, admin_contact.php:34)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R42",
+      "title": "Demonstrimi i shembullit të mbrojtjes nga MySQL Injection...",
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "rule": "sql_injection",
+      "status": "likely_met",
+      "evidence": [
+        "✓ prepared statements: 21× (admin_sponsors.php:25, admin_sponsors.php:39, create_superadmin.php:20)",
+        "✓ parametra të lidhur (bind): 54× (admin_sponsors.php:25, admin_sponsors.php:25, admin_sponsors.php:26)",
+        "✓ escape / htmlspecialchars: 53× (admin_contact.php:32, admin_contact.php:33, admin_contact.php:34)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R43",
+      "title": "Përdorimi i funskioneve themelore për manipulime me fajlla (si include(), require(), fopen(r,w,...), fclose(...), fsize(), fread(), fwrite()",
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Files, Error Handling dhe PHP Email",
+      "rule": "files",
+      "status": "partial",
+      "evidence": [
+        "✓ include / require: 50× (admin_contact.php:2, admin_newsletter.php:2, admin_rental_requests.php:2)",
+        "✗ fopen: nuk u gjet",
+        "✓ fread / fwrite / file_*: 8× (services.php:73, services.php:75, test_helpers.php:43)",
+        "✗ fclose: nuk u gjet"
+      ],
+      "note": "U gjetën 2 nga 4 pjesë."
+    },
+    {
+      "id": "R44",
+      "title": "Me rëndësi: definimi i funksionit për trajtim të gabimeve error_handler me të gjitha parapmetrat si (errno, errstring, errfile, errline,…",
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Files, Error Handling dhe PHP Email",
+      "rule": "error_handler",
+      "status": "likely_met",
+      "evidence": [
+        "✓ set_error_handler: 1× (helpers/error_handlers.php:51)",
+        "✓ trigger_error / mesazhe të personalizuara: 33× (flights.php:14, flights.php:22, flights.php:29)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R45",
+      "title": "Definimi dhe trajtimi i disa prej gabimeve në projektin, ku trajtimi është bërë në formën customize, ku vetë janë deklaruar gabimet dhe t…",
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Files, Error Handling dhe PHP Email",
+      "rule": "error_handler",
+      "status": "likely_met",
+      "evidence": [
+        "✓ set_error_handler: 1× (helpers/error_handlers.php:51)",
+        "✓ trigger_error / mesazhe të personalizuara: 33× (flights.php:14, flights.php:22, flights.php:29)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R46",
+      "title": "Trajtimi i përjashtimeve me TRY, CATCH dhe THROW...",
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Files, Error Handling dhe PHP Email",
+      "rule": "exceptions",
+      "status": "likely_met",
+      "evidence": [
+        "✓ try: 20× (email_sender.php:15, flights.php:11, flights.php:19)",
+        "✓ catch: 26× (about_us.php:336, admin_dashboard.php:55, email_sender.php:50)",
+        "✓ throw: 20× (process_contact.php:52, process_contact.php:66, signup.php:82)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R47",
+      "title": "Përdorimi i funskionit EMAIL në PHP me të gjitha parametrat email(to, subject, message, additional headers etj)",
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Files, Error Handling dhe PHP Email",
+      "rule": "email",
+      "status": "likely_met",
+      "evidence": [
+        "✓ mail() / PHPMailer / SMTP: 48× (email_sender.php:4, email_sender.php:4, email_sender.php:5)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R48",
+      "title": "Dërgimi i emailave përmes një forme standarde",
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Files, Error Handling dhe PHP Email",
+      "rule": "email",
+      "status": "likely_met",
+      "evidence": [
+        "✓ mail() / PHPMailer / SMTP: 48× (email_sender.php:4, email_sender.php:4, email_sender.php:5)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R49",
+      "title": "ME RËNDËSI: përdorimi i PHP Email për dërgim të emailit nga një email i zakonshëm (gmail, yahoo, hotmail. )",
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Files, Error Handling dhe PHP Email",
+      "rule": "email",
+      "status": "likely_met",
+      "evidence": [
+        "✓ mail() / PHPMailer / SMTP: 48× (email_sender.php:4, email_sender.php:4, email_sender.php:5)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R50",
+      "title": "OPSIONALE: Përdorimi i i FILTER_SANITIZE për mbrojtje...",
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Files, Error Handling dhe PHP Email",
+      "rule": "filter_sanitize",
+      "status": "likely_met",
+      "evidence": [
+        "✓ filter_var / FILTER_SANITIZE: 20× (process-newsletter.php:6, process_contact.php:29, process_rental_requests.php:23)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R51",
+      "title": "Përdorimi i AJAX-it për lexim dhe update nga një PHP skriptë",
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Files, Error Handling dhe PHP Email",
+      "rule": "ajax",
+      "status": "likely_met",
+      "evidence": [
+        "✓ AJAX (XMLHttpRequest / fetch / $.ajax): 13× (about_us.php:320, admin_dashboard.php:50, contact.php:269)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R52",
+      "title": "Përdorimi i AJAX-it për lexim dhe update nga db",
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Files, Error Handling dhe PHP Email",
+      "rule": "ajax",
+      "status": "likely_met",
+      "evidence": [
+        "✓ AJAX (XMLHttpRequest / fetch / $.ajax): 13× (about_us.php:320, admin_dashboard.php:50, contact.php:269)"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R53",
+      "title": "Përdorimi i të paktën një Web API në projektin tuaj.",
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Files, Error Handling dhe PHP Email",
+      "rule": "web_api",
+      "status": "likely_met",
+      "evidence": [
+        "✓ thirrje e një API-je të jashtme: 2× (api/flight_api.php:6, api/flight_api.php:19)"
+      ],
+      "note": ""
+    }
+  ],
+  "counts": {
+    "likely_met": 47,
+    "partial": 3,
+    "not_found": 0,
+    "manual": 3
+  },
+  "note": "Automatic hints only. The final Met/Partially met/Not met decision is made by reading the code."
+}

@@ -1,0 +1,153 @@
+{
+  "job_id": "20261022-145000-Airport_Website",
+  "title": "Airport_Website",
+  "created": "2026-10-22T14:50:00",
+  "groups": [
+    {
+      "name": "Airport_Website",
+      "repos": [
+        "https://github.com/bleronbaftiu21/Airport_Website"
+      ]
+    }
+  ],
+  "requirements_file": "C:\\Users\\bleron.baftiu\\PycharmProjects\\PythonProject\\audit-reports\\20261022-145000-Airport_Website\\brief.docx",
+  "requirements_name": "Programimi_ne_ueb_II_Kerksat e projektit.docx",
+  "requirements_text": "",
+  "comparison": [],
+  "base": [],
+  "ai_policy": "unspecified",
+  "deadline": null,
+  "start": null,
+  "language": "shqip",
+  "output_dir": "C:\\Users\\bleron.baftiu\\PycharmProjects\\PythonProject\\audit-reports\\20261022-145000-Airport_Website",
+  "workspace": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-145000",
+  "run_claude": true,
+  "status": "evidence_ready",
+  "started": "2026-10-22T14:50:00",
+  "finished": "2026-10-22T14:50:26",
+  "steps": [
+    {
+      "name": "Leximi i kërkesave",
+      "group": null,
+      "status": "done",
+      "started": "2026-10-22T14:50:00",
+      "finished": "2026-10-22T14:50:00",
+      "message": "0 kërkesa"
+    },
+    {
+      "name": "Klonimi i repove",
+      "group": "Airport_Website",
+      "status": "done",
+      "started": "2026-10-22T14:50:00",
+      "finished": "2026-10-22T14:50:08",
+      "message": "Airport_Website@6cca315"
+    },
+    {
+      "name": "Inventari (endpoint-e, modele, teste)",
+      "group": "Airport_Website",
+      "status": "done",
+      "started": "2026-10-22T14:50:08",
+      "finished": "2026-10-22T14:50:10",
+      "message": ""
+    },
+    {
+      "name": "Historia e git-it",
+      "group": "Airport_Website",
+      "status": "done",
+      "started": "2026-10-22T14:50:10",
+      "finished": "2026-10-22T14:50:11",
+      "message": ""
+    },
+    {
+      "name": "Sinjalet e AI-së",
+      "group": "Airport_Website",
+      "status": "done",
+      "started": "2026-10-22T14:50:11",
+      "finished": "2026-10-22T14:50:11",
+      "message": ""
+    },
+    {
+      "name": "Procesi në GitHub (PR, review)",
+      "group": "Airport_Website",
+      "status": "done",
+      "started": "2026-10-22T14:50:11",
+      "finished": "2026-10-22T14:50:13",
+      "message": ""
+    },
+    {
+      "name": "Kërkimi në GitHub për projekte të ngjashme",
+      "group": "Airport_Website",
+      "status": "done",
+      "started": "2026-10-22T14:50:13",
+      "finished": "2026-10-22T14:50:22",
+      "message": "3 kandidatë: jpatokal/openflights, everett7623/airport-recommendations-2026, FlyBitVIP/FlyBit-Airport-Address"
+    },
+    {
+      "name": "Lidhja e kërkesave me dëshmitë",
+      "group": "Airport_Website",
+      "status": "done",
+      "started": "2026-10-22T14:50:22",
+      "finished": "2026-10-22T14:50:22",
+      "message": ""
+    },
+    {
+      "name": "Ngjashmëria e kodit (grupet + GitHub)",
+      "group": null,
+      "status": "done",
+      "started": "2026-10-22T14:50:22",
+      "finished": "2026-10-22T14:50:26",
+      "message": ""
+    },
+    {
+      "name": "Përmbledhja (tabela)",
+      "group": null,
+      "status": "done",
+      "started": "2026-10-22T14:50:26",
+      "finished": "2026-10-22T14:50:26",
+      "message": "1 grupe"
+    },
+    {
+      "name": "Përmbledhja (tabela)",
+      "group": null,
+      "status": "done",
+      "started": "2026-10-22T14:59:17",
+      "finished": "2026-10-22T14:59:17",
+      "message": "1 grupe"
+    }
+  ],
+  "groups_state": {
+    "Airport_Website": {
+      "slug": "Airport_Website",
+      "dir": "C:\\Users\\bleron.baftiu\\PycharmProjects\\PythonProject\\audit-reports\\20261022-145000-Airport_Website\\Airport_Website",
+      "status": "evidence_ready",
+      "repos": [
+        {
+          "url": "https://github.com/bleronbaftiu21/Airport_Website",
+          "repo": "Airport_Website",
+          "branch": "main",
+          "commit": "6cca315f22b6b05f6c36a96a02253ed305857db2",
+          "short": "6cca315",
+          "dir": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-145000\\Airport_Website\\bleronbaftiu21-Airport_Website",
+          "commits": 449
+        }
+      ],
+      "github_candidates": [
+        {
+          "full_name": "jpatokal/openflights",
+          "reason": "emër/përshkrim i ngjashëm"
+        },
+        {
+          "full_name": "everett7623/airport-recommendations-2026",
+          "reason": "emër/përshkrim i ngjashëm"
+        },
+        {
+          "full_name": "FlyBitVIP/FlyBit-Airport-Address",
+          "reason": "emër/përshkrim i ngjashëm"
+        }
+      ],
+      "claude": "done",
+      "claude_started": "2026-10-22T14:50:26",
+      "claude_finished": "2026-10-22T14:59:17"
+    }
+  }
+}

@@ -87,7 +87,8 @@ def merge_identities(names_emails, aliases):
 
 def run_git(repo, rev):
     cmd = ["git", "-C", repo, "-c", "core.hooksPath=", "-c", "core.longpaths=true", "log", rev, "--no-textconv", "--no-ext-diff",
-           "--no-renames", "--format=%x1e%H%x1f%an%x1f%ae%x1f%aI%x1f%cI%x1f%P%x1f%s", "--numstat"]
+           "--no-renames", "--format=%x1e%H%x1f%an%x1f%ae%x1f%aI%x1f%cI%x1f%P%x1f%s", "--numstat",
+           "--", "."]  # "." = only the audited folder when the repo dir is a sub-folder of a larger repository
     res = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace")
     if res.returncode != 0:
         raise SystemExit(f"git log failed: {res.stderr.strip()}")

@@ -1,0 +1,35 @@
+I finished the audit. Both reports are written in Albanian. **The final score is 6.5/10.** If the requirements alone are scored, the project gets 7.5/10.
+
+```
+Repo Auditor Pro — bleronbaftiu21/Airport_Website @ 6cca315
+Nota përfundimtare: 6.5 / 10  (pa kufizim 6.5, besueshmëria: Medium)
+Nota vetëm për kërkesat: 7.5 / 10
+Kërkesat: të detyrueshme 76.8% · opsionale 100%  (Met 26 · Partially 11 · Not met 4 · Cannot verify 0)
+Origjinaliteti: ~100% · flamuj: Faza 2 me commit pas datës 17 maj (për verifikim)
+Vlerësimi i AI-së: 0–10% (besueshmëria Low)
+Problemet kryesore: 1) faqet e adminit pa kontroll roli + ngarkim skedarësh pa kufizim
+                    2) mungojnë mail(), preg_replace, kthimi me referencë, fopen/fwrite, sort/ksort
+                    3) çelësi i API-së dhe fjalëkalimi SMTP të shkruar në kod
+Raportet: …\Airport_Website\audit-report.md, …\Airport_Website\audit-report.json
+```
+
+**Why this score:**
+- **Requirements (70% of the score):** the parser extracted nothing from the brief, so I split it by hand into 43 items.
+  - The phase 2 work is well covered: sessions, MySQL table creation, insert/update/delete with prepared statements, AJAX, a real Web API with caching, and PHPMailer.
+  - Points were lost on items that are partly or fully missing: `mail()`, regex for dates and for fixing strings, return by reference, references between array members, `fopen`/`fread`/`fwrite`, several sort functions, deleting the cookie, and sending from Gmail. They send through Ethereal, a test service that never delivers the email.
+- **Technical review (30%):** security pulls it down most. Most admin pages never check the session, so anyone can delete news via `delete-news.php?id=N`. Two pages also accept file uploads with no type check.
+- **No cap applied:** this is a course project, and mandatory compliance is well above 40%.
+- **Copying:** none found. The 53–63% overlap with `jpatokal/openflights` in `footer.php` and `nav.php` is only shared HTML structure. The content is completely different: their file is a German "FlightMemory" page.
+
+**Your other checks:**
+- **Template leftovers:** none.
+- **Secrets:** the automated scanner found none, but I found them by hand. They are an API key in `includes/config.php:3`, the SMTP password in 4 files, and the superadmin password in `create_superadmin.php`. They are redacted in the report.
+- **README:** its claims match the code. It just has no install or database setup instructions.
+- **Timing:** phase 2 work starts on 2025-05-20 and has 51 commits on 25 May, all after the brief's 17 May date. Since the deadline was set to "-", I didn't change the score and marked it for you to verify. The 51% "last 7 days" figure is mostly the PHPMailer library being added.
+
+**Things to know:**
+- **Static only:** nothing was run, and there were no other groups' projects to compare against.
+- **No `GITHUB_TOKEN`:** code search on GitHub was skipped, so the candidates were found by name only.
+- **Your own account:** one contributor is `bleronbaftiu21`, which looks like your account. I noted it in the limitations so the human reviewer is aware.
+- **`summary.csv` not updated:** running `pipeline.py --summary-only` needed permission that wasn't granted. You can run it yourself to add the final score:
+  `.venv\Scripts\python.exe -I .claude\skills\repo-auditor-pro\scripts\pipeline.py --config audit-reports\20261022-145000-Airport_Website\config.json --summary-only`

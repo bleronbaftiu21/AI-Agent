@@ -1,0 +1,25 @@
+{
+  "job_id": "20261022-145941-Airport_Website",
+  "title": "Airport_Website",
+  "created": "2026-10-22T14:59:41",
+  "groups": [
+    {
+      "name": "Airport_Website",
+      "repos": [
+        "https://github.com/bleronbaftiu21/Airport_Website"
+      ]
+    }
+  ],
+  "requirements_file": "C:\\Users\\bleron.baftiu\\PycharmProjects\\PythonProject\\audit-reports\\20261022-145941-Airport_Website\\brief.docx",
+  "requirements_name": "Programimi_ne_ueb_II_Kerksat e projektit.docx",
+  "requirements_text": "",
+  "comparison": [],
+  "base": [],
+  "ai_policy": "unspecified",
+  "deadline": null,
+  "start": null,
+  "language": "shqip",
+  "output_dir": "C:\\Users\\bleron.baftiu\\PycharmProjects\\PythonProject\\audit-reports\\20261022-145941-Airport_Website",
+  "workspace": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-145941",
+  "run_claude": false
+}

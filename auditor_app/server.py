@@ -14,6 +14,7 @@ import shutil
 import subprocess
 import sys
 import threading
+import time
 
 from fastapi import FastAPI, File, Form, HTTPException, UploadFile
 from fastapi.responses import FileResponse, JSONResponse, PlainTextResponse
@@ -172,10 +173,21 @@ def update_group_state(out, name, **changes):
     with LOCK:
         state = load(os.path.join(out, "job.json"), {})
         state.setdefault("groups_state", {}).setdefault(name, {}).update(changes)
-        tmp = os.path.join(out, "job.json.tmp")
-        with open(tmp, "w", encoding="utf-8") as fh:
-            json.dump(state, fh, indent=2, ensure_ascii=False)
-        os.replace(tmp, os.path.join(out, "job.json"))
+        write_json_atomic(os.path.join(out, "job.json"), state)
+
+
+def write_json_atomic(path, data):
+    tmp = path + ".srv.tmp"
+    with open(tmp, "w", encoding="utf-8") as fh:
+        json.dump(data, fh, indent=2, ensure_ascii=False)
+    for i in range(40):  # Windows refuses to replace a file another process is reading at that moment
+        try:
+            os.replace(tmp, path)
+            return
+        except PermissionError:
+            if i == 39:
+                raise
+            time.sleep(0.05)
 
 
 def run_claude_for_group(out, name, gstate):
@@ -212,6 +224,15 @@ def run_job(job_id, out, github_token, run_claude):
     with open(os.path.join(out, "pipeline_stdout.txt"), "w", encoding="utf-8") as log:
         subprocess.run([PY, "-I", os.path.join(SCRIPTS, "pipeline.py"), "--config", os.path.join(out, "config.json")],
                        stdout=log, stderr=subprocess.STDOUT, env=env)
+    state = load(os.path.join(out, "job.json"), {})
+    if state.get("status") in ("queued", "running", None):  # the pipeline crashed before finishing
+        with LOCK:
+            state["status"] = "error"
+            state.setdefault("steps", []).append({"name": "Pipeline-i u ndal papritur", "group": None, "status": "error",
+                                                  "message": "Shiko pipeline_stdout.txt në dosjen e auditimit."})
+            write_json_atomic(os.path.join(out, "job.json"), state)
+        RUNNING.pop(job_id, None)
+        return
     if run_claude:
         state = load(os.path.join(out, "job.json"), {})
         for name, gs in state.get("groups_state", {}).items():

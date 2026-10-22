@@ -1,0 +1,538 @@
+{
+  "source": "brief.docx",
+  "characters": 6086,
+  "items": [
+    {
+      "id": "R1",
+      "number": 1,
+      "section": "Listë kontrolluese për mbrojtjen e projektit në lëndën Programimi në ueb II",
+      "title": "Mundesi për të vazhduar me projektin nga uebi I",
+      "text": "Mundesi për të vazhduar me projektin nga uebi I",
+      "mandatory": false,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R2",
+      "number": 2,
+      "section": "Listë kontrolluese për mbrojtjen e projektit në lëndën Programimi në ueb II",
+      "title": "Numri i studenteve ne grup 4-5",
+      "text": "Numri i studenteve ne grup 4-5",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R3",
+      "number": 3,
+      "section": "Listë kontrolluese për mbrojtjen e projektit në lëndën Programimi në ueb II",
+      "title": "Dokumentimi duke u bazuar ne kerkesat specifike",
+      "text": "Dokumentimi duke u bazuar ne kerkesat specifike",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R4",
+      "number": 4,
+      "section": "Përshkrimi i Projektit",
+      "title": "Të gjitha kërkesat e listuara më poshtë duhet të përshtaten dhe të implementohen në kuadër të domenit që e keni zgjedhur për projektin tuaj.",
+      "text": "Të gjitha kërkesat e listuara më poshtë duhet të përshtaten dhe të implementohen në kuadër të domenit që e keni zgjedhur për projektin tuaj.",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R5",
+      "number": 5,
+      "section": "Pjesa e parë › Konceptet themelore të PHP-së",
+      "title": "Variablat, qasja e tyre, var_dump(), funksionet, perdorimi i string funksioneve, përdorimi i konstanteve, operatorët,",
+      "text": "Variablat, qasja e tyre, var_dump(), funksionet, perdorimi i string funksioneve, përdorimi i konstanteve, operatorët,",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R6",
+      "number": 6,
+      "section": "Pjesa e parë › Konceptet themelore të PHP-së",
+      "title": "Përdorimi i kushtëzimeve (if..else, swithch, etj.)",
+      "text": "Përdorimi i kushtëzimeve (if..else, swithch, etj.)",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R7",
+      "number": 7,
+      "section": "Pjesa e parë › Konceptet themelore të PHP-së",
+      "title": "Përdorimi i vargjeve (arrays) – numeric arrays, associative arrays, multidimensional arrays",
+      "text": "Përdorimi i vargjeve (arrays) – numeric arrays, associative arrays, multidimensional arrays",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R8",
+      "number": 8,
+      "section": "Pjesa e parë › Konceptet themelore të PHP-së",
+      "title": "Sortimet në PHP – sort(), rsort(), asort(), ksort(), arsort(), krsort(),",
+      "text": "Sortimet në PHP – sort(), rsort(), asort(), ksort(), arsort(), krsort(),",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R9",
+      "number": 9,
+      "section": "Pjesa e parë › Konceptet themelore të PHP-së",
+      "title": "Përdorimi i variablave golbale të PHP-së",
+      "text": "Përdorimi i variablave golbale të PHP-së",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R10",
+      "number": 10,
+      "section": "Pjesa e parë › OOP PHP",
+      "title": "Definimi dhe përdorimi i klasave në PHP – me veti dhe metoda",
+      "text": "Definimi dhe përdorimi i klasave në PHP – me veti dhe metoda",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R11",
+      "number": 11,
+      "section": "Pjesa e parë › OOP PHP",
+      "title": "Përdorimi i konstruktorëve (destruktorëve)",
+      "text": "Përdorimi i konstruktorëve (destruktorëve)",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R12",
+      "number": 12,
+      "section": "Pjesa e parë › OOP PHP",
+      "title": "Përdorimi i atributeve të klasës dhe i funkioneve Get dhe Set",
+      "text": "Përdorimi i atributeve të klasës dhe i funkioneve Get dhe Set",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R13",
+      "number": 13,
+      "section": "Pjesa e parë › OOP PHP",
+      "title": "Manipulimi me mdoifikatorë: public, private, protected",
+      "text": "Manipulimi me mdoifikatorë: public, private, protected",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R14",
+      "number": 14,
+      "section": "Pjesa e parë › OOP PHP",
+      "title": "Implementimi i trashëgimisë në PHP dhe klasa",
+      "text": "Implementimi i trashëgimisë në PHP dhe klasa",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R15",
+      "number": 15,
+      "section": "Pjesa e parë › PHP Shprehjet e rregullta (RegEx)",
+      "title": "Kuptimi dhe përdorimi i RegEx në raste të ndryshme si psh. Validim, kontroll të dhënave për dërgim në server",
+      "text": "Kuptimi dhe përdorimi i RegEx në raste të ndryshme si psh. Validim, kontroll të dhënave për dërgim në server",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R16",
+      "number": 16,
+      "section": "Pjesa e parë › PHP Shprehjet e rregullta (RegEx)",
+      "title": "Validime me RegEx të email-it, datave, ndonjë vlere numerike",
+      "text": "Validime me RegEx të email-it, datave, ndonjë vlere numerike",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R17",
+      "number": 17,
+      "section": "Pjesa e parë › PHP Shprehjet e rregullta (RegEx)",
+      "title": "Manipulime ne numra (psh ndarja e disa numrave, - ne mes, etj)",
+      "text": "Manipulime ne numra (psh ndarja e disa numrave, - ne mes, etj)",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R18",
+      "number": 18,
+      "section": "Pjesa e parë › PHP Shprehjet e rregullta (RegEx)",
+      "title": "Përdorimi i RegEx për të rregulluar përmbajtje të stringjeve",
+      "text": "Përdorimi i RegEx për të rregulluar përmbajtje të stringjeve",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R19",
+      "number": 19,
+      "section": "Pjesa e parë › PHP Shprehjet e rregullta (RegEx)",
+      "title": "Faza e parë e projektit duhet të përfshijë strukturën kryesore me menytë dhe faqet përkatëse. Pasi nuk ka ende lidhje me databazë, të dhë…",
+      "text": "Faza e parë e projektit duhet të përfshijë strukturën kryesore me menytë dhe faqet përkatëse. Pasi nuk ka ende lidhje me databazë, të dhënat për çdo menu duhet të jenë dummy (të simuluara)",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R20",
+      "number": 20,
+      "section": "Pjesa e dytë › PHP Sessions dhe Cookies",
+      "title": "Definimi dhe përdorimi i COOKIES me të gjitha specifikat (krijim, fshirja, ruajtja në varg).",
+      "text": "Definimi dhe përdorimi i COOKIES me të gjitha specifikat (krijim, fshirja, ruajtja në varg).",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R21",
+      "number": 21,
+      "section": "Pjesa e dytë › PHP Sessions dhe Cookies",
+      "title": "Ndryshimi i përmbjatjes varësisht nga gjendja e cookies (psh ndryshimi i background, ndryshim i fotografive etj)",
+      "text": "Ndryshimi i përmbjatjes varësisht nga gjendja e cookies (psh ndryshimi i background, ndryshim i fotografive etj)",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R22",
+      "number": 22,
+      "section": "Pjesa e dytë › PHP Sessions dhe Cookies",
+      "title": "Definimi dhe përdorimi i SESSIONS në PHP me të gjitha specifikat (krijimi, ruajtja e vlerave, leximi i vlerave etj)",
+      "text": "Definimi dhe përdorimi i SESSIONS në PHP me të gjitha specifikat (krijimi, ruajtja e vlerave, leximi i vlerave etj)",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R23",
+      "number": 23,
+      "section": "Pjesa e dytë › PHP Sessions dhe Cookies",
+      "title": "Përdorimi i sesioneve për ndonjë qëllim të numërimit (psh numri i vizitave në një faqe apo formë të caktuar etj.)",
+      "text": "Përdorimi i sesioneve për ndonjë qëllim të numërimit (psh numri i vizitave në një faqe apo formë të caktuar etj.)",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R24",
+      "number": 24,
+      "section": "Pjesa e dytë › PHP Sessions dhe Cookies",
+      "title": "Shembull i përdorimit të funskionit brenda një PHP sesioni",
+      "text": "Shembull i përdorimit të funskionit brenda një PHP sesioni",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R25",
+      "number": 25,
+      "section": "Pjesa e dytë › PHP Sessions dhe Cookies",
+      "title": "Manipulimi me PHP Sesione (psh ruajtje të ndryshme të vlerave, pastaj ndryshim i tyre dhe manipulime të tilla)",
+      "text": "Manipulimi me PHP Sesione (psh ruajtje të ndryshme të vlerave, pastaj ndryshim i tyre dhe manipulime të tilla)",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R26",
+      "number": 26,
+      "section": "Pjesa e dytë › PHP dhe MySQL",
+      "title": "Definimi dhe kuptimi i kodit të PHP-së për konseksion me bazën e të dhënave",
+      "text": "Definimi dhe kuptimi i kodit të PHP-së për konseksion me bazën e të dhënave",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R27",
+      "number": 27,
+      "section": "Pjesa e dytë › PHP dhe MySQL",
+      "title": "Krijimi i tabelave të ndryshme përmes PHP-së dhe të ruhen në DB",
+      "text": "Krijimi i tabelave të ndryshme përmes PHP-së dhe të ruhen në DB",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R28",
+      "number": 28,
+      "section": "Pjesa e dytë › PHP dhe MySQL",
+      "title": "Insertimi, Fshirja, Update-imi i DB nga PHP",
+      "text": "Insertimi, Fshirja, Update-imi i DB nga PHP",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R29",
+      "number": 29,
+      "section": "Pjesa e dytë › PHP dhe MySQL",
+      "title": "Opsionale: Lidhja me DB përmes një PHP skripte të jashtme",
+      "text": "Opsionale: Lidhja me DB përmes një PHP skripte të jashtme",
+      "mandatory": false,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R30",
+      "number": 30,
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "title": "Përdorimi dhe kuptimi i pointerëve në PHP",
+      "text": "Përdorimi dhe kuptimi i pointerëve në PHP",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R31",
+      "number": 31,
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "title": "Përcjellja përmes referencës",
+      "text": "Përcjellja përmes referencës",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R32",
+      "number": 32,
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "title": "Vendosja e referencave në mes të anëtarëve të vargut",
+      "text": "Vendosja e referencave në mes të anëtarëve të vargut",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R33",
+      "number": 33,
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "title": "Përcjellja e vlerës përmes referencës",
+      "text": "Përcjellja e vlerës përmes referencës",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R34",
+      "number": 34,
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "title": "Përdorimi i funksioneve me referencë",
+      "text": "Përdorimi i funksioneve me referencë",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R35",
+      "number": 35,
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "title": "Kthimi përmes referencës",
+      "text": "Kthimi përmes referencës",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R36",
+      "number": 36,
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "title": "Psh Çasje në variablat globale etj.",
+      "text": "Psh Çasje në variablat globale etj.",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R37",
+      "number": 37,
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "title": "Largimi i referencës",
+      "text": "Largimi i referencës",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R38",
+      "number": 38,
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "title": "Përdorimi i funksionit unset()",
+      "text": "Përdorimi i funksionit unset()",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R39",
+      "number": 39,
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "title": "MySQL Injection",
+      "text": "MySQL Injection",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R40",
+      "number": 40,
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "title": "Çfarë metoda janë përdorur për t’u mbrojtur nga SQL Injection",
+      "text": "Çfarë metoda janë përdorur për t’u mbrojtur nga SQL Injection",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R41",
+      "number": 41,
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "title": "Çfarë është OBLIGATIVE të përdorim gjithmonë kur dërgojmë të dhëna në server nga format apo skriptat në PHP?",
+      "text": "Çfarë është OBLIGATIVE të përdorim gjithmonë kur dërgojmë të dhëna në server nga format apo skriptat në PHP?",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R42",
+      "number": 42,
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Pointerët dhe SQL Injection",
+      "title": "Demonstrimi i shembullit të mbrojtjes nga MySQL Injection...",
+      "text": "Demonstrimi i shembullit të mbrojtjes nga MySQL Injection...",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R43",
+      "number": 43,
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Files, Error Handling dhe PHP Email",
+      "title": "Përdorimi i funskioneve themelore për manipulime me fajlla (si include(), require(), fopen(r,w,...), fclose(...), fsize(), fread(), fwrite()",
+      "text": "Përdorimi i funskioneve themelore për manipulime me fajlla (si include(), require(), fopen(r,w,...), fclose(...), fsize(), fread(), fwrite()",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R44",
+      "number": 44,
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Files, Error Handling dhe PHP Email",
+      "title": "Me rëndësi: definimi i funksionit për trajtim të gabimeve error_handler me të gjitha parapmetrat si (errno, errstring, errfile, errline,…",
+      "text": "Me rëndësi: definimi i funksionit për trajtim të gabimeve error_handler me të gjitha parapmetrat si (errno, errstring, errfile, errline, errcontext)",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R45",
+      "number": 45,
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Files, Error Handling dhe PHP Email",
+      "title": "Definimi dhe trajtimi i disa prej gabimeve në projektin, ku trajtimi është bërë në formën customize, ku vetë janë deklaruar gabimet dhe t…",
+      "text": "Definimi dhe trajtimi i disa prej gabimeve në projektin, ku trajtimi është bërë në formën customize, ku vetë janë deklaruar gabimet dhe të till (në gjuhën shqipe) të paraqiten edhe gjatë trajtimit.",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R46",
+      "number": 46,
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Files, Error Handling dhe PHP Email",
+      "title": "Trajtimi i përjashtimeve me TRY, CATCH dhe THROW...",
+      "text": "Trajtimi i përjashtimeve me TRY, CATCH dhe THROW...",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R47",
+      "number": 47,
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Files, Error Handling dhe PHP Email",
+      "title": "Përdorimi i funskionit EMAIL në PHP me të gjitha parametrat email(to, subject, message, additional headers etj)",
+      "text": "Përdorimi i funskionit EMAIL në PHP me të gjitha parametrat email(to, subject, message, additional headers etj)",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R48",
+      "number": 48,
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Files, Error Handling dhe PHP Email",
+      "title": "Dërgimi i emailave përmes një forme standarde",
+      "text": "Dërgimi i emailave përmes një forme standarde",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R49",
+      "number": 49,
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Files, Error Handling dhe PHP Email",
+      "title": "ME RËNDËSI: përdorimi i PHP Email për dërgim të emailit nga një email i zakonshëm (gmail, yahoo, hotmail. )",
+      "text": "ME RËNDËSI: përdorimi i PHP Email për dërgim të emailit nga një email i zakonshëm (gmail, yahoo, hotmail. )",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R50",
+      "number": 50,
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Files, Error Handling dhe PHP Email",
+      "title": "OPSIONALE: Përdorimi i i FILTER_SANITIZE për mbrojtje...",
+      "text": "OPSIONALE: Përdorimi i i FILTER_SANITIZE për mbrojtje...",
+      "mandatory": false,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R51",
+      "number": 51,
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Files, Error Handling dhe PHP Email",
+      "title": "Përdorimi i AJAX-it për lexim dhe update nga një PHP skriptë",
+      "text": "Përdorimi i AJAX-it për lexim dhe update nga një PHP skriptë",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R52",
+      "number": 52,
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Files, Error Handling dhe PHP Email",
+      "title": "Përdorimi i AJAX-it për lexim dhe update nga db",
+      "text": "Përdorimi i AJAX-it për lexim dhe update nga db",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R53",
+      "number": 53,
+      "section": "Pjesa e dytë › PHP (konc. e avansuara) Files, Error Handling dhe PHP Email",
+      "title": "Përdorimi i të paktën një Web API në projektin tuaj.",
+      "text": "Përdorimi i të paktën një Web API në projektin tuaj.",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    }
+  ],
+  "text": "Universiteti i Prishtinës\nFakulteti i Inxhinierisë Elektrike dhe Kompjuterike\nKodra e Diellit, p.n.\n10000 - Prishtinë, Kosova\nLënda: Programimi në ueb II\nUdhëzimet për projekt grupor ‘25\nProf.Ass.Dr.Dhuratë Hyseni\nAss.MSc.Dalinë Vranovci\nFaza 1: 13 prill dorëzimi, 16, 17 prill prezantimi\nFaza 2: 17 maj dorëzimi, 20, 21 maj prezantimi\n# Listë kontrolluese për mbrojtjen e projektit në lëndën Programimi në ueb II\n- Mundesi për të vazhduar me projektin nga uebi I\n- Numri i studenteve ne grup 4-5\n- Faza 1 : 13 prill dorëzimi, 16, 17 prill prezantimi (15% e pikeve)\n- Faza 2 : 17 maj dorëzimi, 20, 21 maj prezantimi (20% e pikeve)\n- Dokumentimi duke u bazuar ne kerkesat specifike\n# Përshkrimi i Projektit\nKy projekt ka për qëllim ndërtimin e një aplikacioni web të zhvilluar në PHP, duke integruar konceptet themelore dhe të avancuara të gjuhës, si dhe duke përdorur MySQL për ruajtjen e të dhënave. Në fazën e parë, fokusi do të jetë në ndërtimin e një strukture bazë me menu dhe faqe përkatëse, ku të dhënat do të jenë të simuluara. Do të implementohen funksionalitete bazike si përdorimi i variablave, operatorëve, funksioneve, kushteve dhe vargjeve. Gjithashtu, do të përdoret programimi i orientuar në objekte (OOP) për ndërtimin e klasave, trashëgimisë dhe enkapsulimit të të dhënave.\nNë fazën e dytë, projekti do të zgjerohet duke përfshirë menaxhimin e sesioneve dhe cookies për personalizimin e përmbajtjes dhe ruajtjen e të dhënave të përdoruesve. Do të realizohet lidhja me bazën e të dhënave përmes MySQL, duke mundësuar futjen, përditësimin dhe fshirjen e të dhënave përmes PHP. Për siguri më të madhe, do të trajtohen teknika kundër SQL Injection dhe do të implementohen funksionalitete të avancuara si manipulimi me fajlla, trajtimi i gabimeve dhe dërgimi i email-eve. Projekti do të përfshijë gjithashtu përdorimin e AJAX-it për përmirësimin e ndërveprimit me përdoruesin dhe integrimin e një Web API për të ofruar veçori shtesë.\nTë gjitha kërkesat e listuara më poshtë duhet të përshtaten dhe të implementohen në kuadër të domenit që e keni zgjedhur për projektin tuaj.\n# Pjesa e parë\n## Konceptet themelore të PHP-së\n- Variablat, qasja e tyre, var_dump(), funksionet, perdorimi i string funksioneve, përdorimi i konstanteve, operatorët,\n- Përdorimi i kushtëzimeve (if..else, swithch, etj.)\n- Përdorimi i vargjeve (arrays) – numeric arrays, associative arrays, multidimensional arrays\n- Sortimet në PHP – sort(), rsort(), asort(), ksort(), arsort(), krsort(),\n- Përdorimi i variablave golbale të PHP-së\n## OOP PHP\n- Definimi dhe përdorimi i klasave në PHP – me veti dhe metoda\n- Përdorimi i konstruktorëve (destruktorëve)\n- Përdorimi i atributeve të klasës dhe i funkioneve Get dhe Set\n- Manipulimi me mdoifikatorë: public, private, protected\n- Implementimi i trashëgimisë në PHP dhe klasa\n## PHP Shprehjet e rregullta (RegEx)\n- Kuptimi dhe përdorimi i RegEx në raste të ndryshme si psh. Validim, kontroll të dhënave për dërgim në server\n- Validime me RegEx të email-it, datave, ndonjë vlere numerike\n- Manipulime ne numra (psh ndarja e disa numrave, - ne mes, etj)\n- Përdorimi i RegEx për të rregulluar përmbajtje të stringjeve\nFaza e parë e projektit duhet të përfshijë strukturën kryesore me menytë dhe faqet përkatëse. Pasi nuk ka ende lidhje me databazë, të dhënat për çdo menu duhet të jenë dummy (të simuluara)\n# Pjesa e dytë\n## PHP Sessions dhe Cookies\n- Definimi dhe përdorimi i COOKIES me të gjitha specifikat (krijim, fshirja, ruajtja në varg).\n- Ndryshimi i përmbjatjes varësisht nga gjendja e cookies (psh ndryshimi i background, ndryshim i fotografive etj)\n- Definimi dhe përdorimi i SESSIONS në PHP me të gjitha specifikat (krijimi, ruajtja e vlerave, leximi i vlerave etj)\n- Përdorimi i sesioneve për ndonjë qëllim të numërimit (psh numri i vizitave në një faqe apo formë të caktuar etj.)\n- Shembull i përdorimit të funskionit brenda një PHP sesioni\n- Manipulimi me PHP Sesione (psh ruajtje të ndryshme të vlerave, pastaj ndryshim i tyre dhe manipulime të tilla)\n## PHP dhe MySQL\n- Definimi dhe kuptimi i kodit të PHP-së për konseksion me bazën e të dhënave\n- Krijimi i tabelave të ndryshme përmes PHP-së dhe të ruhen në DB\n- Insertimi, Fshirja, Update-imi i DB nga PHP\n- Opsionale: Lidhja me DB përmes një PHP skripte të jashtme\n## PHP (konc. e avansuara) Pointerët dhe SQL Injection\n- Përdorimi dhe kuptimi i pointerëve në PHP\n- Përcjellja përmes referencës\n- Vendosja e referencave në mes të anëtarëve të vargut\n- Përcjellja e vlerës përmes referencës\n- Përdorimi i funksioneve me referencë\n- Kthimi përmes referencës\n- Psh Çasje në variablat globale etj.\n- Largimi i referencës\n- Përdorimi i funksionit unset()\n## ------------------------------\n- MySQL Injection\n- Çfarë metoda janë përdorur për t’u mbrojtur nga SQL Injection\n- Çfarë është OBLIGATIVE të përdorim gjithmonë kur dërgojmë të dhëna në server nga format apo skriptat në PHP?\n- Demonstrimi i shembullit të mbrojtjes nga MySQL Injection...\n## PHP (konc. e avansuara) Files, Error Handling dhe PHP Email\n- Përdorimi i funskioneve themelore për manipulime me fajlla (si include(), require(), fopen(r,w,...), fclose(...), fsize(), fread(), fwrite()\nError Handling\n- Me rëndësi: definimi i funksionit për trajtim të gabimeve error_handler me të gjitha parapmetrat si (errno, errstring, errfile, errline, errcontext)\n- Definimi dhe trajtimi i disa prej gabimeve në projektin, ku trajtimi është bërë në formën customize, ku vetë janë deklaruar gabimet dhe të till (në gjuhën shqipe) të paraqiten edhe gjatë trajtimit.\n- Trajtimi i përjashtimeve me TRY, CATCH dhe THROW...\nPHP EMAIL\n- Përdorimi i funskionit EMAIL në PHP me të gjitha parametrat email(to, subject, message, additional headers etj)\n- Dërgimi i emailave përmes një forme standarde\n- ME RËNDËSI: përdorimi i PHP Email për dërgim të emailit nga një email i zakonshëm (gmail, yahoo, hotmail. )\n- OPSIONALE: Përdorimi i i FILTER_SANITIZE për mbrojtje...\nPHP dhe AJAX\n- Përdorimi i AJAX-it për lexim dhe update nga një PHP skriptë\n- Përdorimi i AJAX-it për lexim dhe update nga db\n- Përdorimi i të paktën një Web API në projektin tuaj.",
+  "note": "Automatic split - check the list against the brief before grading."
+}

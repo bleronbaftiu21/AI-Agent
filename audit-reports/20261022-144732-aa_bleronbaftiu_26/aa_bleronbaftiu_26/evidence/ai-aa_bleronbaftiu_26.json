@@ -1,0 +1,18 @@
+{
+  "files_scanned": 8,
+  "total_nonblank_lines": 1126,
+  "files_by_level": {
+    "strong_signals": 0,
+    "several_medium_signals": 0,
+    "weak_or_single_signal": 0,
+    "no_signals": 8
+  },
+  "lines_by_level": {
+    "strong_signals": 0,
+    "several_medium_signals": 0,
+    "weak_or_single_signal": 0,
+    "no_signals": 1126
+  },
+  "flagged_files": {},
+  "note": "Automated indicators only. Combine with git history and manual reading; classify each component as Likely human / Mixed / Likely AI-assisted and report a range with confidence, never a fact."
+}

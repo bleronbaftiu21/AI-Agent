@@ -1,0 +1,63 @@
+{
+  "repo": "bleronbaftiu21/Airport_Website",
+  "authenticated": false,
+  "limitations": [
+    "GitHub Projects (v2) and Jira boards are not visible through this API; check them manually.",
+    "No GITHUB_TOKEN: unauthenticated API (60 requests/hour), reviews sampled."
+  ],
+  "info": {
+    "full_name": "bleronbaftiu21/Airport_Website",
+    "private": false,
+    "fork": true,
+    "created_at": "2025-06-21T21:08:14Z",
+    "pushed_at": "2025-06-02T12:12:07Z",
+    "default_branch": "main",
+    "has_issues": false,
+    "has_projects": true,
+    "language": null,
+    "parent": "olsadomi/Airport_Website-Gr3",
+    "template": null
+  },
+  "pull_requests": {
+    "total": 0,
+    "merged": 0,
+    "open": 0,
+    "by_author": {},
+    "self_merged_hint": null
+  },
+  "reviews": {
+    "prs_checked": 0,
+    "sampled": false,
+    "prs_with_review_by_other": 0,
+    "share_reviewed": null,
+    "prs_with_review_comment": 0,
+    "reviewers": {}
+  },
+  "branches": 1,
+  "issues": {
+    "total": 0,
+    "closed": 0
+  },
+  "contributors": [
+    {
+      "login": "olsadomi",
+      "contributions": 178
+    },
+    {
+      "login": "valmiirmustafa",
+      "contributions": 73
+    },
+    {
+      "login": "bleronbaftiu21",
+      "contributions": 72
+    },
+    {
+      "login": "oltikrasniqi21",
+      "contributions": 68
+    },
+    {
+      "login": "rrezeejupi",
+      "contributions": 58
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "authenticated": false,
+  "queries": [],
+  "candidates": [],
+  "limitations": [
+    "No GITHUB_TOKEN: GitHub code search (the strongest copy check) was skipped; only repositories with a similar name were searched."
+  ],
+  "name_terms": [
+    "bleronbaftiu"
+  ]
+}

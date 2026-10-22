@@ -1,0 +1,168 @@
+{
+  "rev": "HEAD",
+  "repos": [
+    {
+      "label": "aa_bleronbaftiu_26",
+      "commits": 9,
+      "non_merge": 9,
+      "first": {
+        "sha": "7fb6737d7e",
+        "author": "bleronbaftiu21",
+        "author_date": "2026-09-28T18:43:34+02:00",
+        "subject": "Initial commit"
+      },
+      "last": {
+        "sha": "4f08cb893b",
+        "author": "bleronbaftiu21",
+        "author_date": "2026-10-21T17:58:26+02:00",
+        "subject": "detyra"
+      }
+    }
+  ],
+  "commits": 9,
+  "non_merge_commits": 9,
+  "duplicate_commits": 0,
+  "active_days": 5,
+  "first_date": "2026-09-28",
+  "last_date": "2026-10-21",
+  "commits_per_day": {
+    "2026-09-28": 3,
+    "2026-10-05": 3,
+    "2026-10-12": 1,
+    "2026-10-16": 1,
+    "2026-10-21": 1
+  },
+  "weekly": [
+    {
+      "week": "2026-W40",
+      "commits": 3,
+      "lines_added": 699
+    },
+    {
+      "week": "2026-W41",
+      "commits": 3,
+      "lines_added": 212
+    },
+    {
+      "week": "2026-W42",
+      "commits": 2,
+      "lines_added": 924
+    },
+    {
+      "week": "2026-W43",
+      "commits": 1,
+      "lines_added": 308
+    }
+  ],
+  "last_7_days_share": 0.343,
+  "identity_map": {},
+  "authors": [
+    {
+      "author": "bleronbaftiu21",
+      "names": [
+        "bleronbaftiu21"
+      ],
+      "emails": [
+        "bleronbaftiu2@gmail.com"
+      ],
+      "commits": 9,
+      "lines_added": 2143,
+      "lines_removed": 713,
+      "share_of_added": 1.0,
+      "commits_by_repo": {
+        "aa_bleronbaftiu_26": 9
+      }
+    }
+  ],
+  "issue_tracker_keys": {
+    "commits_with_key": 0,
+    "projects": {}
+  },
+  "largest_commits": [
+    {
+      "repo": "aa_bleronbaftiu_26",
+      "sha": "18da0d7298",
+      "author": "bleronbaftiu21",
+      "author_date": "2026-09-28T19:09:13+02:00",
+      "subject": "Ignore Visual Studio files",
+      "files": 10,
+      "added": 657
+    },
+    {
+      "repo": "aa_bleronbaftiu_26",
+      "sha": "3220ec28be",
+      "author": "bleronbaftiu21",
+      "author_date": "2026-10-12T19:32:08+02:00",
+      "subject": "detyra 4",
+      "files": 2,
+      "added": 498
+    },
+    {
+      "repo": "aa_bleronbaftiu_26",
+      "sha": "0b77c3dd58",
+      "author": "bleronbaftiu21",
+      "author_date": "2026-10-16T23:25:37+02:00",
+      "subject": "java3",
+      "files": 3,
+      "added": 426
+    },
+    {
+      "repo": "aa_bleronbaftiu_26",
+      "sha": "4f08cb893b",
+      "author": "bleronbaftiu21",
+      "author_date": "2026-10-21T17:58:26+02:00",
+      "subject": "detyra",
+      "files": 3,
+      "added": 308
+    },
+    {
+      "repo": "aa_bleronbaftiu_26",
+      "sha": "940b633ece",
+      "author": "bleronbaftiu21",
+      "author_date": "2026-10-05T19:48:59+02:00",
+      "subject": "Detyra me rekurzion",
+      "files": 2,
+      "added": 116
+    },
+    {
+      "repo": "aa_bleronbaftiu_26",
+      "sha": "2ba8ef2e53",
+      "author": "bleronbaftiu21",
+      "author_date": "2026-10-05T17:23:33+02:00",
+      "subject": "initial",
+      "files": 22,
+      "added": 90
+    },
+    {
+      "repo": "aa_bleronbaftiu_26",
+      "sha": "a343e6e470",
+      "author": "bleronbaftiu21",
+      "author_date": "2026-09-28T19:10:13+02:00",
+      "subject": "initial changes",
+      "files": 3,
+      "added": 41
+    },
+    {
+      "repo": "aa_bleronbaftiu_26",
+      "sha": "0a53e41625",
+      "author": "bleronbaftiu21",
+      "author_date": "2026-10-05T17:28:48+02:00",
+      "subject": "//",
+      "files": 11,
+      "added": 6
+    },
+    {
+      "repo": "aa_bleronbaftiu_26",
+      "sha": "7fb6737d7e",
+      "author": "bleronbaftiu21",
+      "author_date": "2026-09-28T18:43:34+02:00",
+      "subject": "Initial commit",
+      "files": 1,
+      "added": 1
+    }
+  ],
+  "late_commits": [],
+  "early_commits": [],
+  "flags": [],
+  "note": "Line counts exclude merges, duplicates, lockfiles, migrations and generated files. Identity merging is heuristic - confirm it. History signals are indicators only."
+}

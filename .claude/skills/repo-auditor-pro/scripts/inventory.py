@@ -101,6 +101,15 @@ DEPLOY_RE = re.compile(r"(?i)\bdeploy|azure/webapps|heroku|vercel|netlify|docker
 SECRET_RE = re.compile(r"(?i)(password|secret|api[_-]?key|token|connectionstring)[\"']?\s*[:=]\s*[\"']?([^\s\"',;]{6,})")
 
 
+
+# third-party code copied into the repo is not the student's work: folders with their own licence file, or known libraries
+VENDORED_NAME = re.compile(r"(?i)^(phpmailer|jquery|bootstrap|font-?awesome|tinymce|ckeditor|chart\.?js|swiper|slick|owl\.?carousel|"
+                           r"select2|datatables|lightbox|fpdf|tcpdf|dompdf|smarty|third[_-]?party)([-_. ].*)?$")
+
+
+def is_vendored(dirpath, root, filenames):
+    return dirpath != root and any(f.upper().startswith(("LICENSE", "LICENCE", "COPYING")) for f in filenames)
+
 def longpath(p):
     """Absolute path with the Windows extended-length prefix so paths over 260 chars are not skipped."""
     p = os.path.abspath(p)
@@ -114,6 +123,10 @@ def walk(root):
     for dirpath, dirnames, filenames in os.walk(root):
         rel_dir = os.path.relpath(dirpath, root).replace("\\", "/")
         dirnames[:] = [d for d in dirnames if d not in EXCLUDED_DIRS and not (d.startswith(".") and d != ".github")]
+        if is_vendored(dirpath, root, filenames):
+            dirnames[:] = []
+            continue
+        dirnames[:] = [d for d in dirnames if not VENDORED_NAME.match(d)]
         for name in filenames:
             rel = (name if rel_dir == "." else f"{rel_dir}/{name}")
             yield os.path.join(dirpath, name), rel

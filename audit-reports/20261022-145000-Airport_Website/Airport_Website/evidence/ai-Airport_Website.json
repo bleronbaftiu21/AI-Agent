@@ -1,0 +1,154 @@
+{
+  "files_scanned": 155,
+  "total_nonblank_lines": 18661,
+  "files_by_level": {
+    "strong_signals": 0,
+    "several_medium_signals": 1,
+    "weak_or_single_signal": 7,
+    "no_signals": 147
+  },
+  "lines_by_level": {
+    "strong_signals": 0,
+    "several_medium_signals": 417,
+    "weak_or_single_signal": 6977,
+    "no_signals": 11267
+  },
+  "flagged_files": {
+    "PHPMailer-master/src/PHPMailer.php": {
+      "lines": 4964,
+      "signals": [
+        {
+          "name": "very_high_comment_ratio",
+          "strength": "medium",
+          "value": 0.399
+        },
+        {
+          "name": "docstring_on_every_function",
+          "strength": "weak",
+          "functions": 204,
+          "docstrings": 216
+        }
+      ],
+      "comment_ratio": 0.399,
+      "level": "weak_or_single_signal"
+    },
+    "PHPMailer-master/src/SMTP.php": {
+      "lines": 1401,
+      "signals": [
+        {
+          "name": "very_high_comment_ratio",
+          "strength": "medium",
+          "value": 0.46
+        },
+        {
+          "name": "docstring_on_every_function",
+          "strength": "weak",
+          "functions": 57,
+          "docstrings": 70
+        }
+      ],
+      "comment_ratio": 0.46,
+      "level": "weak_or_single_signal"
+    },
+    "PHPMailer-master/src/POP3.php": {
+      "lines": 417,
+      "signals": [
+        {
+          "name": "step_comment",
+          "strength": "medium",
+          "count": 1,
+          "lines": [
+            229
+          ]
+        },
+        {
+          "name": "very_high_comment_ratio",
+          "strength": "medium",
+          "value": 0.561
+        },
+        {
+          "name": "docstring_on_every_function",
+          "strength": "weak",
+          "functions": 20,
+          "docstrings": 29
+        }
+      ],
+      "comment_ratio": 0.561,
+      "level": "several_medium_signals"
+    },
+    "PHPMailer-master/src/DSNConfigurator.php": {
+      "lines": 216,
+      "signals": [
+        {
+          "name": "very_high_comment_ratio",
+          "strength": "medium",
+          "value": 0.37
+        },
+        {
+          "name": "docstring_on_every_function",
+          "strength": "weak",
+          "functions": 8,
+          "docstrings": 9
+        }
+      ],
+      "comment_ratio": 0.37,
+      "level": "weak_or_single_signal"
+    },
+    "PHPMailer-master/README.md": {
+      "lines": 169,
+      "signals": [
+        {
+          "name": "obvious_comment",
+          "strength": "medium",
+          "count": 1,
+          "lines": [
+            102
+          ]
+        }
+      ],
+      "level": "weak_or_single_signal"
+    },
+    "PHPMailer-master/src/OAuth.php": {
+      "lines": 125,
+      "signals": [
+        {
+          "name": "very_high_comment_ratio",
+          "strength": "medium",
+          "value": 0.632
+        },
+        {
+          "name": "docstring_on_every_function",
+          "strength": "weak",
+          "functions": 10,
+          "docstrings": 12
+        }
+      ],
+      "comment_ratio": 0.632,
+      "level": "weak_or_single_signal"
+    },
+    "README.md": {
+      "lines": 61,
+      "signals": [
+        {
+          "name": "emoji_heavy",
+          "strength": "medium",
+          "count": 6
+        }
+      ],
+      "level": "weak_or_single_signal"
+    },
+    "PHPMailer-master/src/OAuthTokenProvider.php": {
+      "lines": 41,
+      "signals": [
+        {
+          "name": "very_high_comment_ratio",
+          "strength": "medium",
+          "value": 0.854
+        }
+      ],
+      "comment_ratio": 0.854,
+      "level": "weak_or_single_signal"
+    }
+  },
+  "note": "Automated indicators only. Combine with git history and manual reading; classify each component as Likely human / Mixed / Likely AI-assisted and report a range with confidence, never a fact."
+}

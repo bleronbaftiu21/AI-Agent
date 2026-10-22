@@ -1,0 +1,23 @@
+Përdor skill-in repo-auditor-pro për të përfunduar auditimin e grupit "aa_bleronbaftiu_26".
+
+Dëshmitë automatike janë mbledhur tashmë - mos i kloni repot përsëri:
+- Repot e klonuara dhe commit-et: C:\Users\bleron.baftiu\PycharmProjects\PythonProject\audit-reports\20261022-144732-aa_bleronbaftiu_26\aa_bleronbaftiu_26\evidence\acquire.json
+- Kërkesat (R1..Rn): C:\Users\bleron.baftiu\PycharmProjects\PythonProject\audit-reports\20261022-144732-aa_bleronbaftiu_26\requirements.json
+- Lidhja automatike kërkesë -> dëshmi (vetëm sugjerime): C:\Users\bleron.baftiu\PycharmProjects\PythonProject\audit-reports\20261022-144732-aa_bleronbaftiu_26\aa_bleronbaftiu_26\evidence\hints.json
+- Inventari: C:\Users\bleron.baftiu\PycharmProjects\PythonProject\audit-reports\20261022-144732-aa_bleronbaftiu_26\aa_bleronbaftiu_26\evidence\inventory.json
+- Historia e git-it: C:\Users\bleron.baftiu\PycharmProjects\PythonProject\audit-reports\20261022-144732-aa_bleronbaftiu_26\aa_bleronbaftiu_26\evidence\history.json
+- Sinjalet e AI-së: C:\Users\bleron.baftiu\PycharmProjects\PythonProject\audit-reports\20261022-144732-aa_bleronbaftiu_26\aa_bleronbaftiu_26\evidence/ai-*.json
+- Procesi në GitHub: C:\Users\bleron.baftiu\PycharmProjects\PythonProject\audit-reports\20261022-144732-aa_bleronbaftiu_26\aa_bleronbaftiu_26\evidence/github-*.json
+- Projekte të ngjashme të gjetura në GitHub (kandidatë për kopjim): C:\Users\bleron.baftiu\PycharmProjects\PythonProject\audit-reports\20261022-144732-aa_bleronbaftiu_26\aa_bleronbaftiu_26\evidence\github_similar.json
+- Ngjashmëria e kodit me grupet e tjera dhe me kandidatët nga GitHub (çelësat "GitHub: ..."): C:\Users\bleron.baftiu\PycharmProjects\PythonProject\audit-reports\20261022-144732-aa_bleronbaftiu_26\similarity.json
+
+Kontrollo edhe: kodin e mbetur nga shabllonet (inventory.json -> template_leftovers), punën në kohë
+(history.json -> weekly, last_7_days_share), sekretet (inventory.json -> possible_secrets) dhe nëse README
+pretendon gjëra që kodi nuk i ka. Për çdo kandidat me ngjashmëri mbi ~20%, hap skedarët që përputhen dhe
+krahaso datat (created_at i kandidatit kundrejt commit-it të parë të projektit) për të parë kush ishte i pari.
+
+Politika e AI: unspecified. Afati: -.
+Lexo kodin për çdo kërkesë dhe vendos Met / Partially met / Not met / Cannot verify me dëshmi file:line,
+pastaj integritetin, kategoritë teknike dhe notën sipas audit-method.md (kërkesat 70%).
+Shkruaj audit-report.md (në shqip) dhe audit-report.json te: C:\Users\bleron.baftiu\PycharmProjects\PythonProject\audit-reports\20261022-144732-aa_bleronbaftiu_26\aa_bleronbaftiu_26
+Mos ekzekuto kodin e projektit dhe mos ndrysho asgjë në repot e klonuara.

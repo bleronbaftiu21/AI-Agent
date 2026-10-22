@@ -17,6 +17,7 @@ import os
 import re
 import subprocess
 import sys
+import time
 import traceback
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -30,6 +31,18 @@ def now():
 def slug(text):
     s = re.sub(r"[^A-Za-z0-9._-]+", "-", text.strip()).strip("-")
     return s[:60] or "group"
+
+
+def replace_with_retry(src, dst, attempts=40):
+    """os.replace fails on Windows while another process (the web UI) has dst open for reading; retry briefly."""
+    for i in range(attempts):
+        try:
+            os.replace(src, dst)
+            return
+        except PermissionError:
+            if i == attempts - 1:
+                raise
+            time.sleep(0.05)
 
 
 class Job:
@@ -47,7 +60,7 @@ class Job:
         tmp = self.state_path + ".tmp"
         with open(tmp, "w", encoding="utf-8") as fh:
             json.dump(self.state, fh, indent=2, ensure_ascii=False)
-        os.replace(tmp, self.state_path)
+        replace_with_retry(tmp, self.state_path)
 
     def log(self, msg):
         line = f"[{dt.datetime.now():%H:%M:%S}] {msg}"
@@ -174,6 +187,8 @@ def analyze_group(job, group, req_path):
                 "--history", os.path.join(ev, "history.json")]
         for f in gh_files:
             args += ["--github", f]
+        for spec in labelled:
+            args += ["--repo", spec]
         job.run("requirement_hints.py", *args, "--out", os.path.join(ev, "hints.json"), step=st)
 
     write_prompt(job, name, gdir, ev, req_path)

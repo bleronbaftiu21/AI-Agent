@@ -1,0 +1,58 @@
+{
+  "frameworks": [],
+  "files_by_language": {
+    "C#": 7
+  },
+  "lines_by_language": {
+    "C#": 1125
+  },
+  "source_lines_total": 1125,
+  "generated_or_migration_files": 0,
+  "endpoints": {
+    "count": 0,
+    "by_kind": {},
+    "by_method": {},
+    "items": []
+  },
+  "models": {
+    "count": 0,
+    "names": [],
+    "locations": {}
+  },
+  "migrations": {
+    "count": 0,
+    "files": []
+  },
+  "tests": {
+    "count": 0,
+    "files": []
+  },
+  "ci_files": [],
+  "ci_has_deploy": false,
+  "docker_files": [],
+  "docs": [
+    "README.md"
+  ],
+  "technology": {
+    "search_filter": {
+      "count": 2,
+      "code_hits": 2,
+      "examples": [
+        "AlgoritmeTeAvancuara/AlgoritmeTeAvancuara/java2/Questionnaire_Dependency_Assignment.cs:417",
+        "AlgoritmeTeAvancuara/AlgoritmeTeAvancuara/java2/Questionnaire_Dependency_Assignment.cs:491"
+      ]
+    }
+  },
+  "possible_secrets": [],
+  "template_leftovers": [],
+  "notes": [
+    "Endpoint/model counts come from static patterns; verify borderline cases manually.",
+    "DRF ViewSets and Laravel resources expose several routes each; they are counted once here."
+  ],
+  "repos": [
+    {
+      "label": "aa_bleronbaftiu_26",
+      "path": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-144732\\aa_bleronbaftiu_26\\bleronbaftiu21-aa_bleronbaftiu_26"
+    }
+  ]
+}

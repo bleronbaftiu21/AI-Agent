@@ -1,0 +1,32 @@
+Auditimi përfundoi dhe të dy raportet janë shkruar. I gjithë vlerësimi bazohet në leximin e kodit: kodi i projektit nuk u ekzekutua.
+
+```
+Repo Auditor Pro — bleronbaftiu21/aa_bleronbaftiu_26 @ 4f08cb8
+Nota përfundimtare: 8.5 / 10  (pa kufizim 8.5, besueshmëria: Medium)
+Nota vetëm për kërkesat: 9.5 / 10
+Kërkesat: të detyrueshme 100% · opsionale 0%  (Met 19 · Partial 0 · Not met 1 opsionale · Unverified 0)
+Origjinaliteti: 100% · flamuj: asnjë (kontrolli me GitHub u anashkalua)
+Vlerësimi i AI: 0–44% (besueshmëria Low)
+Problemet kryesore: 1) mungojnë testet 2) README bosh dhe dosja .vs/ në repo 3) e gjithë zgjidhja në një skedar me emërtim mashtrues (java2)
+Raportet: audit-reports\20261022-144732-aa_bleronbaftiu_26\aa_bleronbaftiu_26\audit-report.md, audit-report.json
+```
+
+**Pse kjo notë:**
+- **Kërkesat:** zgjidhja është në `java2/Questionnaire_Dependency_Assignment.cs`. Të pesë problemet janë zgjidhur me rekursion, me mbrojtje nga ciklet. Duke ndjekur kodin me dorë mbi të dhënat e brief-it dalin rezultatet e pritura: 6, 4, 22, lista për q2/a2_truck dhe probabilitetet (p.sh. q6 = 3.4286). Mungon vetëm memoizimi në problemet 1 dhe 2, i cili sipas brief-it është opsional. Prandaj kërkesat marrin 9.5.
+- **Pjesa teknike:** e ul notën te 8.5, sidomos për mungesën e testeve (2/10), README-në bosh dhe strukturën me një skedar të vetëm. Siguria dhe gatishmëria për prodhim u shënuan "nuk aplikohet", sepse është detyrë kursi pa hyrje nga jashtë.
+- **Kufizimet:** nuk u aplikua asnjë.
+
+**Kontrollet që kërkove:**
+- **Shabllonet:** nuk ka kod të mbetur nga shabllonet, përveç komentit të shabllonit të Visual Studio te `Program.cs:1-2`, që është normal.
+- **Sekretet:** nuk u gjet asnjë.
+- **README:** përmban vetëm titullin, kështu që nuk pretendon asgjë që kodi nuk e ka.
+- **Puna në kohë:** puna shtrihet në 4 javë dhe vetëm 34% e saj bie në 7 ditët e fundit. Ka një autor të vetëm dhe repoja nuk është fork.
+- **Kandidatët për kopjim:** nuk pati asnjë mbi 20% për të krahasuar datat. Kërkimi i kodit në GitHub u anashkalua sepse mungon `GITHUB_TOKEN`, dhe `similarity.json` nuk u krijua sepse ishte vetëm një grup.
+
+**Inteligjenca artificiale:** skedari i detyrës ka stil dukshëm më të avancuar se ushtrimet e mëparshme në `java1`. Ky është vetëm tregues, jo provë. Raporti përmban 9 pyetje për mbrojtjen gojore që e verifikojnë këtë.
+
+**Çfarë duhet të dish:**
+- Ndarja automatike e kërkesave në `requirements.json` ishte e gabuar, sepse komentet `@param/@returns` ishin marrë si kërkesa më vete. Listën R1–R20 në raport e rindërtova nga teksti i brief-it, kështu që numrat nuk përputhen me ato automatike.
+- Komandat `git log` dhe përditësimi i `summary.csv` me `pipeline.py --summary-only` kërkonin leje dhe nuk u ekzekutuan. Prandaj `summary.csv` nuk e ka ende notën përfundimtare. Nëse jep leje, e ekzekutoj.
+- Për këtë arsye, që detyra erdhi te commit-i "detyra 4" (2026-10-12) është vetëm hamendësim nga `history.json`, jo e verifikuar.
+- Repoja e klonuar nuk u ndryshua.

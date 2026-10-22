@@ -1,0 +1,193 @@
+{
+  "hints": [
+    {
+      "id": "R1",
+      "title": "Find the longest possible path through the questionnaire.",
+      "rule": null,
+      "status": "manual",
+      "evidence": [],
+      "note": "Asnjë rregull automatik; vlerësohet me dorë."
+    },
+    {
+      "id": "R2",
+      "title": "@param questionnaire - The questionnaire object with questions and start point",
+      "rule": "oop",
+      "status": "manual",
+      "evidence": [
+        "gjuhët: C#"
+      ],
+      "note": "OOP gjykohet duke lexuar kodin (klasa, ndërfaqe, trashëgimi)."
+    },
+    {
+      "id": "R3",
+      "title": "@returns Object containing the length, question IDs, and answer choices for",
+      "rule": "oop",
+      "status": "manual",
+      "evidence": [
+        "gjuhët: C#"
+      ],
+      "note": "OOP gjykohet duke lexuar kodin (klasa, ndërfaqe, trashëgimi)."
+    },
+    {
+      "id": "R4",
+      "title": "the longest path",
+      "rule": null,
+      "status": "manual",
+      "evidence": [],
+      "note": "Asnjë rregull automatik; vlerësohet me dorë."
+    },
+    {
+      "id": "R5",
+      "title": "Find the shortest possible path through the questionnaire.",
+      "rule": "tests",
+      "status": "not_found",
+      "evidence": [
+        "0 teste në 0 skedarë",
+        "CI: asnjë",
+        "CD/deploy në CI: jo"
+      ],
+      "note": "Mungon: teste."
+    },
+    {
+      "id": "R6",
+      "title": "@param questionnaire - The questionnaire object",
+      "rule": "oop",
+      "status": "manual",
+      "evidence": [
+        "gjuhët: C#"
+      ],
+      "note": "OOP gjykohet duke lexuar kodin (klasa, ndërfaqe, trashëgimi)."
+    },
+    {
+      "id": "R7",
+      "title": "@returns Object containing the length, question IDs, and answer choices for",
+      "rule": "oop",
+      "status": "manual",
+      "evidence": [
+        "gjuhët: C#"
+      ],
+      "note": "OOP gjykohet duke lexuar kodin (klasa, ndërfaqe, trashëgimi)."
+    },
+    {
+      "id": "R8",
+      "title": "the shortest path",
+      "rule": "tests",
+      "status": "not_found",
+      "evidence": [
+        "0 teste në 0 skedarë",
+        "CI: asnjë",
+        "CD/deploy në CI: jo"
+      ],
+      "note": "Mungon: teste."
+    },
+    {
+      "id": "R9",
+      "title": "Count the total number of distinct paths through the questionnaire.",
+      "rule": null,
+      "status": "manual",
+      "evidence": [],
+      "note": "Asnjë rregull automatik; vlerësohet me dorë."
+    },
+    {
+      "id": "R10",
+      "title": "@param questionnaire - The questionnaire object",
+      "rule": "oop",
+      "status": "manual",
+      "evidence": [
+        "gjuhët: C#"
+      ],
+      "note": "OOP gjykohet duke lexuar kodin (klasa, ndërfaqe, trashëgimi)."
+    },
+    {
+      "id": "R11",
+      "title": "@returns The total number of distinct answer combinations from start to end,",
+      "rule": null,
+      "status": "manual",
+      "evidence": [],
+      "note": "Asnjë rregull automatik; vlerësohet me dorë."
+    },
+    {
+      "id": "R12",
+      "title": "or -1 if the questionnaire contains a cycle (infinitely many paths)",
+      "rule": null,
+      "status": "manual",
+      "evidence": [],
+      "note": "Asnjë rregull automatik; vlerësohet me dorë."
+    },
+    {
+      "id": "R13",
+      "title": "Find all questions reachable after selecting a specific answer.",
+      "rule": null,
+      "status": "manual",
+      "evidence": [],
+      "note": "Asnjë rregull automatik; vlerësohet me dorë."
+    },
+    {
+      "id": "R14",
+      "title": "@param questionnaire - The questionnaire object",
+      "rule": "oop",
+      "status": "manual",
+      "evidence": [
+        "gjuhët: C#"
+      ],
+      "note": "OOP gjykohet duke lexuar kodin (klasa, ndërfaqe, trashëgimi)."
+    },
+    {
+      "id": "R15",
+      "title": "@param questionId - The ID of the question being answered",
+      "rule": null,
+      "status": "manual",
+      "evidence": [],
+      "note": "Asnjë rregull automatik; vlerësohet me dorë."
+    },
+    {
+      "id": "R16",
+      "title": "@param answerId - The ID of the answer choice",
+      "rule": null,
+      "status": "manual",
+      "evidence": [],
+      "note": "Asnjë rregull automatik; vlerësohet me dorë."
+    },
+    {
+      "id": "R17",
+      "title": "@returns Array of reachable questions with their minimum depth",
+      "rule": null,
+      "status": "manual",
+      "evidence": [],
+      "note": "Asnjë rregull automatik; vlerësohet me dorë."
+    },
+    {
+      "id": "R18",
+      "title": "Calculate the probability of each question being shown.",
+      "rule": null,
+      "status": "manual",
+      "evidence": [],
+      "note": "Asnjë rregull automatik; vlerësohet me dorë."
+    },
+    {
+      "id": "R19",
+      "title": "@param questionnaire - The questionnaire object",
+      "rule": "oop",
+      "status": "manual",
+      "evidence": [
+        "gjuhët: C#"
+      ],
+      "note": "OOP gjykohet duke lexuar kodin (klasa, ndërfaqe, trashëgimi)."
+    },
+    {
+      "id": "R20",
+      "title": "@returns Array of questions with their appearance probabilities",
+      "rule": null,
+      "status": "manual",
+      "evidence": [],
+      "note": "Asnjë rregull automatik; vlerësohet me dorë."
+    }
+  ],
+  "counts": {
+    "likely_met": 0,
+    "partial": 0,
+    "not_found": 2,
+    "manual": 18
+  },
+  "note": "Automatic hints only. The final Met/Partially met/Not met decision is made by reading the code."
+}

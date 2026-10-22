@@ -1,0 +1,10 @@
+{
+  "hints": [],
+  "counts": {
+    "likely_met": 0,
+    "partial": 0,
+    "not_found": 0,
+    "manual": 0
+  },
+  "note": "Automatic hints only. The final Met/Partially met/Not met decision is made by reading the code."
+}

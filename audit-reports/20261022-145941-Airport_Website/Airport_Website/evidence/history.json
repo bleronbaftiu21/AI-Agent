@@ -1,0 +1,320 @@
+{
+  "rev": "HEAD",
+  "repos": [
+    {
+      "label": "Airport_Website",
+      "commits": 385,
+      "non_merge": 275,
+      "first": {
+        "sha": "9d452c5c5d",
+        "author": "olsadomi",
+        "author_date": "2024-12-09T13:07:28+01:00",
+        "subject": "Initial commit"
+      },
+      "last": {
+        "sha": "6cca315f22",
+        "author": "Olsa Domi",
+        "author_date": "2025-05-25T23:39:29+02:00",
+        "subject": "Update README.md"
+      }
+    }
+  ],
+  "commits": 385,
+  "non_merge_commits": 276,
+  "duplicate_commits": 1,
+  "active_days": 36,
+  "first_date": "2024-12-09",
+  "last_date": "2025-05-25",
+  "commits_per_day": {
+    "2024-12-09": 11,
+    "2024-12-10": 17,
+    "2024-12-11": 14,
+    "2024-12-12": 4,
+    "2024-12-13": 11,
+    "2024-12-14": 10,
+    "2024-12-15": 18,
+    "2024-12-16": 8,
+    "2024-12-18": 3,
+    "2024-12-20": 14,
+    "2024-12-21": 1,
+    "2024-12-22": 4,
+    "2024-12-26": 1,
+    "2025-01-01": 7,
+    "2025-01-02": 7,
+    "2025-01-03": 1,
+    "2025-01-04": 8,
+    "2025-01-05": 4,
+    "2025-01-06": 17,
+    "2025-01-09": 2,
+    "2025-03-28": 1,
+    "2025-04-02": 4,
+    "2025-04-04": 1,
+    "2025-04-06": 1,
+    "2025-04-07": 3,
+    "2025-04-08": 2,
+    "2025-04-13": 2,
+    "2025-04-18": 2,
+    "2025-04-19": 6,
+    "2025-04-20": 11,
+    "2025-04-22": 1,
+    "2025-05-20": 2,
+    "2025-05-22": 4,
+    "2025-05-23": 8,
+    "2025-05-24": 14,
+    "2025-05-25": 51
+  },
+  "weekly": [
+    {
+      "week": "2024-W50",
+      "commits": 85,
+      "lines_added": 5409
+    },
+    {
+      "week": "2024-W51",
+      "commits": 30,
+      "lines_added": 2950
+    },
+    {
+      "week": "2024-W52",
+      "commits": 1,
+      "lines_added": 56
+    },
+    {
+      "week": "2025-W01",
+      "commits": 27,
+      "lines_added": 1893
+    },
+    {
+      "week": "2025-W02",
+      "commits": 19,
+      "lines_added": 222
+    },
+    {
+      "week": "2025-W13",
+      "commits": 1,
+      "lines_added": 6
+    },
+    {
+      "week": "2025-W14",
+      "commits": 6,
+      "lines_added": 2372
+    },
+    {
+      "week": "2025-W15",
+      "commits": 7,
+      "lines_added": 1026
+    },
+    {
+      "week": "2025-W16",
+      "commits": 19,
+      "lines_added": 3450
+    },
+    {
+      "week": "2025-W17",
+      "commits": 1,
+      "lines_added": 44
+    },
+    {
+      "week": "2025-W21",
+      "commits": 79,
+      "lines_added": 18342
+    }
+  ],
+  "last_7_days_share": 0.513,
+  "identity_map": {
+    "olsadomi": "Olsa Domi",
+    "valkiii": "Valmir Mustafa",
+    "valmirmustafa": "Valmir Mustafa"
+  },
+  "authors": [
+    {
+      "author": "oltikrasniqi21",
+      "names": [
+        "oltikrasniqi21"
+      ],
+      "emails": [
+        "oltkrasn@gmail.com"
+      ],
+      "commits": 38,
+      "lines_added": 15580,
+      "lines_removed": 2823,
+      "share_of_added": 0.436,
+      "commits_by_repo": {
+        "Airport_Website": 38
+      }
+    },
+    {
+      "author": "Olsa Domi",
+      "names": [
+        "Olsa Domi",
+        "olsadomi"
+      ],
+      "emails": [
+        "77245008+olsadomi@users.noreply.github.com"
+      ],
+      "commits": 117,
+      "lines_added": 6522,
+      "lines_removed": 2788,
+      "share_of_added": 0.182,
+      "commits_by_repo": {
+        "Airport_Website": 117
+      }
+    },
+    {
+      "author": "Valmir Mustafa",
+      "names": [
+        "Valmir Mustafa",
+        "valkiii",
+        "valmirmustafa"
+      ],
+      "emails": [
+        "159398218+valkiii00@users.noreply.github.com",
+        "valmirmustafa2005@gmail.com"
+      ],
+      "commits": 37,
+      "lines_added": 5629,
+      "lines_removed": 3855,
+      "share_of_added": 0.157,
+      "commits_by_repo": {
+        "Airport_Website": 37
+      }
+    },
+    {
+      "author": "bleronbaftiu21",
+      "names": [
+        "bleronbaftiu21"
+      ],
+      "emails": [
+        "bleronbaftiu2@gmail.com"
+      ],
+      "commits": 45,
+      "lines_added": 4931,
+      "lines_removed": 3559,
+      "share_of_added": 0.138,
+      "commits_by_repo": {
+        "Airport_Website": 45
+      }
+    },
+    {
+      "author": "Rreze Ejupi",
+      "names": [
+        "Rreze Ejupi"
+      ],
+      "emails": [
+        "rrezeejupi@gmail.com"
+      ],
+      "commits": 38,
+      "lines_added": 3108,
+      "lines_removed": 1089,
+      "share_of_added": 0.087,
+      "commits_by_repo": {
+        "Airport_Website": 38
+      }
+    }
+  ],
+  "issue_tracker_keys": {
+    "commits_with_key": 0,
+    "projects": {}
+  },
+  "largest_commits": [
+    {
+      "repo": "Airport_Website",
+      "sha": "3302972758",
+      "author": "oltikrasniqi21",
+      "author_date": "2025-05-25T01:44:13+02:00",
+      "subject": "Krijimi i faqes per rezervime online. Funksionalizimi i dergimit te emialave per rezervim.",
+      "files": 78,
+      "added": 10844
+    },
+    {
+      "repo": "Airport_Website",
+      "sha": "15b6b05115",
+      "author": "bleronbaftiu21",
+      "author_date": "2025-04-04T21:58:03+02:00",
+      "subject": "Ndryshimi ne php",
+      "files": 16,
+      "added": 965
+    },
+    {
+      "repo": "Airport_Website",
+      "sha": "1e80f1c432",
+      "author": "oltikrasniqi21",
+      "author_date": "2025-04-19T00:36:43+02:00",
+      "subject": "Organizimi ne Foldera Home, Navbar",
+      "files": 78,
+      "added": 890
+    },
+    {
+      "repo": "Airport_Website",
+      "sha": "4d7def695b",
+      "author": "Valmir Mustafa",
+      "author_date": "2025-05-24T15:02:40+02:00",
+      "subject": "Cleaned up root folder by organizing images,and misc files, implemented php logic in footer for dynamic updating.",
+      "files": 82,
+      "added": 878
+    },
+    {
+      "repo": "Airport_Website",
+      "sha": "cf6e86470f",
+      "author": "Valmir Mustafa",
+      "author_date": "2025-01-05T23:15:40+01:00",
+      "subject": "finalised css, added newsletter input, added refferal to car rental, box shadows, modified css and removed unecessary padding and margins, changed js code for more optimised animations for navbar, added functioning filters for search and selection and much more",
+      "files": 4,
+      "added": 848
+    },
+    {
+      "repo": "Airport_Website",
+      "sha": "cd99f5026c",
+      "author": "bleronbaftiu21",
+      "author_date": "2025-04-18T22:39:07+02:00",
+      "subject": "changed from html to php",
+      "files": 15,
+      "added": 754
+    },
+    {
+      "repo": "Airport_Website",
+      "sha": "60ebd2e568",
+      "author": "valkiii",
+      "author_date": "2025-04-08T13:54:45+02:00",
+      "subject": "test commit for php side regarding flights",
+      "files": 2,
+      "added": 723
+    },
+    {
+      "repo": "Airport_Website",
+      "sha": "27c52b2fdc",
+      "author": "olsadomi",
+      "author_date": "2025-04-02T21:26:22+02:00",
+      "subject": "test2: changed file format from html to php",
+      "files": 4,
+      "added": 648
+    },
+    {
+      "repo": "Airport_Website",
+      "sha": "d951ece7fb",
+      "author": "olsadomi",
+      "author_date": "2025-04-02T17:59:37+02:00",
+      "subject": "WEB 2 PROJECT BEGINS HERE --> renamed services and contact files, from html, to php files",
+      "files": 4,
+      "added": 639
+    },
+    {
+      "repo": "Airport_Website",
+      "sha": "0c27468d44",
+      "author": "bleronbaftiu21",
+      "author_date": "2024-12-15T20:48:59+01:00",
+      "subject": "Created all post-details",
+      "files": 9,
+      "added": 612
+    }
+  ],
+  "late_commits": [],
+  "early_commits": [],
+  "flags": [
+    "[Airport_Website] 2 commit(s) look like GitHub web uploads.",
+    "5 distinct people after merging 8 git identities - verify they match the submitting student/team.",
+    "1 duplicate commit(s) from squash/rebase were counted once.",
+    "51% of all code was added in the last 7 days before the last commit (last-minute work)."
+  ],
+  "note": "Line counts exclude merges, duplicates, lockfiles, migrations and generated files. Identity merging is heuristic - confirm it. History signals are indicators only."
+}

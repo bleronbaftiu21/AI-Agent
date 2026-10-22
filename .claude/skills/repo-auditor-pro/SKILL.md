@@ -11,7 +11,7 @@ Conduct an independent, read-only, evidence-based audit of a GitHub repository. 
 
 Accept:
 
-- **Repository** (required): `https://github.com/<owner>/<repository>` plus optional branch or commit SHA (`/tree/<ref>` or `@<ref>`). **One project may span several repositories** (e.g. backend + frontend): audit them together as one project with one report and one score.
+- **Repository** (required): `https://github.com/<owner>/<repository>` plus optional branch or commit SHA (`/tree/<ref>` or `@<ref>`). A link to a sub-folder (`/tree/<branch>/<folder>`) audits only that folder (one assignment inside a larger repository); its history is limited to that folder. **One project may span several repositories** (e.g. backend + frontend): audit them together as one project with one report and one score.
 - **Batch** (optional): several groups/teams, each with its own repository list, graded against the same brief. Each group gets its own report; all groups are compared with each other for copying, and a summary table (`summary.csv`) is produced.
 - **Requirements** (optional, strongly recommended): pasted text, a local file (PDF, DOCX, MD, TXT), or a URL to the brief/spec/rubric. If absent, infer the intended scope from README/docs and say so — never invent requirements.
 - **Comparison corpus** (optional): other repositories or local folders to check for copying (e.g. other students' submissions, a previous year's projects, a known template).

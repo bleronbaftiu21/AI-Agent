@@ -47,6 +47,15 @@ DOCSTRING = re.compile(r'(""".*?"""|\'\'\'.*?\'\'\'|/\*\*.*?\*/)', re.S)
 FUNC_DEF = re.compile(r"^\s*(def |async def |function |public |private |protected |static |func |fn )", re.M)
 
 
+
+# third-party code copied into the repo is not the student's work: folders with their own licence file, or known libraries
+VENDORED_NAME = re.compile(r"(?i)^(phpmailer|jquery|bootstrap|font-?awesome|tinymce|ckeditor|chart\.?js|swiper|slick|owl\.?carousel|"
+                           r"select2|datatables|lightbox|fpdf|tcpdf|dompdf|smarty|third[_-]?party)([-_. ].*)?$")
+
+
+def is_vendored(dirpath, root, filenames):
+    return dirpath != root and any(f.upper().startswith(("LICENSE", "LICENCE", "COPYING")) for f in filenames)
+
 def longpath(p):
     """Absolute path with the Windows extended-length prefix so paths over 260 chars are not skipped."""
     p = os.path.abspath(p)
@@ -59,6 +68,10 @@ def walk(root):
     root = longpath(root)
     for dirpath, dirnames, filenames in os.walk(root):
         dirnames[:] = [d for d in dirnames if d not in EXCLUDED_DIRS and not d.startswith(".")]
+        if is_vendored(dirpath, root, filenames):
+            dirnames[:] = []
+            continue
+        dirnames[:] = [d for d in dirnames if not VENDORED_NAME.match(d)]
         if MIGRATION_DIR.search(dirpath.replace("\\", "/")):
             continue
         for name in filenames:

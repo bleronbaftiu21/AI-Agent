@@ -1,0 +1,43 @@
+{
+  "candidates": [
+    {
+      "full_name": "jpatokal/openflights",
+      "url": "https://github.com/jpatokal/openflights",
+      "code_hits": 0,
+      "matched_lines": [],
+      "name_match": true,
+      "created_at": "2015-06-05T11:01:21Z",
+      "pushed_at": "2026-10-22T11:00:23Z",
+      "stars": 1678,
+      "description": "Website for storing flight information, rendering paths on a zoomable world map and calculating statistics, with plenty of free airline, airport and route data.",
+      "reason": "emër/përshkrim i ngjashëm",
+      "dir": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-145000\\Airport_Website\\_github\\jpatokal-openflights"
+    },
+    {
+      "full_name": "everett7623/airport-recommendations-2026",
+      "url": "https://github.com/everett7623/airport-recommendations-2026",
+      "code_hits": 0,
+      "matched_lines": [],
+      "name_match": true,
+      "created_at": "2026-01-29T07:17:25Z",
+      "pushed_at": "2026-10-22T06:07:50Z",
+      "stars": 1408,
+      "description": "2026 机场推荐清单 | 免费试用/性价比/专线/按量计费 | 60+机场实测 | 每日更新",
+      "reason": "emër/përshkrim i ngjashëm",
+      "dir": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-145000\\Airport_Website\\_github\\everett7623-airport-recommendations-2026"
+    },
+    {
+      "full_name": "FlyBitVIP/FlyBit-Airport-Address",
+      "url": "https://github.com/FlyBitVIP/FlyBit-Airport-Address",
+      "code_hits": 0,
+      "matched_lines": [],
+      "name_match": true,
+      "created_at": "2024-07-19T16:55:08Z",
+      "pushed_at": "2026-10-13T09:39:35Z",
+      "stars": 1265,
+      "description": "收藏永不迷路",
+      "reason": "emër/përshkrim i ngjashëm",
+      "dir": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-145000\\Airport_Website\\_github\\FlyBitVIP-FlyBit-Airport-Address"
+    }
+  ]
+}

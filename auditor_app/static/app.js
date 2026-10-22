@@ -500,7 +500,9 @@ function tabReq(g, job) {
       Vendimin përfundimtar Met / Partially met / Not met e jep Claude duke lexuar kodin (skeda "Raporti").</div>
     <div class="card table-wrap"><table><thead><tr><th>ID</th><th>Kërkesa</th><th>Sugjerimi</th><th>Dëshmia automatike</th></tr></thead>
     <tbody>${g.hints.hints.map((h) => `<tr><td><strong>${esc(h.id)}</strong></td>
-      <td><strong>${esc(h.title)}</strong><div class="help">${esc(reqText[h.id]?.text || "")}</div></td>
+      <td>${h.section ? `<div class="help">${esc(h.section)}</div>` : ""}<strong>${esc(h.title)}</strong>
+        ${reqText[h.id]?.text && reqText[h.id].text !== h.title ? `<div class="help">${esc(reqText[h.id].text)}</div>` : ""}
+        ${reqText[h.id] && !reqText[h.id].mandatory ? ` <span class="badge muted">opsionale</span>` : ""}</td>
       <td>${badge(HINT, h.status)}</td>
       <td><ul class="ev">${h.evidence.map((e) => `<li class="mono">${esc(e)}</li>`).join("")}</ul>${h.note ? `<div class="help">${esc(h.note)}</div>` : ""}</td></tr>`).join("")}</tbody></table></div>`;
 }

@@ -38,6 +38,15 @@ class RateLimited(Exception):
     pass
 
 
+
+# third-party code copied into the repo is not the student's work: folders with their own licence file, or known libraries
+VENDORED_NAME = re.compile(r"(?i)^(phpmailer|jquery|bootstrap|font-?awesome|tinymce|ckeditor|chart\.?js|swiper|slick|owl\.?carousel|"
+                           r"select2|datatables|lightbox|fpdf|tcpdf|dompdf|smarty|third[_-]?party)([-_. ].*)?$")
+
+
+def is_vendored(dirpath, root, filenames):
+    return dirpath != root and any(f.upper().startswith(("LICENSE", "LICENCE", "COPYING")) for f in filenames)
+
 def get(path, token, search=False):
     req = urllib.request.Request(API + path, headers={
         "Accept": "application/vnd.github+json", "User-Agent": "repo-auditor-pro",
@@ -75,6 +84,10 @@ def distinctive_lines(dirs, limit):
         root = longpath(d)
         for dirpath, dirnames, filenames in os.walk(root):
             dirnames[:] = [x for x in dirnames if x not in EXCLUDED_DIRS and not x.startswith(".")]
+            if is_vendored(dirpath, root, filenames):
+                dirnames[:] = []
+                continue
+            dirnames[:] = [x for x in dirnames if not VENDORED_NAME.match(x)]
             if re.search(r"[\\/](tests?|__tests__|spec)[\\/]?", dirpath, re.I):
                 continue
             for name in filenames:

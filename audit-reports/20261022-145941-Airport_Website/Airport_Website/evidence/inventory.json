@@ -1,0 +1,92 @@
+{
+  "frameworks": [],
+  "files_by_language": {
+    "PHP": 50,
+    "CSS": 23,
+    "JavaScript": 9,
+    "SQL": 1
+  },
+  "lines_by_language": {
+    "CSS": 4256,
+    "PHP": 3945,
+    "JavaScript": 872,
+    "SQL": 14
+  },
+  "source_lines_total": 9087,
+  "generated_or_migration_files": 0,
+  "endpoints": {
+    "count": 0,
+    "by_kind": {},
+    "by_method": {},
+    "items": []
+  },
+  "models": {
+    "count": 0,
+    "names": [],
+    "locations": {}
+  },
+  "migrations": {
+    "count": 0,
+    "files": []
+  },
+  "tests": {
+    "count": 0,
+    "files": []
+  },
+  "ci_files": [],
+  "ci_has_deploy": false,
+  "docker_files": [],
+  "docs": [
+    "README.md"
+  ],
+  "technology": {
+    "logging": {
+      "count": 10,
+      "code_hits": 18,
+      "examples": [
+        "admin_sponsors.php:120",
+        "script/flights.js:174",
+        "script/home.js:12",
+        "script/home.js:20",
+        "script/home.js:45",
+        "script/parkingReservation.js:51"
+      ]
+    },
+    "roles_authorization": {
+      "count": 10,
+      "code_hits": 12,
+      "examples": [
+        "admin_dashboard.php:4",
+        "create_superadmin.php:18",
+        "create_superadmin.php:28",
+        "create_superadmin.php:29",
+        "create_users_table.php:11",
+        "edit-news.php:5"
+      ]
+    },
+    "search_filter": {
+      "count": 23,
+      "code_hits": 68,
+      "examples": [
+        "contact.php:235",
+        "contact.php:301",
+        "flights.php:164",
+        "flights.php:165",
+        "flights.php:176",
+        "index.php:79"
+      ]
+    }
+  },
+  "possible_secrets": [],
+  "template_leftovers": [],
+  "notes": [
+    "Endpoint/model counts come from static patterns; verify borderline cases manually.",
+    "DRF ViewSets and Laravel resources expose several routes each; they are counted once here."
+  ],
+  "repos": [
+    {
+      "label": "Airport_Website",
+      "path": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-145941\\Airport_Website\\bleronbaftiu21-Airport_Website"
+    }
+  ]
+}

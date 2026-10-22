@@ -38,6 +38,15 @@ K = 12  # tokens per k-gram
 W = 8   # winnowing window
 
 
+
+# third-party code copied into the repo is not the student's work: folders with their own licence file, or known libraries
+VENDORED_NAME = re.compile(r"(?i)^(phpmailer|jquery|bootstrap|font-?awesome|tinymce|ckeditor|chart\.?js|swiper|slick|owl\.?carousel|"
+                           r"select2|datatables|lightbox|fpdf|tcpdf|dompdf|smarty|third[_-]?party)([-_. ].*)?$")
+
+
+def is_vendored(dirpath, root, filenames):
+    return dirpath != root and any(f.upper().startswith(("LICENSE", "LICENCE", "COPYING")) for f in filenames)
+
 def strip_comments(text, ext):
     """Blank out comments while preserving newlines so line numbers stay valid."""
     keep_nl = lambda m: re.sub(r"[^\n]", " ", m.group(0))
@@ -114,6 +123,10 @@ def walk(root):
     root = longpath(root)
     for dirpath, dirnames, filenames in os.walk(root):
         dirnames[:] = [d for d in dirnames if d not in EXCLUDED_DIRS and not d.startswith(".")]
+        if is_vendored(dirpath, root, filenames):
+            dirnames[:] = []
+            continue
+        dirnames[:] = [d for d in dirnames if not VENDORED_NAME.match(d)]
         for name in filenames:
             if os.path.splitext(name)[1].lower() in SOURCE_EXTS:
                 yield os.path.join(dirpath, name)

@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://github.com/jpatokal/openflights",
+    "owner": "jpatokal",
+    "repo": "openflights",
+    "dir": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-145000\\Airport_Website\\_github\\jpatokal-openflights",
+    "requested_ref": null,
+    "ok": true,
+    "commit": "f1d8bc2c0df16ea6e1149b372d024b79febd8a4b",
+    "short": "f1d8bc2",
+    "branch": "master",
+    "commits": 1
+  },
+  {
+    "url": "https://github.com/everett7623/airport-recommendations-2026",
+    "owner": "everett7623",
+    "repo": "airport-recommendations-2026",
+    "dir": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-145000\\Airport_Website\\_github\\everett7623-airport-recommendations-2026",
+    "requested_ref": null,
+    "ok": true,
+    "commit": "6c599d15dcec02e0e0d00e5fb72d3499b434aa21",
+    "short": "6c599d1",
+    "branch": "main",
+    "commits": 1
+  },
+  {
+    "url": "https://github.com/FlyBitVIP/FlyBit-Airport-Address",
+    "owner": "FlyBitVIP",
+    "repo": "FlyBit-Airport-Address",
+    "dir": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-145000\\Airport_Website\\_github\\FlyBitVIP-FlyBit-Airport-Address",
+    "requested_ref": null,
+    "ok": true,
+    "commit": "43f04c67dd29dec1ade7a2d6da6761ccf5269ead",
+    "short": "43f04c6",
+    "branch": "main",
+    "commits": 1
+  }
+]

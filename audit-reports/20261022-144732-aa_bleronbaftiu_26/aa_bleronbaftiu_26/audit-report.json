@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "repository": {"url": "https://github.com/bleronbaftiu21/aa_bleronbaftiu_26", "branch": "main", "commit": "4f08cb893b6deb70c13aece55e4692cc218aaf99", "is_fork": false, "fork_parent": null},
+  "audit": {"date": "2026-10-22", "language": "sq", "requirements_source": "brief.pdf (Dynamic Questionnaire Analysis)", "ai_policy": "unspecified", "executed_tests": false, "corpus": []},
+  "scores": {
+    "categories": [
+      {"name": "requirements_compliance", "weight": 0.7527, "score": 9.5, "status": "assessed", "justification": "19/19 mandatory requirements Met; optional memoization in P1/P2 missing."},
+      {"name": "code_quality", "weight": 0.0753, "score": 8, "status": "assessed", "justification": "Clean, validated, modern C#; magic strings and duplicate Program class name."},
+      {"name": "structure_architecture", "weight": 0.0538, "score": 6, "status": "assessed", "justification": "Data, models, algorithms and runner in one file; misleading java2 folder name."},
+      {"name": "security", "weight": 0.0, "score": null, "status": "not_applicable", "justification": "Offline console program with no external input, network or secrets."},
+      {"name": "testing", "weight": 0.0538, "score": 2, "status": "assessed", "justification": "No automated tests; only console demo for the brief's example."},
+      {"name": "maintainability_documentation", "weight": 0.043, "score": 4, "status": "assessed", "justification": "README contains only the title; .vs/ committed; vague commit messages."},
+      {"name": "production_readiness", "weight": 0.0, "score": null, "status": "not_applicable", "justification": "Course algorithm assignment; no deployment expected."},
+      {"name": "performance", "weight": 0.0108, "score": 7, "status": "assessed", "justification": "P3 memoized; P1/P2/P5 grow with number of paths (inferred)."},
+      {"name": "dependencies", "weight": 0.0108, "score": 9, "status": "assessed", "justification": "No external packages; .NET 8 BCL only."}
+    ],
+    "weighted": 8.5,
+    "cap": {"applied": false, "value": null, "reason": null},
+    "final": 8.5,
+    "requirements_only": 9.5,
+    "confidence": "Medium"
+  },
+  "requirements": {
+    "items": [
+      {"id": "R1", "text": "Every problem solved with recursion (loops only for bookkeeping)", "mandatory": true, "points": null, "status": "Met", "evidence": ["java2/Questionnaire_Dependency_Assignment.cs:259-294", "java2/Questionnaire_Dependency_Assignment.cs:307-335", "java2/Questionnaire_Dependency_Assignment.cs:350-365", "java2/Questionnaire_Dependency_Assignment.cs:393-408", "java2/Questionnaire_Dependency_Assignment.cs:441-467"], "notes": "Component iteration in HasCycle is also recursive."},
+      {"id": "R2", "text": "Data model per Answer/Question/Questionnaire interfaces, snake_case JSON", "mandatory": true, "points": null, "status": "Met", "evidence": ["java2/Questionnaire_Dependency_Assignment.cs:10-14", "java2/Questionnaire_Dependency_Assignment.cs:133-147"], "notes": ""},
+      {"id": "R3", "text": "P1 findLongestQuestionPath returns length, question_ids, answer_path", "mandatory": true, "points": null, "status": "Met", "evidence": ["java2/Questionnaire_Dependency_Assignment.cs:149-152", "java2/Questionnaire_Dependency_Assignment.cs:240-244"], "notes": "length equals question_ids length by construction."},
+      {"id": "R4", "text": "P1 longest path = question + longest of successor paths (recursive)", "mandatory": true, "points": null, "status": "Met", "evidence": ["java2/Questionnaire_Dependency_Assignment.cs:269-288"], "notes": "Yields length 6 (q1,q2,q3,q6,q8,q9), accepted by brief."},
+      {"id": "R5", "text": "P1 handles multi-answer and unconditional-next questions", "mandatory": true, "points": null, "status": "Met", "evidence": ["java2/Questionnaire_Dependency_Assignment.cs:225-237"], "notes": ""},
+      {"id": "R6", "text": "P1 tracks answer IDs; only radio/select contribute", "mandatory": true, "points": null, "status": "Met", "evidence": ["java2/Questionnaire_Dependency_Assignment.cs:279-281"], "notes": ""},
+      {"id": "R7", "text": "P1 cycle guard with set of questions on current path", "mandatory": true, "points": null, "status": "Met", "evidence": ["java2/Questionnaire_Dependency_Assignment.cs:257", "java2/Questionnaire_Dependency_Assignment.cs:264-265", "java2/Questionnaire_Dependency_Assignment.cs:291"], "notes": ""},
+      {"id": "R8", "text": "P1/P2 cache best result per question id", "mandatory": false, "points": null, "status": "Not met", "evidence": ["java2/Questionnaire_Dependency_Assignment.cs:253-299"], "notes": "Searched FindBestPath for a memo dictionary; none (memo only in P3)."},
+      {"id": "R9", "text": "P2 shortest path, recursive, considering all branches", "mandatory": true, "points": null, "status": "Met", "evidence": ["java2/Questionnaire_Dependency_Assignment.cs:247-251", "java2/Questionnaire_Dependency_Assignment.cs:269-288"], "notes": "Yields q1,q5,q6,q8 (length 4)."},
+      {"id": "R10", "text": "P2 returns any valid shortest path; cycle guard", "mandatory": true, "points": null, "status": "Met", "evidence": ["java2/Questionnaire_Dependency_Assignment.cs:283-285", "java2/Questionnaire_Dependency_Assignment.cs:264"], "notes": ""},
+      {"id": "R11", "text": "P3 recursive count; null next counts as one path", "mandatory": true, "points": null, "status": "Met", "evidence": ["java2/Questionnaire_Dependency_Assignment.cs:350-365"], "notes": "22 for the dataset."},
+      {"id": "R12", "text": "P3 each answer counted as own branch", "mandatory": true, "points": null, "status": "Met", "evidence": ["java2/Questionnaire_Dependency_Assignment.cs:360-361"], "notes": ""},
+      {"id": "R13", "text": "P3 detect cycle and return -1", "mandatory": true, "points": null, "status": "Met", "evidence": ["java2/Questionnaire_Dependency_Assignment.cs:301-336", "java2/Questionnaire_Dependency_Assignment.cs:344-345"], "notes": "Checks whole graph, matching 'questionnaire contains a cycle'."},
+      {"id": "R14", "text": "P4 recursion with depth tracking and min-depth update rule", "mandatory": true, "points": null, "status": "Met", "evidence": ["java2/Questionnaire_Dependency_Assignment.cs:393-408"], "notes": ""},
+      {"id": "R15", "text": "P4 empty array for END answer or unknown IDs", "mandatory": true, "points": null, "status": "Met", "evidence": ["java2/Questionnaire_Dependency_Assignment.cs:378-388"], "notes": ""},
+      {"id": "R16", "text": "P4 output fields, unique entries, sorted by min_depth then id", "mandatory": true, "points": null, "status": "Met", "evidence": ["java2/Questionnaire_Dependency_Assignment.cs:154-157", "java2/Questionnaire_Dependency_Assignment.cs:412-419"], "notes": ""},
+      {"id": "R17", "text": "P5 equal-likelihood recursive propagation accumulating across branches", "mandatory": true, "points": null, "status": "Met", "evidence": ["java2/Questionnaire_Dependency_Assignment.cs:441-469"], "notes": "Accumulates into map keyed by id."},
+      {"id": "R18", "text": "P5 text/checkbox forwards full probability; first question 1.0/1.0", "mandatory": true, "points": null, "status": "Met", "evidence": ["java2/Questionnaire_Dependency_Assignment.cs:455-458", "java2/Questionnaire_Dependency_Assignment.cs:469"], "notes": ""},
+      {"id": "R19", "text": "P5 conditional expected_position; unreachable -> 0/0", "mandatory": true, "points": null, "status": "Met", "evidence": ["java2/Questionnaire_Dependency_Assignment.cs:471-479"], "notes": "q6 traces to 3.4286."},
+      {"id": "R20", "text": "P5 round to 4 decimals; sort probability desc then id", "mandatory": true, "points": null, "status": "Met", "evidence": ["java2/Questionnaire_Dependency_Assignment.cs:484-492"], "notes": ""}
+    ],
+    "mandatory_compliance_pct": 100.0,
+    "optional_compliance_pct": 0.0
+  },
+  "integrity": {
+    "originality": {
+      "originality_pct": 100.0,
+      "matches": [],
+      "history_signals": [
+        "Single author bleronbaftiu21, 9 commits 2026-09-28..2026-10-21 over 4 weeks",
+        "last_7_days_share 0.343 (below 0.6 threshold)",
+        "Not a fork or template; no late/early commits",
+        "Assignment file likely arrived in commit 'detyra 4' (2026-10-12, +498 in 2 files) - inferred from history.json"
+      ],
+      "external_code": [{"location": "Program.cs:1-2", "source": "Visual Studio console template comment", "attributed": true}]
+    },
+    "ai_assistance": {
+      "estimate_low_pct": 0,
+      "estimate_high_pct": 44,
+      "confidence": "Low",
+      "components": [
+        {"path": "AlgoritmeTeAvancuara/AlgoritmeTeAvancuara/java2/Questionnaire_Dependency_Assignment.cs", "lines": 496, "classification": "Mixed/uncertain", "signals": ["Style shift vs java1 (Albanian names, classic C#) to modern C# 12 idioms", "Input validation beyond brief", "Artificially recursive component loop", "Counter: short Albanian comments, no assistant artifacts, ai_signals found none"]},
+        {"path": "AlgoritmeTeAvancuara/AlgoritmeTeAvancuara/java1, Program.cs", "lines": 150, "classification": "Likely human", "signals": ["Albanian identifiers and personal notes"]},
+        {"path": "AlgoritmeTeAvancuara/AlgoritmeTeAvancuara/java3, java4", "lines": 480, "classification": "Likely human", "signals": ["Out of scope; no automated signals"]}
+      ],
+      "policy_assessment": "AI policy unspecified - reported without penalty.",
+      "needs_human_review": false
+    },
+    "contributions": [{"author": "bleronbaftiu21", "commits": 9, "lines_added": 2143, "lines_removed": 713}]
+  },
+  "findings": [
+    {"id": "F-01", "title": "No automated tests", "category": "testing", "severity": "Medium", "status": "Confirmed", "locations": ["java2/Questionnaire_Dependency_Assignment.cs:107-121"], "evidence": "0 test files; results only printed to console.", "impact": "Correctness rests on visual check of one example; edge cases untested.", "recommendation": "Add an xUnit project covering the example, cycles, unknown IDs and unreachable questions."},
+    {"id": "F-02", "title": "Empty README and poor repo hygiene", "category": "maintainability", "severity": "Low", "status": "Confirmed", "locations": ["README.md:1", ".vs/VSWorkspaceState.json", ".vs/AlgoritmeAvancuara/v17/.wsuo"], "evidence": "README has only a title; IDE files committed; commit messages like '//' and 'detyra'.", "impact": "Unclear where each task lives and how to run it.", "recommendation": "Document tasks and dotnet run; move .gitignore to root and remove .vs/; descriptive commits."},
+    {"id": "F-03", "title": "Whole solution in one file with misleading naming", "category": "structure", "severity": "Low", "status": "Confirmed", "locations": ["java2/Questionnaire_Dependency_Assignment.cs:8-495", "Program.cs:26-29"], "evidence": "Data, models, algorithms and runner in one file; class named Program; C# code in folder java2.", "impact": "Harder to read, reuse and test.", "recommendation": "Split into Models/Analyzer files, load JSON from a file, rename folders by topic."},
+    {"id": "F-04", "title": "P1/P2 and P5 enumerate every path", "category": "performance", "severity": "Info", "status": "Potential", "locations": ["java2/Questionnaire_Dependency_Assignment.cs:259-294", "java2/Questionnaire_Dependency_Assignment.cs:441-467"], "evidence": "No per-question cache in FindBestPath; probability walk visits each path (inferred, not measured).", "impact": "Exponential cost on large DAGs; irrelevant for the brief's dataset.", "recommendation": "Cache per question id; topological accumulation for P5."},
+    {"id": "F-05", "title": "Magic strings for question types", "category": "code_quality", "severity": "Info", "status": "Confirmed", "locations": ["java2/Questionnaire_Dependency_Assignment.cs:183", "java2/Questionnaire_Dependency_Assignment.cs:197", "java2/Questionnaire_Dependency_Assignment.cs:227", "java2/Questionnaire_Dependency_Assignment.cs:379", "java2/Questionnaire_Dependency_Assignment.cs:456"], "evidence": "\"radio\"/\"select\"/\"text\"/\"checkbox\" repeated literals.", "impact": "Typos not caught by compiler.", "recommendation": "Use an enum or constants."}
+  ],
+  "viva_questions": [
+    "Pse FindBestPath kthen null kur active.Add(id) deshton dhe pse duhet active.Remove(id)?",
+    "Ne P4, pse rirekursoni kur pyetja arrihet me thellesi me te vogel? Jepni shembull nga grafi.",
+    "Pse HasCycle perdor tri gjendje (0/1/2) dhe jo nje bashkesi te vizituarash?",
+    "Pse CheckComponent eshte rekursiv ne vend te nje foreach?",
+    "Si llogaritet expected_position = 4.5 per q8?",
+    "Cfare ben checked(...) ne CountAllPossiblePaths?",
+    "Si do te shtonit memoizim ne P1 pa prishur mbrojtjen nga ciklet?",
+    "Cfare kthen FindReachableQuestions per nje pyetje te tipit text?",
+    "Pse P5 hedh perjashtim per cikel ndersa P3 kthen -1?"
+  ],
+  "limitations": [
+    "Code not executed; results verified by manual tracing on the brief's dataset.",
+    "No GITHUB_TOKEN: GitHub code search skipped; unauthenticated API.",
+    "Single group in this run: no similarity.json, no cross-group comparison.",
+    "Per-file git log not run (permission not granted); dates from history.json.",
+    "java3/java4 (other exercises) only partially read for style comparison.",
+    "Requirement list rebuilt manually because the automatic split was wrong."
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "repository": {
+    "url": "https://github.com/bleronbaftiu21/Airport_Website",
+    "branch": "main",
+    "commit": "6cca315f22b6b05f6c36a96a02253ed305857db2",
+    "is_fork": true,
+    "fork_parent": "olsadomi/Airport_Website-Gr3"
+  },
+  "audit": {
+    "date": "2026-10-22",
+    "language": "sq",
+    "requirements_source": "brief.docx - Programimi ne ueb II, Udhezimet per projekt grupor '25 (Faza 1: 13 prill, Faza 2: 17 maj)",
+    "ai_policy": "unspecified",
+    "executed_tests": false,
+    "corpus": [
+      "GitHub: jpatokal/openflights",
+      "GitHub: everett7623/airport-recommendations-2026",
+      "GitHub: FlyBitVIP/FlyBit-Airport-Address"
+    ]
+  },
+  "scores": {
+    "categories": [
+      {"name": "requirements_compliance", "weight": 0.70, "score": 7.5, "status": "assessed", "justification": "41 mandatory items: 26 Met, 11 Partially met, 4 Not met (76.8%); both optional items Met."},
+      {"name": "code_quality", "weight": 0.07, "score": 5.0, "status": "assessed", "justification": "Readable logic with Albanian validation messages, but concrete bugs (sponsor column, undefined $numberCount, id/request_id mismatch), dead and duplicated code."},
+      {"name": "structure_architecture", "weight": 0.05, "score": 5.0, "status": "assessed", "justification": "Flat root with ~50 PHP files, classes inside templates, hard-coded /UEB25_GR3/ paths; some separation in helpers/, api/, includes/."},
+      {"name": "security", "weight": 0.05, "score": 3.0, "status": "assessed", "justification": "Prepared statements and password_hash throughout, but admin endpoints lack authorization, unrestricted uploads, stored XSS and hard-coded secrets."},
+      {"name": "testing", "weight": 0.05, "score": 3.0, "status": "assessed", "justification": "No automated tests or CI; only a manual echo script (test_helpers.php). Not required by the brief."},
+      {"name": "maintainability_documentation", "weight": 0.04, "score": 5.0, "status": "assessed", "justification": "README documents features and team split accurately; no install/DB setup instructions; descriptive commit messages."},
+      {"name": "production_readiness", "weight": 0.02, "score": 4.0, "status": "assessed", "justification": "Course project: root DB user without password, committed logs/cache, display_errors and CORS * on one endpoint."},
+      {"name": "performance", "weight": 0.01, "score": 6.0, "status": "assessed", "justification": "Inferred: 1h file cache for the flight API; redundant API call in flights.php; unpaginated news queries (negligible at this scale)."},
+      {"name": "dependencies", "weight": 0.01, "score": 4.0, "status": "assessed", "justification": "PHPMailer vendored twice (PHPMailer-master/ and vendor/), composer unused by code, three jQuery versions."}
+    ],
+    "weighted": 6.53,
+    "cap": {"applied": false, "value": null, "reason": "No cap: course (not production-oriented) project so the secret/critical-vulnerability cap does not apply; mandatory compliance above 40%; no confirmed copying."},
+    "final": 6.5,
+    "requirements_only": 7.5,
+    "confidence": "Medium"
+  },
+  "requirements": {
+    "items": [
+      {"id": "R1", "text": "Variablat, qasja e tyre, var_dump(), funksionet, string funksionet, konstantet, operatoret", "mandatory": true, "points": null, "status": "Partially met", "evidence": ["includes/config.php:3-13", "news.php:211", "news.php:253", "services.php:86", "flights.php:3"], "notes": "No var_dump() anywhere."},
+      {"id": "R2", "text": "Perdorimi i kushtezimeve (if..else, switch)", "mandatory": true, "points": null, "status": "Met", "evidence": ["services.php:127-145", "news.php:218-235", "flights.php:108-113"], "notes": ""},
+      {"id": "R3", "text": "Vargjet: numeric, associative, multidimensional", "mandatory": true, "points": null, "status": "Met", "evidence": ["about_us.php:4-12", "helpers/flight_helpers.php:39-46", "flights.php:34-51"], "notes": "$airlines numeric array is declared but not used later."},
+      {"id": "R4", "text": "Sortimet sort(), rsort(), asort(), ksort(), arsort(), krsort()", "mandatory": true, "points": null, "status": "Partially met", "evidence": ["news.php:161-183", "flights.php:200", "post-details.php:97"], "notes": "Only asort/arsort/usort; sort, rsort, ksort, krsort missing."},
+      {"id": "R5", "text": "Perdorimi i variablave globale te PHP-se", "mandatory": true, "points": null, "status": "Met", "evidence": ["about_us.php:2", "post-details.php:12", "login.php:31-33"], "notes": ""},
+      {"id": "R6", "text": "Klasat me veti dhe metoda", "mandatory": true, "points": null, "status": "Met", "evidence": ["news.php:93-197", "index.php:34-54", "services.php:332-393"], "notes": ""},
+      {"id": "R7", "text": "Konstruktoret (destruktoret)", "mandatory": true, "points": null, "status": "Met", "evidence": ["services.php:338", "services.php:375"], "notes": ""},
+      {"id": "R8", "text": "Atributet e klases me Get dhe Set", "mandatory": true, "points": null, "status": "Met", "evidence": ["services.php:345-373"], "notes": ""},
+      {"id": "R9", "text": "Modifikatoret public, private, protected", "mandatory": true, "points": null, "status": "Partially met", "evidence": ["news.php:95-101", "services.php:338"], "notes": "protected not used."},
+      {"id": "R10", "text": "Trashegimia ne PHP", "mandatory": true, "points": null, "status": "Met", "evidence": ["services.php:381", "process_contact.php:5"], "notes": ""},
+      {"id": "R11", "text": "RegEx per validim / kontroll te dhenash para dergimit ne server", "mandatory": true, "points": null, "status": "Met", "evidence": ["process_signup.php:23-61", "process_contact.php:21-35"], "notes": ""},
+      {"id": "R12", "text": "Validime me RegEx te email-it, datave, vlerave numerike", "mandatory": true, "points": null, "status": "Partially met", "evidence": ["about_us.php:17", "process_contact.php:33", "process_signup.php:61"], "notes": "No date regex; about_us.php email regex branch is unreachable (form posts via AJAX to process-newsletter.php)."},
+      {"id": "R13", "text": "Manipulime ne numra me RegEx (ndarja, '-' ne mes)", "mandatory": true, "points": null, "status": "Partially met", "evidence": ["process_contact.php:55-56"], "notes": "Digit count computed but never returned; contact.php:97 uses undefined $numberCount; no splitting/dash formatting."},
+      {"id": "R14", "text": "RegEx per rregullimin e permbajtjes se stringjeve", "mandatory": true, "points": null, "status": "Not met", "evidence": [], "notes": "Searched preg_replace/preg_split: 0 matches in project code."},
+      {"id": "R15", "text": "Faza 1: struktura me menyte dhe faqet, te dhena dummy", "mandatory": true, "points": null, "status": "Met", "evidence": ["nav.php:25-31", "index.php:56-60", "services.php:395-399"], "notes": ""},
+      {"id": "R16", "text": "COOKIES: krijim, fshirje, ruajtje ne varg", "mandatory": true, "points": null, "status": "Partially met", "evidence": ["post-details.php:12-20"], "notes": "No cookie deletion."},
+      {"id": "R17", "text": "Ndryshimi i permbajtjes varesisht nga cookies", "mandatory": true, "points": null, "status": "Met", "evidence": ["post-details.php:97-103"], "notes": "Recommended news reordered by cookie view counts."},
+      {"id": "R18", "text": "SESSIONS: krijimi, ruajtja dhe leximi i vlerave", "mandatory": true, "points": null, "status": "Met", "evidence": ["login.php:2", "login.php:31-33", "admin_dashboard.php:2-9", "nav.php:10-16"], "notes": ""},
+      {"id": "R19", "text": "Sesione per numerim (vizita)", "mandatory": true, "points": null, "status": "Met", "evidence": ["services.php:85-105"], "notes": ""},
+      {"id": "R20", "text": "Funksion brenda nje PHP sesioni", "mandatory": true, "points": null, "status": "Met", "evidence": ["services.php:86-95"], "notes": ""},
+      {"id": "R21", "text": "Manipulimi me sesione (ruajtje, ndryshim, fshirje)", "mandatory": true, "points": null, "status": "Met", "evidence": ["services.php:95-98", "logout.php:3-4"], "notes": ""},
+      {"id": "R22", "text": "Kodi PHP per koneksion me DB", "mandatory": true, "points": null, "status": "Met", "evidence": ["db.php:3-12"], "notes": ""},
+      {"id": "R23", "text": "Krijimi i tabelave permes PHP-se", "mandatory": true, "points": null, "status": "Met", "evidence": ["create_users_table.php:4", "create_news_table.php:13", "create_contact_table.php:3", "create_newsletter_subscribers_table.php:13", "create_rental_requests_table.php:6"], "notes": "create_sponsors_table.php:10 inserts into non-existent column sponsor_name."},
+      {"id": "R24", "text": "Insertimi, fshirja, update-imi i DB nga PHP", "mandatory": true, "points": null, "status": "Met", "evidence": ["news-insert.php:17", "delete-news.php:7", "edit-news.php:26-31", "admin_sponsors.php:25", "admin_sponsors.php:39"], "notes": ""},
+      {"id": "R25", "text": "Opsionale: lidhja me DB permes nje PHP skripte te jashtme", "mandatory": false, "points": null, "status": "Met", "evidence": ["db.php:8", "news.php:60"], "notes": ""},
+      {"id": "R26", "text": "Percjellja me reference / funksione me reference", "mandatory": true, "points": null, "status": "Met", "evidence": ["services.php:86", "email_sender.php:12"], "notes": ""},
+      {"id": "R27", "text": "Vendosja e referencave ne mes te anetareve te vargut", "mandatory": true, "points": null, "status": "Not met", "evidence": [], "notes": "Searched '=&' / '= &$': 0 matches."},
+      {"id": "R28", "text": "Kthimi permes references (p.sh. qasje ne variablat globale)", "mandatory": true, "points": null, "status": "Not met", "evidence": [], "notes": "Searched 'function &': 0 matches."},
+      {"id": "R29", "text": "Largimi i references / perdorimi i unset()", "mandatory": true, "points": null, "status": "Partially met", "evidence": ["services.php:98"], "notes": "unset() used on a session key, not to remove a reference."},
+      {"id": "R30", "text": "Mbrojtja nga SQL Injection (demonstrim)", "mandatory": true, "points": null, "status": "Met", "evidence": ["login.php:21-23", "process_signup.php:68-77", "process_contact.php:58-60", "post-details.php:22-26"], "notes": "All queries with user input use prepared statements."},
+      {"id": "R31", "text": "Funksionet per fajlla: include, require, fopen, fclose, fsize, fread, fwrite", "mandatory": true, "points": null, "status": "Partially met", "evidence": ["helpers/cache_helpers.php:28", "helpers/cache_helpers.php:56", "flights.php:6-8"], "notes": "fopen/fread/fwrite/fclose/filesize not used."},
+      {"id": "R32", "text": "Funksioni error_handler me parametrat (errno, errstring, errfile, errline, errcontext)", "mandatory": true, "points": null, "status": "Met", "evidence": ["helpers/error_handlers.php:4", "helpers/error_handlers.php:51", "includes/config.php:15-18"], "notes": "errcontext omitted (removed in PHP 8); handler active only on flights.php."},
+      {"id": "R33", "text": "Gabime te definuara custom dhe te paraqitura ne shqip", "mandatory": true, "points": null, "status": "Partially met", "evidence": ["process_contact.php:5", "process_contact.php:52", "process_contact.php:71-73", "contact.php:285-290"], "notes": "Custom exception shows Albanian messages; error_handler logs English type names only."},
+      {"id": "R34", "text": "Trajtimi i perjashtimeve me TRY, CATCH dhe THROW", "mandatory": true, "points": null, "status": "Met", "evidence": ["process_contact.php:9-79", "api/flight_api.php:17-57"], "notes": ""},
+      {"id": "R35", "text": "Funksioni mail() i PHP me te gjithe parametrat", "mandatory": true, "points": null, "status": "Not met", "evidence": [], "notes": "No mail( call; only PHPMailer used."},
+      {"id": "R36", "text": "Dergimi i emailave permes nje forme standarde", "mandatory": true, "points": null, "status": "Met", "evidence": ["reply.php:10-43", "reply_sender.php:9-36", "admin_newsletter.php:38", "send_newsletter.php:5-30"], "notes": ""},
+      {"id": "R37", "text": "ME RENDESI: dergimi nga email i zakonshem (gmail, yahoo, hotmail)", "mandatory": true, "points": null, "status": "Partially met", "evidence": ["email_sender.php:17-23"], "notes": "SMTP configured to smtp.ethereal.email test inbox; mails are not delivered."},
+      {"id": "R38", "text": "Opsionale: FILTER_SANITIZE per mbrojtje", "mandatory": false, "points": null, "status": "Met", "evidence": ["reply.php:5", "reply.php:11-13", "reply_rental.php:25-27"], "notes": ""},
+      {"id": "R39", "text": "AJAX per lexim dhe update nga nje PHP skripte", "mandatory": true, "points": null, "status": "Met", "evidence": ["contact.php:269-304", "script/parkingReservation.js:147"], "notes": ""},
+      {"id": "R40", "text": "AJAX per lexim dhe update nga DB", "mandatory": true, "points": null, "status": "Met", "evidence": ["signup.php:76", "about_us.php:320", "process-newsletter.php:21", "admin_dashboard.php:50"], "notes": ""},
+      {"id": "R41", "text": "Perdorimi i te pakten nje Web API", "mandatory": true, "points": null, "status": "Met", "evidence": ["api/flight_api.php:6-48", "flights.php:20-27"], "notes": "aviationstack with file cache."},
+      {"id": "R42", "text": "Numri i studenteve ne grup 4-5", "mandatory": true, "points": null, "status": "Met", "evidence": ["README.md:4-9"], "notes": "5 contributors in history."},
+      {"id": "R43", "text": "Dokumentimi duke u bazuar ne kerkesat specifike", "mandatory": true, "points": null, "status": "Partially met", "evidence": ["README.md:27-72"], "notes": "Feature list matches code but not mapped to requirements; no setup instructions."}
+    ],
+    "mandatory_compliance_pct": 76.8,
+    "optional_compliance_pct": 100.0
+  },
+  "integrity": {
+    "originality": {
+      "originality_pct": 100.0,
+      "matches": [
+        {"target_file": "footer.php", "other_file": "jpatokal/openflights:test/server/fixtures/fm-standard.html", "containment": 0.633, "target_lines": [[2, 39]], "verdict": "Expected/boilerplate similarity"},
+        {"target_file": "footer.php", "other_file": "jpatokal/openflights:test/server/fixtures/fm-kilometer.html", "containment": 0.600, "target_lines": [[4, 39]], "verdict": "Expected/boilerplate similarity"},
+        {"target_file": "nav.php", "other_file": "jpatokal/openflights:test/server/fixtures/fm-newairlines.html", "containment": 0.553, "target_lines": [[2, 7], [19, 41]], "verdict": "Expected/boilerplate similarity"},
+        {"target_file": "nav.php", "other_file": "jpatokal/openflights:html/settings.php", "containment": 0.383, "target_lines": [[2, 6], [16, 26], [30, 41]], "verdict": "Expected/boilerplate similarity"},
+        {"target_file": "parkingReservation.php", "other_file": "jpatokal/openflights:index.php", "containment": 0.284, "target_lines": [[2, 17], [24, 27], [40, 46], [50, 52], [55, 84]], "verdict": "Expected/boilerplate similarity"}
+      ],
+      "history_signals": [
+        "449 commits (282 non-merge) over 36 active days, 2024-12-09 to 2025-05-25, by 5 people matching README team list.",
+        "Repository is a fork of the team's original repo olsadomi/Airport_Website-Gr3 (fork created 2025-06-21).",
+        "All Phase 2 commits dated 2025-05-20..25, after the brief's Phase 2 submission date (17 May 2025); needs verification.",
+        "51% of lines added in the last 7 days; largely PHPMailer vendoring (700d4d0: 12,061 lines; 3302972: 10,844 lines/78 files).",
+        "2 commits look like GitHub web uploads; 1 duplicate commit from squash/rebase."
+      ],
+      "external_code": [
+        {"location": "PHPMailer-master/", "source": "PHPMailer (LGPL-2.1, LICENSE included)", "attributed": true},
+        {"location": "vendor/phpmailer/phpmailer/", "source": "PHPMailer via Composer (LICENSE included)", "attributed": true}
+      ]
+    },
+    "ai_assistance": {
+      "estimate_low_pct": 0,
+      "estimate_high_pct": 10,
+      "confidence": "Low",
+      "components": [
+        {"path": "helpers/flight_helpers.php, helpers/cache_helpers.php, helpers/error_handlers.php, api/flight_api.php", "lines": 364, "classification": "Mixed/uncertain", "signals": ["uniform try/catch + error_log around trivial operations", "style differs from rest of project", "but human debugging traces present (stray '}{}', path_debug.log, duplicated ini_set)"]},
+        {"path": "process_signup.php, signup.php", "lines": 208, "classification": "Mixed/uncertain", "signals": ["very regular validation blocks", "English '(e.g., !@#$%^&*)' inside Albanian message", "templated async/await fetch"]},
+        {"path": "README.md (Phase 2 section)", "lines": 50, "classification": "Mixed/uncertain", "signals": ["emoji-heavy checklist", "generic 'Rezultati' section"]},
+        {"path": "index.php, news.php, services.php, flights.php, contact.php, about_us.php, admin/sender pages, script/*.js", "lines": 4900, "classification": "Likely human", "signals": ["Albanian comments and mixed naming", "typical student bugs", "commented-out code", "visible iteration in small commits"]}
+      ],
+      "policy_assessment": "AI policy unspecified: estimate reported without penalty; no AI disclosure in README.",
+      "needs_human_review": false
+    },
+    "contributions": [
+      {"author": "oltikrasniqi21", "commits": 38, "lines_added": 15580, "lines_removed": 2823},
+      {"author": "Olsa Domi", "commits": 121, "lines_added": 6832, "lines_removed": 2902},
+      {"author": "Valmir Mustafa", "commits": 39, "lines_added": 5630, "lines_removed": 3856},
+      {"author": "bleronbaftiu21", "commits": 45, "lines_added": 4931, "lines_removed": 3559},
+      {"author": "Rreze Ejupi", "commits": 38, "lines_added": 3108, "lines_removed": 1089}
+    ]
+  },
+  "findings": [
+    {"id": "F-01", "title": "Unrestricted, unauthenticated file upload (possible code execution)", "category": "security", "severity": "Critical", "status": "Potential", "locations": ["news-insert.php:12-16", "admin_sponsors.php:19-24", "edit-news.php:18-21"], "evidence": "Original filename via basename($_FILES[...]['name']) saved into public fotot/, Photos/, uploads/ with no extension or MIME check; news-insert.php and admin_sponsors.php require no admin session.", "impact": "Anonymous visitor may upload a .php file to a web-served folder; on default XAMPP/Apache it would execute.", "recommendation": "Whitelist image types with finfo + extension, randomize file names, disable PHP execution in upload folders, and require admin auth."},
+    {"id": "F-02", "title": "Admin pages and actions lack authorization checks", "category": "security", "severity": "High", "status": "Confirmed", "locations": ["delete-news.php:4-12", "news-insert.php:3-6", "admin_sponsors.php:11-48", "admin_contact.php:1-5", "admin_newsletter.php:1-5", "send_newsletter.php:5", "admin_rental_requests.php:1-5", "reply.php:1-20", "reply_rental.php:1-43"], "evidence": "Only admin_dashboard.php:4, news-admin.php:5, edit-news.php:5 check user_role === 'admin'; delete-news.php deletes via GET without a session.", "impact": "Any visitor can delete/insert news and sponsors, read contact PII, and send emails/newsletters as the airport.", "recommendation": "Add a shared require_admin.php guard to every admin/action script; use POST + CSRF token for deletes."},
+    {"id": "F-03", "title": "Hard-coded secrets in source", "category": "security", "severity": "Medium", "status": "Confirmed", "locations": ["includes/config.php:3", "email_sender.php:20-21", "reply_sender.php:17-18", "reply_sender_rental.php:16-17", "sendNewsletter.php:16-17", "create_superadmin.php:14-15"], "evidence": "aviationstack key 'ef21...fcb', SMTP password 'Re2j...' (Ethereal), superadmin plaintext password, all in public repo; not detected by the automated scanner.", "impact": "API key abuse; publicly known admin password.", "recommendation": "Move secrets to an untracked config/.env, rotate the API key, remove the password from the script."},
+    {"id": "F-04", "title": "Stored XSS in news and sponsor listings", "category": "security", "severity": "Medium", "status": "Confirmed", "locations": ["news.php:251-256", "index.php:144-145", "post-details.php:60", "edit-news.php:85"], "evidence": "Title, description, category, image path and sponsor name echoed without htmlspecialchars.", "impact": "Combined with F-02, an anonymous user can inject script executed for every visitor of the news page.", "recommendation": "Escape all output with htmlspecialchars as already done in post-details.php:67-72."},
+    {"id": "F-05", "title": "Phase 2 work committed after the brief's submission date", "category": "process", "severity": "Medium", "status": "Needs manual verification", "locations": ["git: c22608f (2025-05-20) .. 6cca315 (2025-05-25)"], "evidence": "Brief: 'Faza 2: 17 maj dorezimi'. First Phase 2 commit 2025-05-20; 51 commits on 2025-05-25 including cookie, sponsors admin, superadmin.", "impact": "If no extension was granted, most graded Phase 2 features were added after submission.", "recommendation": "Confirm the real deadline; if needed, grade the last commit before it."},
+    {"id": "F-06", "title": "Functional bugs found by static reading", "category": "correctness", "severity": "Medium", "status": "Confirmed", "locations": ["create_sponsors_table.php:10", "tabelat/tabelat.sql:3", "contact.php:97", "admin_rental_requests.php:40", "reply_rental.php:7", "parkingReservation.php:59", "flights.php:215", "api/flight_api.php:58", "script/parkingReservation.js:118-134"], "evidence": "Insert into non-existent column sponsor_name; undefined $numberCount; request_id vs id mismatch so replied_at never set; form field names differ from read keys; arrivals re-fetched overriding fallback and sort; stray '}{}'; any navbar click logs the user out.", "impact": "Seed sponsors, digit count, reply status and form repopulation do not work as claimed.", "recommendation": "Align column/field names, remove dead code and the duplicate fetch."},
+    {"id": "F-07", "title": "Duplicated configuration and dependencies", "category": "maintainability", "severity": "Low", "status": "Confirmed", "locations": ["login.php:4-9", "process-newsletter.php:9-14", "create_superadmin.php:2-7", "create_news_table.php:2-7", "services.php:294", "services.php:532", "services.php:574"], "evidence": "DB credentials in 6 files, SMTP config in 4, PHPMailer in both PHPMailer-master/ and vendor/, jQuery 3.6.0/3.6.4/3.7.1 loaded.", "impact": "Changes must be repeated; heavier pages; inconsistent behavior.", "recommendation": "Single db.php and mailer helper; one PHPMailer via vendor/autoload.php; one jQuery."},
+    {"id": "F-08", "title": "Debug artifacts and logs committed; verbose errors", "category": "production-readiness", "severity": "Low", "status": "Confirmed", "locations": ["logs/", "cache/", "includes/config.php:21-22", "helpers/error_handlers.php:6-10", "process_rental_requests.php:3", "process_rental_requests.php:7-8", "process_rental_requests.php:12", "test_db.php", "test_helpers.php"], "evidence": "Runtime logs/cache in git, debug writes on every load, CORS *, display_errors=1, POST data logged.", "impact": "Information leakage and noise; test scripts publicly reachable.", "recommendation": "Add .gitignore for logs/cache, remove debug writes and test scripts from web root."},
+    {"id": "F-09", "title": "README lacks installation and database setup instructions", "category": "documentation", "severity": "Low", "status": "Confirmed", "locations": ["README.md"], "evidence": "Feature claims match code (cookies for news, Web API, sessions, AJAX, superadmin); missing DB name, create_* order, /UEB25_GR3/ path and demo admin login.", "impact": "Project cannot be reproduced without reading the code.", "recommendation": "Add an 'Instalimi' section; clarify that only the email step of parking reservation requires login."}
+  ],
+  "viva_questions": [
+    "Te services.php:86, pse visitsCounter merr &$visits? Cfare ndodh me $_SESSION['services_visits'] pa '&'?",
+    "Te post-details.php:12-20, si ruhet vargu viewed_posts ne cookie dhe si ndikon te 'Lajme tjera'? Si do ta fshinit kete cookie?",
+    "Te helpers/cache_helpers.php, cfare ndodh kur API kthen gabim dhe cache ka skaduar? Pse flights.php:215 e therret serish getFlightsWithCache?",
+    "Shpjegoni parametrat e error_handler te helpers/error_handlers.php:4; pse mungon errcontext dhe si do t'i shfaqnit gabimet ne shqip?",
+    "Si e di parkingReservationAJAX.php qe perdoruesi eshte i kycur, nese vete ky skedar nuk therret session_start()?",
+    "Cfare e pengon nje vizitor pa llogari te hape direkt delete-news.php?id=3 apo admin_contact.php?",
+    "Te process_contact.php:5, pse krijuat CustomValidationException dhe si i ndani gabimet me implode('|')/explode?",
+    "Pse PHPMailer gjendet edhe te PHPMailer-master/ edhe te vendor/? Cilin perdor kodi?",
+    "Brief-i jep 17 maj si date dorezimi per fazen 2; commit-et e fazes 2 fillojne me 20 maj. Cili ishte afati real?",
+    "Ku perdoret mail() i PHP-se, preg_replace apo kthimi me reference (function &f()) ne projekt?"
+  ],
+  "limitations": [
+    "No execution: code, database, external API and email sending were not run; all verdicts are static.",
+    "Requirement parser returned 0 items; R1-R43 were extracted manually from the brief text.",
+    "No corpus of other groups' submissions; cross-group copying not checked.",
+    "No GITHUB_TOKEN: GitHub code search for distinctive lines skipped; candidates found by name only; GitHub API rate-limited.",
+    "Configured deadline was '-'; the 17 May 2025 date comes from the brief and was not applied to the score.",
+    "Automated secret scan missed hard-coded credentials; full git history (git log -p) was not scanned for further secrets.",
+    "No vulnerability database was available for dependency CVE checks.",
+    "One contributor account (bleronbaftiu21) resembles the requesting user's name; flagged for the human reviewer's awareness."
+  ]
+}

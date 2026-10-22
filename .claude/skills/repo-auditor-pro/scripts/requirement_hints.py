@@ -7,9 +7,20 @@ Usage:
 """
 import argparse
 import json
+import os
+import re
 import sys
 import unicodedata
 
+
+
+# third-party code copied into the repo is not the student's work: folders with their own licence file, or known libraries
+VENDORED_NAME = re.compile(r"(?i)^(phpmailer|jquery|bootstrap|font-?awesome|tinymce|ckeditor|chart\.?js|swiper|slick|owl\.?carousel|"
+                           r"select2|datatables|lightbox|fpdf|tcpdf|dompdf|smarty|third[_-]?party)([-_. ].*)?$")
+
+
+def is_vendored(dirpath, root, filenames):
+    return dirpath != root and any(f.upper().startswith(("LICENSE", "LICENCE", "COPYING")) for f in filenames)
 
 def norm(s):
     s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode()
@@ -237,19 +248,189 @@ RULES = [
     (("dokument", "documentation", "readme"), r_docs),
 ]
 
+def r_team(req, inv, ctx):
+    people = (ctx_data["history"] or {}).get("authors", [])
+    nums = [int(n) for n in re.findall(r"\b(\d{1,2})\b", ctx)]
+    lo, hi = (min(nums[:2]), max(nums[:2])) if nums else (1, 99)
+    n = len(people)
+    ev = [f"{n} persona në historinë e git-it: " + ", ".join(p["author"] for p in people)] if people else []
+    if not people:
+        return "manual", ev, "Historia e git-it mungon."
+    return ("likely_met" if lo <= n <= hi else "partial"), ev, f"Kërkohen {lo}-{hi}. Identitetet e bashkuara duhen konfirmuar."
+
+
+RULES.insert(0, (("numri i student", "anetare", "anetaret", "team size", "members"), r_team))
+
 ctx_data = {"history": None, "github": []}
+
+# Concept checks that search the code itself (typical web-course requirements: PHP, JS, SQL).
+# (name, keywords in the requirement, {label: code regex}, parts needed for "likely_met"; None = all)
+CONCEPTS = [
+    ("web_api", ("web api", "api te jashtem", "external api"), {
+        "thirrje e një API-je të jashtme": r"curl_init\s*\(|file_get_contents\(\s*['\"]https?://|fetch\(\s*['\"`]https?://|axios\.get\(\s*['\"`]https?://|https?://api\."}, None),
+    ("ajax", ("ajax",), {
+        "AJAX (XMLHttpRequest / fetch / $.ajax)": r"XMLHttpRequest|\bfetch\s*\(|\$\.(ajax|get|post|getJSON)\s*\(|\baxios\b"}, None),
+    ("filter_sanitize", ("filter_sanitize", "filter_var"), {
+        "filter_var / FILTER_SANITIZE": r"FILTER_SANITIZE|filter_var\s*\(|filter_input\s*\("}, None),
+    ("sql_injection", ("injection", "obligative"), {
+        "prepared statements": r"->prepare\s*\(|\bmysqli_prepare\s*\(|\bprepare\s*\(\s*['\"]",
+        "parametra të lidhur (bind)": r"bind_param|bindParam|bindValue|->execute\s*\(\s*\[|\?\s*[,)]",
+        "escape / htmlspecialchars": r"real_escape_string|htmlspecialchars|htmlentities"}, 2),
+    ("regex", ("regex", "shprehjet e rregullta", "regular expression"), {
+        "preg_match / preg_replace / RegExp": r"\bpreg_(match|match_all|replace|split)\s*\(|new\s+RegExp\s*\(|/\^[^/\n]{3,}\$?/[gimsuy]*\.test\s*\(|\bre\.(match|search|fullmatch|compile|sub)\s*\("}, None),
+    ("cookies", ("cookie",), {
+        "setcookie (krijim)": r"\bsetcookie\s*\(|document\.cookie\s*=|\.cookie\s*\(",
+        "$_COOKIE (lexim)": r"\$_COOKIE|document\.cookie\b|req\.cookies",
+        "fshirje (skadim në të kaluarën)": r"setcookie\s*\([^;]*time\s*\(\s*\)\s*-|expires=Thu, 01 Jan 1970|clearCookie"}, 2),
+    ("sessions", ("session", "sesion"), {
+        "session_start": r"\bsession_start\s*\(|req\.session|HttpContext\.Session",
+        "$_SESSION (ruajtje/lexim)": r"\$_SESSION\s*\[|req\.session\.\w+|Session\.(Set|Get)"}, None),
+    ("db_crud", ("insert", "fshirj", "update", "crud"), {
+        "INSERT": r"(?i)\binsert\s+into\b", "UPDATE": r"(?i)\bupdate\s+`?\w+`?\s+set\b", "DELETE": r"(?i)\bdelete\s+from\b"}, None),
+    ("db_tables", ("tabelave", "tabela", "create table"), {
+        "CREATE TABLE": r"(?i)\bcreate\s+table\b"}, None),
+    ("db_connect", ("konseksion", "koneksion", "bazen e te dhenave", "baze te dhenash", "mysql", "lidhja me db", "database connection"), {
+        "lidhja me DB (mysqli / PDO)": r"\bmysqli_connect\s*\(|new\s+mysqli\s*\(|new\s+PDO\s*\(|mysql\.createConnection|createPool\s*\("}, None),
+    ("unset", ("unset", "largimi i referenc"), {"unset()": r"\bunset\s*\("}, None),
+    ("references", ("referenc", "pointer"), {
+        "&$ (përcjellje me referencë)": r"&\s*\$\w+", "function &f (kthim me referencë)": r"function\s*&\s*\w+\s*\("}, 1),
+    ("sorting", ("sort",), {f"{f}()": rf"\b{f}\s*\(" for f in ("sort", "rsort", "asort", "ksort", "arsort", "krsort")}, 4),
+    ("globals", ("globale", "golbale", "global"), {
+        "$GLOBALS / superglobals / global": r"\$GLOBALS|\$_SERVER|\$_GET|\$_POST|\$_REQUEST|\bglobal\s+\$"}, None),
+    ("error_handler", ("error_handler", "trajtim te gabimeve", "trajtimi i gabimeve", "gabimeve"), {
+        "set_error_handler": r"\bset_error_handler\s*\(", "trigger_error / mesazhe të personalizuara": r"\btrigger_error\s*\(|\berror_log\s*\("}, 1),
+    ("exceptions", ("try", "catch", "throw", "perjashtim"), {
+        "try": r"\btry\s*\{", "catch": r"\bcatch\s*\(", "throw": r"\bthrow\s+new\b"}, None),
+    ("files", ("fajll", "fopen", "include()", "file"), {
+        "include / require": r"\b(include|require)(_once)?\b", "fopen": r"\bfopen\s*\(",
+        "fread / fwrite / file_*": r"\b(fread|fwrite|fgets|file_put_contents|file_get_contents|filesize)\s*\(", "fclose": r"\bfclose\s*\("}, 3),
+    ("email", ("email", "emaila", "mail("), {
+        "mail() / PHPMailer / SMTP": r"\bmail\s*\(|PHPMailer|\bSMTP\b|smtp\.|nodemailer|SmtpClient"}, None),
+    ("menu", ("meny", "menu", "navigim"), {"menu / <nav>": r"<nav\b|class=['\"][^'\"]*\b(menu|navbar|nav)\b"}, None),
+    ("get_set", ("get dhe set", "getter", "setter", "get/set"), {
+        "get…()": r"function\s+get[A-Z_]\w*\s*\(|\bget\s+\w+\s*\(\)\s*\{", "set…()": r"function\s+set[A-Z_]\w*\s*\(|\bset\s+\w+\s*\(\w+\)\s*\{"}, None),
+    ("constructors", ("konstruktor", "destruktor", "constructor"), {
+        "__construct": r"__construct\s*\(|\bconstructor\s*\(", "__destruct": r"__destruct\s*\("}, 1),
+    ("modifiers", ("modifikator", "mdoifikator", "public, private", "private, protected"), {
+        "public": r"\bpublic\s", "private": r"\bprivate\s", "protected": r"\bprotected\s"}, None),
+    ("inheritance", ("trashegim", "inheritance"), {"class … extends …": r"\bclass\s+\w+\s+extends\s+\w+"}, None),
+    ("classes", ("klasa", "klasave", "klases", "class"), {
+        "class": r"\bclass\s+\w+", "metoda": r"\b(public|private|protected)\s+(static\s+)?function\b|^\s+\w+\s*\([^)]*\)\s*\{"}, None),
+    ("arrays", ("vargje", "vargjeve", "array"), {
+        "numeric": r"\barray\s*\(\s*['\"\d]|=\s*\[\s*['\"\d]", "associative": r"['\"]\w+['\"]\s*=>",
+        "multidimensional": r"=>\s*\[|=>\s*array\s*\(|\[\s*\[|\]\s*\[\s*['\"\$\d]"}, None),
+    ("conditions", ("kushtezim", "if..else", "switch", "swithch"), {
+        "if / else": r"\belse\b|\belseif\b", "switch": r"\bswitch\s*\("}, None),
+    ("php_basics", ("var_dump", "variabla", "konstante", "operator"), {
+        "var_dump()": r"\bvar_dump\s*\(", "funksione": r"\bfunction\s+\w+\s*\(",
+        "string funksione": r"\b(strlen|str_replace|strtoupper|strtolower|substr|ucfirst|ucwords|trim|explode|implode|strpos|str_contains|sprintf)\s*\(",
+        "konstante": r"\bdefine\s*\(|\bconst\s+[A-Z_]{2,}"}, 3),
+]
+CODE_EXTS = {".php", ".phtml", ".inc", ".js", ".mjs", ".jsx", ".ts", ".tsx", ".vue", ".html", ".htm", ".twig",
+             ".py", ".cs", ".java", ".kt", ".rb", ".go", ".sql"}
+SKIP_DIRS = {".git", "node_modules", "vendor", "venv", ".venv", "dist", "build", "bin", "obj", "target", "__pycache__",
+             ".next", "coverage", "packages", "bower_components"}
+CODE = []  # [(shown_path, text)]
+
+
+def load_code(specs):
+    for spec in specs:
+        label, sep, path = spec.partition("=")
+        if not sep:
+            label, path = os.path.basename(os.path.normpath(spec)), spec
+        root = os.path.abspath(path)
+        if os.name == "nt" and not root.startswith("\\\\?\\"):
+            root = "\\\\?\\" + root
+        for dirpath, dirnames, filenames in os.walk(root):
+            dirnames[:] = [d for d in dirnames if d not in SKIP_DIRS and not d.startswith(".")]
+            if is_vendored(dirpath, root, filenames):
+                dirnames[:] = []
+                continue
+            dirnames[:] = [d for d in dirnames if not VENDORED_NAME.match(d)]
+            for name in filenames:
+                if os.path.splitext(name)[1].lower() not in CODE_EXTS or ".min." in name:
+                    continue
+                full = os.path.join(dirpath, name)
+                try:
+                    if os.path.getsize(full) > 1_000_000:
+                        continue
+                    with open(full, encoding="utf-8", errors="replace") as fh:
+                        text = fh.read()
+                except OSError:
+                    continue
+                rel = os.path.relpath(full, root).replace("\\", "/")
+                CODE.append((f"{label}/{rel}" if len(specs) > 1 else rel, text))
+
+
+def code_find(pattern, limit=3):
+    rx = re.compile(pattern, re.M)
+    hits, total = [], 0
+    for shown, text in CODE:
+        for m in rx.finditer(text):
+            total += 1
+            if len(hits) < limit:
+                hits.append(f"{shown}:{text.count(chr(10), 0, m.start()) + 1}")
+    return total, hits
+
+
+def concept_hint(name, parts, need):
+    evidence, found = [], 0
+    for label, pattern in parts.items():
+        total, hits = code_find(pattern)
+        if total:
+            found += 1
+            evidence.append(f"✓ {label}: {total}× ({', '.join(hits)})")
+        else:
+            evidence.append(f"✗ {label}: nuk u gjet")
+    need = need or len(parts)
+    status = "likely_met" if found >= need else "partial" if found else "not_found"
+    note = "" if status == "likely_met" else f"U gjetën {found} nga {len(parts)} pjesë."
+    return status, evidence, note
+
+
+KW_CACHE = {}
+
+
+def kw_in(keyword, haystack):
+    """Whole-word start match ('orm' must not match 'forme'); a trailing space also requires a word end."""
+    rx = KW_CACHE.get(keyword)
+    if rx is None:
+        k = keyword.strip()
+        start = r"\b" if re.match(r"\w", k) else ""
+        end = r"\b" if keyword.endswith(" ") else ""
+        rx = KW_CACHE[keyword] = re.compile(start + re.escape(k) + end)
+    return bool(rx.search(haystack))
 
 
 def hint_for(req, inv):
-    title, full = norm(req.get("title")), norm(f"{req.get('title')} {req.get('text')}")
-    for haystack in (title, full):
+    title = norm(req.get("title"))
+    body = norm(f"{req.get('title')} {req.get('text')}")
+    section = norm(req.get("section"))
+    full = norm(f"{req.get('section')} {req.get('title')} {req.get('text')}")
+    base = {"id": req["id"], "title": req.get("title"), "section": req.get("section", "")}
+
+    def try_concepts(haystack):
+        if not CODE:
+            return None
+        for name, keywords, parts, need in CONCEPTS:
+            if any(kw_in(k, haystack) for k in keywords):
+                status, evidence, note = concept_hint(name, parts, need)
+                return {**base, "rule": name, "status": status, "evidence": evidence, "note": note}
+        return None
+
+    def try_rules(haystack):
         for keywords, fn in RULES:
-            if any(k in haystack for k in keywords):
+            if any(kw_in(k, haystack) for k in keywords):
                 status, evidence, note = fn(req, inv, full)
-                return {"id": req["id"], "title": req.get("title"), "rule": fn.__name__[2:], "status": status,
-                        "evidence": [e for e in evidence if e], "note": note}
-    return {"id": req["id"], "title": req.get("title"), "rule": None, "status": "manual", "evidence": [],
-            "note": "Asnjë rregull automatik; vlerësohet me dorë."}
+                return {**base, "rule": fn.__name__[2:], "status": status, "evidence": [e for e in evidence if e], "note": note}
+        return None
+
+    for attempt in (lambda: try_concepts(title), lambda: try_rules(title), lambda: try_concepts(body),
+                    lambda: try_rules(body), lambda: try_concepts(section), lambda: try_rules(section)):
+        result = attempt()
+        if result:
+            return result
+    return {**base, "rule": None, "status": "manual", "evidence": [], "note": "Asnjë rregull automatik; vlerësohet me dorë."}
 
 
 def main():
@@ -258,8 +439,10 @@ def main():
     ap.add_argument("--inventory", required=True)
     ap.add_argument("--history")
     ap.add_argument("--github", action="append", default=[])
+    ap.add_argument("--repo", action="append", default=[], help="[LABEL=]DIR of the project code, for concept checks")
     ap.add_argument("--out")
     args = ap.parse_args()
+    load_code(args.repo)
     def load(p, default=None):
         try:
             with open(p, encoding="utf-8") as fh:

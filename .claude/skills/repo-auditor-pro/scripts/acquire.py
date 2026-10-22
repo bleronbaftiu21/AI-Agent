@@ -53,18 +53,38 @@ def acquire(url, dest_root, hooks_dir, depth=None):
     # persist the safe settings so later read-only git commands (log, show) work on long Windows paths
     for key, value in (("core.longpaths", "true"), ("core.symlinks", "false"), ("core.hooksPath", hooks_dir)):
         git(["-C", target, "config", key, value])
-    checkout_ref = ref or "origin/HEAD"
+    # ".../tree/main/some/folder" = branch "main" + sub-folder "some/folder"; branch names may contain "/"
+    checkout_ref, subpath = ("origin/HEAD", "") if not ref else resolve_ref(target, ref)
+    if not checkout_ref:
+        info["error"] = f"branch/tag/commit {ref!r} not found in the repository"
+        return info
     res = git(["-C", target, "checkout", "--quiet", "--force", "--detach", checkout_ref], hooks_dir=hooks_dir)
-    if res.returncode != 0 and ref:
-        res = git(["-C", target, "checkout", "--quiet", "--force", "--detach", f"origin/{ref}"], hooks_dir=hooks_dir)
     if res.returncode != 0:
         info["error"] = f"checkout of {checkout_ref!r} failed: {res.stderr.strip()[-300:]}"
         return info
+    if subpath:
+        sub_dir = os.path.join(target, *subpath.split("/"))
+        if not os.path.isdir(sub_dir):
+            info["error"] = f"folder {subpath!r} does not exist in {checkout_ref}"
+            return info
+        info.update(dir=sub_dir, repo_root=target, subpath=subpath)
     head = git(["-C", target, "rev-parse", "HEAD"]).stdout.strip()
     branch = git(["-C", target, "rev-parse", "--abbrev-ref", "origin/HEAD"]).stdout.strip().replace("origin/", "")
-    info.update(ok=True, commit=head, short=head[:7], branch=ref or branch,
-                commits=int(git(["-C", target, "rev-list", "--count", "HEAD"]).stdout.strip() or 0))
+    count_args = ["-C", target, "rev-list", "--count", "HEAD"] + (["--", subpath] if subpath else [])
+    info.update(ok=True, commit=head, short=head[:7], branch=checkout_ref.replace("origin/", "") if ref else branch,
+                commits=int(git(count_args).stdout.strip() or 0))
     return info
+
+
+def resolve_ref(target, ref_path):
+    """Split 'main/some/folder' into the longest existing ref and the remaining folder path."""
+    parts = ref_path.strip("/").split("/")
+    for i in range(len(parts), 0, -1):
+        cand = "/".join(parts[:i])
+        for c in (f"origin/{cand}", cand):
+            if git(["-C", target, "rev-parse", "--verify", "--quiet", c + "^{commit}"]).returncode == 0:
+                return c, "/".join(parts[i:])
+    return None, ""
 
 
 def main():

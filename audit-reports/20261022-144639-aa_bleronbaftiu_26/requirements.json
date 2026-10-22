@@ -1,0 +1,188 @@
+{
+  "source": "brief.pdf",
+  "characters": 16581,
+  "items": [
+    {
+      "id": "R1",
+      "number": 1,
+      "title": "Find the longest possible path through the questionnaire.",
+      "text": "Find the longest possible path through the questionnaire.",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R2",
+      "number": 2,
+      "title": "@param questionnaire - The questionnaire object with questions and start point",
+      "text": "@param questionnaire - The questionnaire object with questions and start point",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R3",
+      "number": 3,
+      "title": "@returns Object containing the length, question IDs, and answer choices for",
+      "text": "@returns Object containing the length, question IDs, and answer choices for",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R4",
+      "number": 4,
+      "title": "the longest path",
+      "text": "the longest path",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R5",
+      "number": 5,
+      "title": "Find the shortest possible path through the questionnaire.",
+      "text": "Find the shortest possible path through the questionnaire.",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R6",
+      "number": 6,
+      "title": "@param questionnaire - The questionnaire object",
+      "text": "@param questionnaire - The questionnaire object",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R7",
+      "number": 7,
+      "title": "@returns Object containing the length, question IDs, and answer choices for",
+      "text": "@returns Object containing the length, question IDs, and answer choices for",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R8",
+      "number": 8,
+      "title": "the shortest path",
+      "text": "the shortest path",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R9",
+      "number": 9,
+      "title": "Count the total number of distinct paths through the questionnaire.",
+      "text": "Count the total number of distinct paths through the questionnaire.",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R10",
+      "number": 10,
+      "title": "@param questionnaire - The questionnaire object",
+      "text": "@param questionnaire - The questionnaire object",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R11",
+      "number": 11,
+      "title": "@returns The total number of distinct answer combinations from start to end,",
+      "text": "@returns The total number of distinct answer combinations from start to end,",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R12",
+      "number": 12,
+      "title": "or -1 if the questionnaire contains a cycle (infinitely many paths)",
+      "text": "or -1 if the questionnaire contains a cycle (infinitely many paths)",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R13",
+      "number": 13,
+      "title": "Find all questions reachable after selecting a specific answer.",
+      "text": "Find all questions reachable after selecting a specific answer.",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R14",
+      "number": 14,
+      "title": "@param questionnaire - The questionnaire object",
+      "text": "@param questionnaire - The questionnaire object",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R15",
+      "number": 15,
+      "title": "@param questionId - The ID of the question being answered",
+      "text": "@param questionId - The ID of the question being answered",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R16",
+      "number": 16,
+      "title": "@param answerId - The ID of the answer choice",
+      "text": "@param answerId - The ID of the answer choice",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R17",
+      "number": 17,
+      "title": "@returns Array of reachable questions with their minimum depth",
+      "text": "@returns Array of reachable questions with their minimum depth",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R18",
+      "number": 18,
+      "title": "Calculate the probability of each question being shown.",
+      "text": "Calculate the probability of each question being shown.",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R19",
+      "number": 19,
+      "title": "@param questionnaire - The questionnaire object",
+      "text": "@param questionnaire - The questionnaire object",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R20",
+      "number": 20,
+      "title": "@returns Array of questions with their appearance probabilities",
+      "text": "@returns Array of questions with their appearance probabilities",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    }
+  ],
+  "text": "Dynamic Questionnaire Analysis\nProgramming Assignment\nIntroduction\nIn many applications (surveys, medical assessments, financial applications), questionnaires have\nconditional logic where certain questions only appear based on previous answers. For example, if\nsomeone answers “Yes” to “Do you own a car?”, they might see follow-up questions about the car's\nmake and model. This creates a branching structure where different answer paths lead to different sets\nof questions.\nEvery problem in this assignment must be solved with recursion. Each function is expected to\nwalk the question graph through recursive calls (a recursive helper function is fine); iterative loops\nmay be used only for bookkeeping such as building an index, iterating over a question's answers, or\nsorting the final result.\nDataset\nYou are provided with questionnaire data in JSON format. Each question has a unique ID, question\ntext, and a question type. Questions of type radio or select carry a list of possible answers, each with\nits own next_question_id; questions of type text or checkbox have a single unconditional\nnext_question_id. A next_question_id of null ends the questionnaire.\nTypeScript Interfaces\ninterface Answer {\nid: string;\ntext: string;\nnext_question_id: string | null; // null means end of questionnaire\n}\ninterface Question {\nid: string;\ntext: string;\ntype: \"radio\" | \"select\" | \"text\" | \"checkbox\";\nanswers?: Answer[]; // Only for radio/select types\nnext_question_id?: string | null; // For text/checkbox (unconditional next)\n}\ninterface Questionnaire {\nquestions: Question[];\nstart_question_id: string;\n}\nJSON Structure\n{\n\"start_question_id\": \"q1\",\n\"questions\": [\n{\n\"id\": \"q1\", \"text\": \"Do you own a car?\", \"type\": \"radio\",\n\"answers\": [\n{ \"id\": \"a1_yes\", \"text\": \"Yes\", \"next_question_id\": \"q2\" },\n{ \"id\": \"a1_no\", \"text\": \"No\", \"next_question_id\": \"q5\" }\n]\n},\n{\n\"id\": \"q2\", \"text\": \"What type of car do you own?\", \"type\": \"select\",\n\"answers\": [\n{ \"id\": \"a2_sedan\", \"text\": \"Sedan\", \"next_question_id\": \"q3\" },\n{ \"id\": \"a2_suv\", \"text\": \"SUV\", \"next_question_id\": \"q3\" },\n{ \"id\": \"a2_truck\", \"text\": \"Truck\", \"next_question_id\": \"q4\" },\n{ \"id\": \"a2_sports\", \"text\": \"Sports Car\", \"next_question_id\": \"q4\" }\n]\n},\n{\n\"id\": \"q3\", \"text\": \"How many passengers can your vehicle seat?\", \"type\": \"radio\",\n\"answers\": [\n{ \"id\": \"a3_2to5\", \"text\": \"2-5\", \"next_question_id\": \"q6\" },\n{ \"id\": \"a3_6plus\", \"text\": \"6+\", \"next_question_id\": \"q6\" }\n]\n},\n{\n\"id\": \"q4\", \"text\": \"Do you use your vehicle for work purposes?\", \"type\": \"radio\",\n\"answers\": [\n{ \"id\": \"a4_yes\", \"text\": \"Yes\", \"next_question_id\": \"q7\" },\n{ \"id\": \"a4_no\", \"text\": \"No\", \"next_question_id\": \"q6\" }\n]\n},\n{\n\"id\": \"q5\", \"text\": \"What is your primary mode of transportation?\", \"type\": \"select\",\n\"answers\": [\n{ \"id\": \"a5_public\", \"text\": \"Public Transit\", \"next_question_id\": \"q6\" },\n{ \"id\": \"a5_bike\", \"text\": \"Bicycle\", \"next_question_id\": \"q6\" },\n{ \"id\": \"a5_walk\", \"text\": \"Walking\", \"next_question_id\": \"q6\" }\n]\n},\n{\n\"id\": \"q6\", \"text\": \"What is your annual commute distance?\",\n\"type\": \"text\", \"next_question_id\": \"q8\"\n},\n{\n\"id\": \"q7\", \"text\": \"What percentage of your vehicle use is for work?\",\n\"type\": \"text\", \"next_question_id\": \"q8\"\n},\n{\n\"id\": \"q8\", \"text\": \"Are you satisfied with your current transportation situation?\",\n\"type\": \"radio\",\n\"answers\": [\n{ \"id\": \"a8_yes\", \"text\": \"Yes\", \"next_question_id\": null },\n{ \"id\": \"a8_no\", \"text\": \"No\", \"next_question_id\": \"q9\" }\n]\n},\n{\n\"id\": \"q9\", \"text\": \"What would you like to improve?\",\n\"type\": \"text\", \"next_question_id\": null\n}\n]\n}\nQuestionnaire Flow Visualization\nq1: Own a car?\nYes -> q2: Car type?\nSedan -> q3: Passengers? (2-5 | 6+) -> q6 -> q8\nSUV -> q3: Passengers? (2-5 | 6+) -> q6 -> q8\nTruck -> q4: Work use? Yes -> q7 -> q8\nNo -> q6 -> q8\nSports -> q4: Work use? Yes -> q7 -> q8\nNo -> q6 -> q8\nNo -> q5: Primary transport?\nPublic Transit | Bicycle | Walking -> q6 -> q8\nq6: Commute distance? -> q8\nq7: Work %? -> q8\nq8: Satisfied? Yes -> END\nNo -> q9: Improve? -> END\nNote that the graph is a DAG, not a tree: q6, q8 and q9 are each reachable from several different branches.\nYour recursion must therefore handle a question being visited through more than one path.\nProblem 1: Find Longest Question Path\nDescription\nDetermine the longest possible path through the questionnaire—that is, the maximum number of\nquestions a user could answer before reaching the end. This represents the most detailed response\npath.\nFunction Signature\ninterface LongestPath {\nlength: number;\nquestion_ids: string[];\nanswer_path: string[]; // Answer IDs chosen along this path\n}\nfunction findLongestQuestionPath(questionnaire: Questionnaire): LongestPath {\n/**\n* Find the longest possible path through the questionnaire.\n*\n* @param questionnaire - The questionnaire object with questions and start point\n* @returns Object containing the length, question IDs, and answer choices for\n* the longest path\n*/\n// Your implementation here\n}\nInput Format\nquestionnaire: An object containing the array of questions and the starting question ID\nOutput Format\nReturn an object containing:\nlength: The number of questions in the longest path — this must equal question_ids.length\nquestion_ids: Array of question IDs, in order, for this path\nanswer_path: Array of answer IDs chosen along this path. Only radio and select questions\ncontribute an entry; text and checkbox questions have no answer choice, so answer_path is\nnormally shorter than question_ids\nSeveral distinct paths may share the maximum length. Return any one of them; a test should assert on\nlength and on the validity of the returned path, not on one specific branch.\nExample\nfindLongestQuestionPath(questionnaire); // Returns (one valid answer):\n{\nlength: 6,\nquestion_ids: [\"q1\", \"q2\", \"q4\", \"q7\", \"q8\", \"q9\"],\nanswer_path: [\"a1_yes\", \"a2_truck\", \"a4_yes\", \"a8_no\"]\n}\n// Path: Own car (Yes) -> Truck -> Work use (Yes) -> Work % -> Satisfied (No) -> Improve\n// [\"q1\", \"q2\", \"q3\", \"q6\", \"q8\", \"q9\"] is also of length 6 and equally correct.\nRequirements\nUse recursion to explore the possible paths: the longest path from a question is that question plus\nthe longest of the paths from each of its next questions\nHandle questions with multiple possible answers, and questions with a single unconditional next\nquestion\nTrack the answer IDs that lead to the maximum-length path\nGuard against cycles: keep the set of questions on the current path and do not re-enter one\nPlain recursion re-explores shared sub-paths, so its cost grows with the number of distinct paths\n(22 for this dataset). Caching the best result per question id is optional; it brings the cost down to\nO(n × m), where n is the number of questions and m the average number of answers per question\nProblem 2: Find Shortest Question Path\nDescription\nDetermine the shortest possible path through the questionnaire—the minimum number of questions a\nuser must answer to complete the survey. This represents the quickest completion route.\nFunction Signature\ninterface ShortestPath {\nlength: number;\nquestion_ids: string[];\nanswer_path: string[];\n}\nfunction findShortestQuestionPath(questionnaire: Questionnaire): ShortestPath {\n/**\n* Find the shortest possible path through the questionnaire.\n*\n* @param questionnaire - The questionnaire object\n* @returns Object containing the length, question IDs, and answer choices for\n* the shortest path\n*/\n// Your implementation here\n}\nInput Format\nquestionnaire: An object containing the array of questions and the starting question ID\nOutput Format\nSame shape as Problem 1: length must equal question_ids.length, and answer_path lists only the\nanswer IDs of radio/select questions along the path.\nExample\nfindShortestQuestionPath(questionnaire); // Returns (one valid answer):\n{\nlength: 4,\nquestion_ids: [\"q1\", \"q5\", \"q6\", \"q8\"],\nanswer_path: [\"a1_no\", \"a5_public\", \"a8_yes\"]\n}\n// Path: Own car (No) -> Public Transit -> Commute distance -> Satisfied (Yes) -> END\n// \"a5_bike\" and \"a5_walk\" lead to the same question sequence and are equally correct.\n// For comparison, the \"Yes\" branch is longer:\n// [\"q1\", \"q2\", \"q3\", \"q6\", \"q8\"] has length 5, so it is not the shortest path.\nRequirements\nUse recursion: the shortest path from a question is that question plus the shortest of the paths\nfrom each of its next questions\nConsider all possible answer branches — the shortest route is not necessarily the first branch\nlisted\nReturn any valid shortest path if several exist with the same length\nGuard against cycles, as in Problem 1\nProblem 3: Count All Possible Paths\nDescription\nCalculate the total number of distinct paths through the questionnaire. Each unique combination of\nanswer choices that leads from the start question to the end counts as a separate path. Two routes that\nvisit the same questions but differ in any answer choice are therefore different paths — for example,\nanswering q3 with “2-5” and answering it with “6+” both continue to q6, yet they count as two paths.\nFunction Signature\nfunction countAllPossiblePaths(questionnaire: Questionnaire): number {\n/**\n* Count the total number of distinct paths through the questionnaire.\n*\n* @param questionnaire - The questionnaire object\n* @returns The total number of distinct answer combinations from start to end,\n* or -1 if the questionnaire contains a cycle (infinitely many paths)\n*/\n// Your implementation here\n}\nInput Format\nquestionnaire: An object containing the array of questions and the starting question ID\nOutput Format\nReturn an integer representing the total number of distinct paths, or -1 if a cycle is detected.\nExample\ncountAllPossiblePaths(questionnaire);\n// Returns: 22\n// Worked out bottom-up, where paths(q) is the number of ways to finish from q:\n// paths(q9) = 1\n// paths(q8) = 1 (Yes -> END) + paths(q9) = 2\n// paths(q7) = paths(q8) = 2\n// paths(q6) = paths(q8) = 2\n// paths(q5) = 3 x paths(q6) = 6\n// paths(q4) = paths(q7) + paths(q6) = 4\n// paths(q3) = 2 x paths(q6) = 4\n// paths(q2) = paths(q3) + paths(q3) + paths(q4) + paths(q4) = 16\n// paths(q1) = paths(q2) + paths(q5) = 22\nRequirements\nUse recursion to traverse all branches: the count for a question is the sum of the counts of its\nnext questions, with a next_question_id of null counting as exactly one completed path\nCount each answer choice as its own branch, even when two answers lead to the same next\nquestion\nDetect cycles and return -1 when the number of paths would be infinite\nProblem 4: Find All Questions Reachable from an Answer\nDescription\nGiven a specific question and a specific answer to that question, find all questions that could possibly\nbe reached later in the questionnaire by following that answer. This shows the downstream impact of\neach answer choice.\nFunction Signature\ninterface ReachableQuestion {\nquestion_id: string;\nquestion_text: string;\nmin_depth: number; // Minimum steps from the starting answer to reach this question\n}\nfunction findReachableQuestions(\nquestionnaire: Questionnaire,\nquestionId: string,\nanswerId: string\n): ReachableQuestion[] {\n/**\n* Find all questions reachable after selecting a specific answer.\n*\n* @param questionnaire - The questionnaire object\n* @param questionId - The ID of the question being answered\n* @param answerId - The ID of the answer choice\n* @returns Array of reachable questions with their minimum depth\n*/\n// Your implementation here\n}\nInput Format\nquestionnaire: The questionnaire object\nquestionId: ID of the starting question\nanswerId: ID of the specific answer choice on that question\nOutput Format\nReturn an array of objects, each containing:\nquestion_id: The ID of a reachable question\nquestion_text: The text of that question\nmin_depth: The minimum number of steps from the starting answer to that question; the question\nthe answer leads to directly has min_depth: 1\nSort by min_depth ascending, then by question_id ascending. Each reachable question appears\nexactly once, even if several routes lead to it.\nExample\nfindReachableQuestions(questionnaire, \"q2\", \"a2_truck\"); // Returns:\n[\n{ question_id: \"q4\", question_text: \"Do you use your vehicle for work purposes?\",\nmin_depth: 1 },\n{ question_id: \"q6\", question_text: \"What is your annual commute distance?\",\nmin_depth: 2 },\n{ question_id: \"q7\", question_text: \"What percentage of your vehicle use is for work?\",\nmin_depth: 2 },\n{ question_id: \"q8\", question_text: \"Are you satisfied with your current transportation\nsituation?\", min_depth: 3 },\n{ question_id: \"q9\", question_text: \"What would you like to improve?\",\nmin_depth: 4 }\n]\nfindReachableQuestions(questionnaire, \"q8\", \"a8_yes\"); // Returns: [] (answer ends the\nquestionnaire)\nfindReachableQuestions(questionnaire, \"q2\", \"a9_nope\"); // Returns: [] (unknown question or\nanswer ID)\nRequirements\nUse recursion with depth tracking: recurse into each next question with depth + 1\nRecord the minimum depth for each reachable question: when a question is reached again at a\nsmaller depth, update it and recurse through it once more; when it is reached at an equal or\ngreater depth, stop. This also terminates the recursion if the data ever contains a cycle\nReturn an empty array if the answer leads directly to the end, or if the question ID or answer ID\ndoes not exist\nProblem 5: Calculate Question Appearance Probability\nDescription\nCalculate the probability that each question will be shown to a user, assuming all answer choices at a\nquestion are equally likely to be selected. This helps identify which questions are most or least\nfrequently seen and can inform questionnaire design.\nFunction Signature\ninterface QuestionProbability {\nquestion_id: string;\nquestion_text: string;\nprobability: number; // Value between 0 and 1\nexpected_position: number; // Average position in the questionnaire, given the\n// question is shown (first question = 1)\n}\nfunction calculateQuestionProbabilities(\nquestionnaire: Questionnaire\n): QuestionProbability[] {\n/**\n* Calculate the probability of each question being shown.\n*\n* @param questionnaire - The questionnaire object\n* @returns Array of questions with their appearance probabilities\n*/\n// Your implementation here\n}\nInput Format\nquestionnaire: The questionnaire object\nOutput Format\nReturn an array of objects, each containing:\nquestion_id: The question ID\nquestion_text: The question text\nprobability: Probability that this question appears (0.0 to 1.0)\nexpected_position: Average position at which it appears, conditional on it appearing (first\nquestion = 1)\nSort by probability descending, then by question_id ascending. Questions that are unreachable from\nthe start question have probability 0 and are reported with expected_position: 0.\nExpected Result for the Dataset\nA question with a single unconditional next question passes its whole probability on; a question with\nk answers passes probability / k along each answer. Walking the flow from q1 gives:\nquestion_id probability expected_position why\nq1 1.0 1.0 start question\nq8 1.0 4.5 every path reaches it: position 4 half the time, 5 half thetime\nq6 0.875 3.4286 0.5 from q5 + 0.25 from q3 + 0.125 from q4 (No)\nq2 0.5 2.0 q1 = Yes\nq5 0.5 2.0 q1 = No\nq9 0.5 5.5 q8 = No, one step after q8\nq3 0.25 3.0 0.5 x 2/4 (Sedan or SUV)\nq4 0.25 3.0 0.5 x 2/4 (Truck or Sports Car)\nq7 0.125 4.0 0.25 x 1/2 (q4 = Yes)\nAs a self-check, the probabilities sum to 5.0, which is the expected number of questions a user\nanswers.\nExample\ncalculateQuestionProbabilities(questionnaire); // Returns:\n[\n{ question_id: \"q1\", question_text: \"Do you own a car?\",\nprobability: 1.0, expected_position: 1.0 },\n{ question_id: \"q8\", question_text: \"Are you satisfied with your current transportation\nsituation?\",\nprobability: 1.0, expected_position: 4.5 },\n{ question_id: \"q6\", question_text: \"What is your annual commute distance?\",\nprobability: 0.875, expected_position: 3.4286 },\n{ question_id: \"q2\", question_text: \"What type of car do you own?\",\nprobability: 0.5, expected_position: 2.0 },\n// ... q5, q9, q3, q4, q7\n]\nRequirements\nAssume all answer choices at a given question are equally likely\nUse recursion to propagate probability (and position) forward from the start question; a question\nreached through several branches accumulates the probability of each\nThe first question always has probability 1.0 and expected position 1.0\nHandle conditional branching correctly: a text/checkbox question forwards all of its probability\nto its single next question\nRound probability and expected_position to 4 decimal places\nBecause the flow is a DAG and not a tree, process a question only once its incoming branches\nhave all been accounted for, or accumulate contributions into a map keyed by question id before\nreporting",
+  "note": "Automatic split - check the list against the brief before grading."
+}

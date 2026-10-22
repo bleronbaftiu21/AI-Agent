@@ -1,0 +1,451 @@
+{
+  "mode": "groups",
+  "params": {
+    "k": 12,
+    "window": 8,
+    "min_containment": 0.25,
+    "pair_threshold": 0.05
+  },
+  "groups": {
+    "Airport_Website": {
+      "files": 82,
+      "fingerprints": 5646
+    },
+    "GitHub: FlyBitVIP/FlyBit-Airport-Address": {
+      "files": 0,
+      "fingerprints": 0
+    },
+    "GitHub: everett7623/airport-recommendations-2026": {
+      "files": 0,
+      "fingerprints": 0
+    },
+    "GitHub: jpatokal/openflights": {
+      "files": 130,
+      "fingerprints": 13517
+    }
+  },
+  "matrix": {
+    "Airport_Website": {
+      "GitHub: FlyBitVIP/FlyBit-Airport-Address": 0.0,
+      "GitHub: everett7623/airport-recommendations-2026": 0.0,
+      "GitHub: jpatokal/openflights": 0.088
+    },
+    "GitHub: FlyBitVIP/FlyBit-Airport-Address": {
+      "Airport_Website": 0.0,
+      "GitHub: everett7623/airport-recommendations-2026": 0.0,
+      "GitHub: jpatokal/openflights": 0.0
+    },
+    "GitHub: everett7623/airport-recommendations-2026": {
+      "Airport_Website": 0.0,
+      "GitHub: FlyBitVIP/FlyBit-Airport-Address": 0.0,
+      "GitHub: jpatokal/openflights": 0.0
+    },
+    "GitHub: jpatokal/openflights": {
+      "Airport_Website": 0.037,
+      "GitHub: FlyBitVIP/FlyBit-Airport-Address": 0.0,
+      "GitHub: everett7623/airport-recommendations-2026": 0.0
+    }
+  },
+  "max_by_group": {
+    "Airport_Website": 0.088,
+    "GitHub: FlyBitVIP/FlyBit-Airport-Address": 0.0,
+    "GitHub: everett7623/airport-recommendations-2026": 0.0,
+    "GitHub: jpatokal/openflights": 0.037
+  },
+  "pairs": [
+    {
+      "a": "Airport_Website",
+      "b": "GitHub: jpatokal/openflights",
+      "a_in_b": 0.088,
+      "b_in_a": 0.037,
+      "max": 0.088,
+      "matches": [
+        {
+          "target_file": "bleronbaftiu21-Airport_Website/footer.php",
+          "corpus": "GitHub: jpatokal/openflights",
+          "other_file": "jpatokal-openflights/test/server/fixtures/fm-standard.html",
+          "containment_target": 0.633,
+          "containment_other": 0.067,
+          "target_fingerprints": 30,
+          "shared_fingerprints": 19,
+          "small_file": false,
+          "target_lines": [
+            [
+              2,
+              39
+            ]
+          ]
+        },
+        {
+          "target_file": "bleronbaftiu21-Airport_Website/footer.php",
+          "corpus": "GitHub: jpatokal/openflights",
+          "other_file": "jpatokal-openflights/test/server/fixtures/fm-kilometer.html",
+          "containment_target": 0.6,
+          "containment_other": 0.062,
+          "target_fingerprints": 30,
+          "shared_fingerprints": 18,
+          "small_file": false,
+          "target_lines": [
+            [
+              4,
+              39
+            ]
+          ]
+        },
+        {
+          "target_file": "bleronbaftiu21-Airport_Website/nav.php",
+          "corpus": "GitHub: jpatokal/openflights",
+          "other_file": "jpatokal-openflights/test/server/fixtures/fm-newairlines.html",
+          "containment_target": 0.553,
+          "containment_other": 0.073,
+          "target_fingerprints": 47,
+          "shared_fingerprints": 26,
+          "small_file": false,
+          "target_lines": [
+            [
+              2,
+              7
+            ],
+            [
+              19,
+              41
+            ]
+          ]
+        },
+        {
+          "target_file": "bleronbaftiu21-Airport_Website/footer.php",
+          "corpus": "GitHub: jpatokal/openflights",
+          "other_file": "jpatokal-openflights/test/server/fixtures/fm-newairlines.html",
+          "containment_target": 0.533,
+          "containment_other": 0.045,
+          "target_fingerprints": 30,
+          "shared_fingerprints": 16,
+          "small_file": false,
+          "target_lines": [
+            [
+              4,
+              39
+            ]
+          ]
+        },
+        {
+          "target_file": "bleronbaftiu21-Airport_Website/footer.php",
+          "corpus": "GitHub: jpatokal/openflights",
+          "other_file": "jpatokal-openflights/test/server/fixtures/fm-newstyle.html",
+          "containment_target": 0.533,
+          "containment_other": 0.058,
+          "target_fingerprints": 30,
+          "shared_fingerprints": 16,
+          "small_file": false,
+          "target_lines": [
+            [
+              7,
+              25
+            ],
+            [
+              27,
+              39
+            ]
+          ]
+        },
+        {
+          "target_file": "bleronbaftiu21-Airport_Website/nav.php",
+          "corpus": "GitHub: jpatokal/openflights",
+          "other_file": "jpatokal-openflights/test/server/fixtures/fm-standard.html",
+          "containment_target": 0.532,
+          "containment_other": 0.088,
+          "target_fingerprints": 47,
+          "shared_fingerprints": 25,
+          "small_file": false,
+          "target_lines": [
+            [
+              3,
+              7
+            ],
+            [
+              19,
+              41
+            ]
+          ]
+        },
+        {
+          "target_file": "bleronbaftiu21-Airport_Website/nav.php",
+          "corpus": "GitHub: jpatokal/openflights",
+          "other_file": "jpatokal-openflights/test/server/fixtures/fm-kilometer.html",
+          "containment_target": 0.532,
+          "containment_other": 0.086,
+          "target_fingerprints": 47,
+          "shared_fingerprints": 25,
+          "small_file": false,
+          "target_lines": [
+            [
+              3,
+              7
+            ],
+            [
+              19,
+              41
+            ]
+          ]
+        },
+        {
+          "target_file": "bleronbaftiu21-Airport_Website/nav.php",
+          "corpus": "GitHub: jpatokal/openflights",
+          "other_file": "jpatokal-openflights/test/server/fixtures/fm-newstyle.html",
+          "containment_target": 0.468,
+          "containment_other": 0.08,
+          "target_fingerprints": 47,
+          "shared_fingerprints": 22,
+          "small_file": false,
+          "target_lines": [
+            [
+              3,
+              7
+            ],
+            [
+              20,
+              41
+            ]
+          ]
+        },
+        {
+          "target_file": "bleronbaftiu21-Airport_Website/nav.php",
+          "corpus": "GitHub: jpatokal/openflights",
+          "other_file": "jpatokal-openflights/html/settings.php",
+          "containment_target": 0.383,
+          "containment_other": 0.068,
+          "target_fingerprints": 47,
+          "shared_fingerprints": 18,
+          "small_file": false,
+          "target_lines": [
+            [
+              2,
+              6
+            ],
+            [
+              16,
+              26
+            ],
+            [
+              30,
+              41
+            ]
+          ]
+        },
+        {
+          "target_file": "bleronbaftiu21-Airport_Website/nav.php",
+          "corpus": "GitHub: jpatokal/openflights",
+          "other_file": "jpatokal-openflights/index.php",
+          "containment_target": 0.34,
+          "containment_other": 0.043,
+          "target_fingerprints": 47,
+          "shared_fingerprints": 16,
+          "small_file": false,
+          "target_lines": [
+            [
+              2,
+              7
+            ],
+            [
+              20,
+              23
+            ],
+            [
+              25,
+              26
+            ],
+            [
+              30,
+              41
+            ]
+          ]
+        },
+        {
+          "target_file": "bleronbaftiu21-Airport_Website/nav.php",
+          "corpus": "GitHub: jpatokal/openflights",
+          "other_file": "jpatokal-openflights/html/apsearch.php",
+          "containment_target": 0.319,
+          "containment_other": 0.101,
+          "target_fingerprints": 47,
+          "shared_fingerprints": 15,
+          "small_file": false,
+          "target_lines": [
+            [
+              3,
+              5
+            ],
+            [
+              7,
+              10
+            ],
+            [
+              21,
+              22
+            ],
+            [
+              25,
+              41
+            ]
+          ]
+        },
+        {
+          "target_file": "bleronbaftiu21-Airport_Website/footer.php",
+          "corpus": "GitHub: jpatokal/openflights",
+          "other_file": "jpatokal-openflights/html/settings.php",
+          "containment_target": 0.3,
+          "containment_other": 0.034,
+          "target_fingerprints": 30,
+          "shared_fingerprints": 9,
+          "small_file": false,
+          "target_lines": [
+            [
+              4,
+              30
+            ],
+            [
+              35,
+              39
+            ]
+          ]
+        },
+        {
+          "target_file": "bleronbaftiu21-Airport_Website/parkingReservation.php",
+          "corpus": "GitHub: jpatokal/openflights",
+          "other_file": "jpatokal-openflights/test/server/fixtures/fm-newairlines.html",
+          "containment_target": 0.296,
+          "containment_other": 0.068,
+          "target_fingerprints": 81,
+          "shared_fingerprints": 24,
+          "small_file": false,
+          "target_lines": [
+            [
+              2,
+              20
+            ],
+            [
+              24,
+              27
+            ],
+            [
+              40,
+              52
+            ],
+            [
+              55,
+              61
+            ],
+            [
+              65,
+              84
+            ]
+          ]
+        },
+        {
+          "target_file": "bleronbaftiu21-Airport_Website/parkingReservation.php",
+          "corpus": "GitHub: jpatokal/openflights",
+          "other_file": "jpatokal-openflights/index.php",
+          "containment_target": 0.284,
+          "containment_other": 0.062,
+          "target_fingerprints": 81,
+          "shared_fingerprints": 23,
+          "small_file": false,
+          "target_lines": [
+            [
+              2,
+              17
+            ],
+            [
+              24,
+              27
+            ],
+            [
+              40,
+              46
+            ],
+            [
+              50,
+              52
+            ],
+            [
+              55,
+              84
+            ]
+          ]
+        },
+        {
+          "target_file": "bleronbaftiu21-Airport_Website/parkingReservation.php",
+          "corpus": "GitHub: jpatokal/openflights",
+          "other_file": "jpatokal-openflights/test/server/fixtures/fm-standard.html",
+          "containment_target": 0.284,
+          "containment_other": 0.081,
+          "target_fingerprints": 81,
+          "shared_fingerprints": 23,
+          "small_file": false,
+          "target_lines": [
+            [
+              3,
+              20
+            ],
+            [
+              24,
+              27
+            ],
+            [
+              40,
+              52
+            ],
+            [
+              55,
+              61
+            ],
+            [
+              65,
+              84
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "a": "Airport_Website",
+      "b": "GitHub: FlyBitVIP/FlyBit-Airport-Address",
+      "a_in_b": 0.0,
+      "b_in_a": 0.0,
+      "max": 0.0,
+      "matches": []
+    },
+    {
+      "a": "Airport_Website",
+      "b": "GitHub: everett7623/airport-recommendations-2026",
+      "a_in_b": 0.0,
+      "b_in_a": 0.0,
+      "max": 0.0,
+      "matches": []
+    },
+    {
+      "a": "GitHub: FlyBitVIP/FlyBit-Airport-Address",
+      "b": "GitHub: everett7623/airport-recommendations-2026",
+      "a_in_b": 0.0,
+      "b_in_a": 0.0,
+      "max": 0.0,
+      "matches": []
+    },
+    {
+      "a": "GitHub: FlyBitVIP/FlyBit-Airport-Address",
+      "b": "GitHub: jpatokal/openflights",
+      "a_in_b": 0.0,
+      "b_in_a": 0.0,
+      "max": 0.0,
+      "matches": []
+    },
+    {
+      "a": "GitHub: everett7623/airport-recommendations-2026",
+      "b": "GitHub: jpatokal/openflights",
+      "a_in_b": 0.0,
+      "b_in_a": 0.0,
+      "max": 0.0,
+      "matches": []
+    }
+  ],
+  "note": "Overlap = share of a group's code fingerprints that also appear in the other group. Shared framework boilerplate gives a few percent; inspect pairs above ~20% manually and use --base for starter code."
+}

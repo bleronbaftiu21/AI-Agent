@@ -1,0 +1,619 @@
+{
+  "schema_version": "1.0",
+  "repository": {
+    "url": "https://github.com/ssh-Eventix/Grupi18-SSH-Eventix-Backend",
+    "branch": "main",
+    "commit": "bbcc1a627d14fd79be8be5bce2a1f66fb34f86e5",
+    "is_fork": false,
+    "fork_parent": null,
+    "additional": [
+      {
+        "url": "https://github.com/ssh-Eventix/Grupi18-SSH-Eventix-Frontend",
+        "branch": "main",
+        "commit": "11e9ee2656314bb32b83f70f388ea661d7aca5e9"
+      }
+    ]
+  },
+  "audit": {
+    "date": "2026-10-22",
+    "language": "sq",
+    "requirements_source": "kerkesa_projekti_sistemet_shperndara.pdf",
+    "ai_policy": "unspecified",
+    "executed_tests": false,
+    "corpus": []
+  },
+  "scores": {
+    "categories": [
+      {
+        "name": "requirements_compliance",
+        "weight": 0.7,
+        "score": 8.5,
+        "status": "assessed",
+        "justification": "85% e kerkesave te detyrueshme; 6 te pjesshme."
+      },
+      {
+        "name": "code_quality",
+        "weight": 0.07,
+        "score": 6,
+        "status": "assessed",
+        "justification": "Exception gjenerike pa handler global; duplikim."
+      },
+      {
+        "name": "structure_architecture",
+        "weight": 0.05,
+        "score": 7,
+        "status": "assessed",
+        "justification": "Clean architecture; disa anashkalime shtresash."
+      },
+      {
+        "name": "security",
+        "weight": 0.05,
+        "score": 6,
+        "status": "assessed",
+        "justification": "Sekrete dev/test ne repo; izolimi tenant potencial (gjysme peshe)."
+      },
+      {
+        "name": "testing",
+        "weight": 0.05,
+        "score": 5,
+        "status": "assessed",
+        "justification": "41 teste ne CI; mbulim i holle; FE pa teste."
+      },
+      {
+        "name": "maintainability_documentation",
+        "weight": 0.04,
+        "score": 6,
+        "status": "assessed",
+        "justification": "README e gjate por e pasakte."
+      },
+      {
+        "name": "production_readiness",
+        "weight": 0.02,
+        "score": 7,
+        "status": "assessed",
+        "justification": "Mjaftueshem per projekt kursi; localhost/CD si keshilla."
+      },
+      {
+        "name": "performance",
+        "weight": 0.01,
+        "score": 6,
+        "status": "assessed",
+        "justification": "Cache prezent; pa pagination (inferred)."
+      },
+      {
+        "name": "dependencies",
+        "weight": 0.01,
+        "score": 7,
+        "status": "assessed",
+        "justification": "Versione te fiksuara; CVE jo te kontrolluara."
+      }
+    ],
+    "weighted": 7.78,
+    "cap": {
+      "applied": false,
+      "value": null,
+      "reason": null
+    },
+    "final": 7.8,
+    "requirements_only": 8.5,
+    "confidence": "Medium"
+  },
+  "requirements": {
+    "items": [
+      {
+        "id": "R1",
+        "text": "Klient-server te pavarur, komunikim vetem permes API",
+        "mandatory": true,
+        "points": null,
+        "status": "Met",
+        "evidence": [
+          "Frontend/src/api/axios.js:3-6"
+        ],
+        "notes": ""
+      },
+      {
+        "id": "R2",
+        "text": "HTTP/HTTPS sipas REST (full)",
+        "mandatory": true,
+        "points": null,
+        "status": "Partially met",
+        "evidence": [
+          "Eventix.Api/Program.cs:604-607",
+          "Eventix.Api/Controllers/EventsController.cs:34-54"
+        ],
+        "notes": "Gabimet e validimit kthehen 500; rruge RPC-style."
+      },
+      {
+        "id": "R3",
+        "text": "Minimum 20 endpoint-e",
+        "mandatory": true,
+        "points": null,
+        "status": "Met",
+        "evidence": [
+          "Eventix.Api/Controllers (144 [Http*])"
+        ],
+        "notes": ""
+      },
+      {
+        "id": "R4",
+        "text": "Framework REST (.NET)",
+        "mandatory": true,
+        "points": null,
+        "status": "Met",
+        "evidence": [
+          "Eventix.Api/Eventix.Api.csproj"
+        ],
+        "notes": ""
+      },
+      {
+        "id": "R5",
+        "text": "Programim OOP",
+        "mandatory": true,
+        "points": null,
+        "status": "Met",
+        "evidence": [
+          "Eventix.Infrastructure/Persistence/Repositories/TenantBaseRepository.cs",
+          "Eventix.Domain/Common/BaseEntity.cs"
+        ],
+        "notes": ""
+      },
+      {
+        "id": "R6",
+        "text": "Swagger UI per te gjitha endpoint-et",
+        "mandatory": true,
+        "points": null,
+        "status": "Met",
+        "evidence": [
+          "Eventix.Api/Program.cs:65-120,598-599"
+        ],
+        "notes": "Vetem ne Development."
+      },
+      {
+        "id": "R7",
+        "text": "ORM dhe modele",
+        "mandatory": true,
+        "points": null,
+        "status": "Met",
+        "evidence": [
+          "Eventix.Infrastructure/Persistence/Database/PublicDbContext.cs",
+          "Eventix.Infrastructure/Persistence/Database/TenantDbContext.cs"
+        ],
+        "notes": ""
+      },
+      {
+        "id": "R8",
+        "text": "Login/register dhe role-based authorization",
+        "mandatory": true,
+        "points": null,
+        "status": "Met",
+        "evidence": [
+          "Eventix.Api/Controllers/AuthController.cs:171,253",
+          "Eventix.Api/Program.cs:293-568"
+        ],
+        "notes": "Shih F-01."
+      },
+      {
+        "id": "R9",
+        "text": "Middleware per logging dhe autentikim",
+        "mandatory": true,
+        "points": null,
+        "status": "Met",
+        "evidence": [
+          "Eventix.Api/Middleware/RequestLoggingMiddleware.cs",
+          "Eventix.Infrastructure/MultiTenancy/TenantMiddleware.cs"
+        ],
+        "notes": ""
+      },
+      {
+        "id": "R10",
+        "text": "React + Context API",
+        "mandatory": true,
+        "points": null,
+        "status": "Met",
+        "evidence": [
+          "Frontend/src/auth/AuthContext.jsx"
+        ],
+        "notes": "Vetem nje context."
+      },
+      {
+        "id": "R11",
+        "text": "Unit teste, API teste, CI/CD",
+        "mandatory": true,
+        "points": null,
+        "status": "Partially met",
+        "evidence": [
+          "Eventix.Tests/",
+          "Backend/.github/workflows/ci.yml"
+        ],
+        "notes": "41 teste; pa CD; frontend pa teste."
+      },
+      {
+        "id": "R12",
+        "text": "Minimum 20 modele dhe migrime",
+        "mandatory": true,
+        "points": null,
+        "status": "Met",
+        "evidence": [
+          "Eventix.Domain/Entities (31)",
+          "Eventix.Infrastructure/Migrations",
+          "Eventix.Infrastructure/Persistence/Migrations"
+        ],
+        "notes": ""
+      },
+      {
+        "id": "R13",
+        "text": "Dokumentim i plote",
+        "mandatory": true,
+        "points": null,
+        "status": "Partially met",
+        "evidence": [
+          "Backend/README.md"
+        ],
+        "notes": "Pasaktesi: OpenAI, migrime, env vars."
+      },
+      {
+        "id": "R14",
+        "text": "Jira / GitHub Projects",
+        "mandatory": true,
+        "points": null,
+        "status": "Met",
+        "evidence": [
+          "40 commit-e me SCRUM-<n>"
+        ],
+        "notes": "Board-i nuk u pa."
+      },
+      {
+        "id": "R15",
+        "text": "GitHub me Pull Requests dhe Code Reviews",
+        "mandatory": true,
+        "points": null,
+        "status": "Partially met",
+        "evidence": [
+          "GitHub API: >=104 PR BE, 41 PR FE"
+        ],
+        "notes": "0 review ne 12 PR te kontrolluara."
+      },
+      {
+        "id": "R16",
+        "text": "Modul AI me OpenAI API",
+        "mandatory": true,
+        "points": null,
+        "status": "Partially met",
+        "evidence": [
+          "Eventix.Api/Controllers/AiController.cs",
+          "Eventix.Infrastructure/Services/OllamaClient.cs:28",
+          "Eventix.Api/appsettings.json:18-21"
+        ],
+        "notes": "Perdor Ollama, jo OpenAI."
+      },
+      {
+        "id": "R17",
+        "text": "Caching (Redis)",
+        "mandatory": true,
+        "points": null,
+        "status": "Met",
+        "evidence": [
+          "Eventix.Api/Helpers/CacheHelper.cs",
+          "Eventix.Api/Program.cs:185-196"
+        ],
+        "notes": "Redis host hardcoded."
+      },
+      {
+        "id": "R18",
+        "text": "Background jobs",
+        "mandatory": true,
+        "points": null,
+        "status": "Met",
+        "evidence": [
+          "Eventix.Infrastructure/BackgroundJobs/JobScheduler.cs"
+        ],
+        "notes": "Hangfire, 8 pune."
+      },
+      {
+        "id": "R19",
+        "text": "Multi-tenancy",
+        "mandatory": true,
+        "points": null,
+        "status": "Met",
+        "evidence": [
+          "Eventix.Infrastructure/MultiTenancy/TenantSchemaProvisioner.cs",
+          "Eventix.Infrastructure/MultiTenancy/TenantMiddleware.cs"
+        ],
+        "notes": "Shih F-01."
+      },
+      {
+        "id": "R20",
+        "text": "Kerkim dhe filtrim i avancuar",
+        "mandatory": true,
+        "points": null,
+        "status": "Partially met",
+        "evidence": [
+          "Eventix.Infrastructure/Persistence/Repositories/EventRepository.cs:27-39",
+          "Eventix.Application/DTOs/AuditLog/AuditLogQueryDTO.cs"
+        ],
+        "notes": "Eventet vetem kerkim teksti, pa pagination."
+      }
+    ],
+    "mandatory_compliance_pct": 85.0,
+    "optional_compliance_pct": null
+  },
+  "integrity": {
+    "originality": {
+      "originality_pct": 100.0,
+      "matches": [],
+      "history_signals": [
+        "Zhvillim gradual 2026-04-06..2026-05-30 me >145 PR dhe 40 Jira keys.",
+        "cc9521bce5: +27,300 rreshta nga merge i deges me histori te veçante (2 root commits), jo kod i jashtem.",
+        "Commit-e te dyfishuara nga squash/rebase fryjne statistikat."
+      ],
+      "external_code": [],
+      "note": "Krahasimi me grupe te tjera nuk u be (pa korpus)."
+    },
+    "ai_assistance": {
+      "estimate_low_pct": 5,
+      "estimate_high_pct": 25,
+      "confidence": "Low",
+      "components": [
+        {
+          "path": "Backend/README.md",
+          "lines": 531,
+          "classification": "Likely AI-assisted",
+          "signals": [
+            "tekst gjenerik deklarativ",
+            "pretendime qe nuk perputhen me kodin (OpenAI, Repository Tests)",
+            "shtuar diten e fundit"
+          ]
+        },
+        {
+          "path": "Frontend (commit a7f08dc08f)",
+          "lines": 4000,
+          "classification": "Mixed/uncertain",
+          "signals": [
+            "commit i madh 40 skedare / 4,368 rreshta",
+            "mesazh ne stil agjenti",
+            "te dhena mock te hequra me vone"
+          ]
+        },
+        {
+          "path": "Backend C# (pa migrime)",
+          "lines": 14479,
+          "classification": "Likely human",
+          "signals": [
+            "stil jokonsistent",
+            "commit-e ne shqip",
+            "pa artefakte AI"
+          ]
+        },
+        {
+          "path": "Frontend tjeter",
+          "lines": 9600,
+          "classification": "Likely human",
+          "signals": [
+            "indentim jokonsistent",
+            "zgjidhje ad-hoc"
+          ]
+        }
+      ],
+      "policy_assessment": "Politika e paspecifikuar; nuk penalizohet.",
+      "needs_human_review": false
+    },
+    "contributions": [
+      {
+        "author": "Viola Resyli",
+        "commits": 83,
+        "lines_added": 44448,
+        "lines_removed": null
+      },
+      {
+        "author": "Yllka Fejzullahu",
+        "commits": 24,
+        "lines_added": 54630,
+        "lines_removed": null
+      },
+      {
+        "author": "Bleron Baftiu",
+        "commits": 56,
+        "lines_added": 23677,
+        "lines_removed": null
+      },
+      {
+        "author": "Olti Krasniqi",
+        "commits": 25,
+        "lines_added": 12691,
+        "lines_removed": null
+      },
+      {
+        "author": "Riga Zubaku",
+        "commits": 12,
+        "lines_added": 3401,
+        "lines_removed": null
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "F-01",
+      "title": "Tenant-i nga header-i nuk verifikohet kundrejt tenantId ne JWT",
+      "category": "security",
+      "severity": "High",
+      "status": "Potential",
+      "locations": [
+        "Eventix.Infrastructure/MultiTenancy/TenantMiddleware.cs:41-46",
+        "Eventix.Infrastructure/Auth/PermissionHandler.cs:20-24",
+        "Frontend/src/api/axios.js:8-21"
+      ],
+      "evidence": "X-Tenant-Slug zgjedh skemen; claim tenantId lexohet vetem kur header mungon; PermissionHandler kontrollon vetem rolet.",
+      "impact": "Perdorues i tenant A mund te aksesoje te dhenat e tenant B me lejet e rolit te vet.",
+      "recommendation": "Refuzo (403) kur tenant-i i zgjidhur != tenantId ne token (pervec SuperAdmin/impersonation); shto test."
+    },
+    {
+      "id": "F-02",
+      "title": "Kredenciale te commit-uara",
+      "category": "security",
+      "severity": "High",
+      "status": "Confirmed",
+      "locations": [
+        "Eventix.Api/appsettings.Development.json:11-12",
+        "docker-compose.yml:9",
+        ".github/workflows/ci.yml:23,38,39"
+      ],
+      "evidence": "SMTP username/password, POSTGRES_PASSWORD, JWT_SECRET_KEY = [REDACTED]",
+      "impact": "Kredenciale sandbox te perdorshme nga kushdo me akses ne repo.",
+      "recommendation": "Rrotullo kredencialet; perdor GitHub Secrets dhe .env jashte git."
+    },
+    {
+      "id": "F-03",
+      "title": "Moduli AI perdor Ollama, jo OpenAI; README pretendon OpenAI",
+      "category": "requirements",
+      "severity": "High",
+      "status": "Confirmed",
+      "locations": [
+        "Eventix.Infrastructure/Services/OllamaClient.cs:8-40",
+        "Eventix.Api/appsettings.json:18-21",
+        "README.md:153,345"
+      ],
+      "evidence": "BaseUrl http://localhost:11434, Model qwen2.5:0.5b",
+      "impact": "R16 kerkon OpenAI API; dokumentimi nuk perputhet.",
+      "recommendation": "Shto klient OpenAI pas nje nderfaqeje LLM ose korrigjo README."
+    },
+    {
+      "id": "F-04",
+      "title": "Exception gjenerike pa handler global",
+      "category": "code_quality",
+      "severity": "Medium",
+      "status": "Confirmed",
+      "locations": [
+        "Eventix.Application/Services/BookingService.cs:60,65,91"
+      ],
+      "evidence": "27 x throw new Exception; pa UseExceptionHandler",
+      "impact": "Gabimet e klientit kthehen 500.",
+      "recommendation": "Exception domain-i + ProblemDetails middleware."
+    },
+    {
+      "id": "F-05",
+      "title": "Overselling i mundshem ne rezervime paralele",
+      "category": "code_quality",
+      "severity": "Medium",
+      "status": "Potential",
+      "locations": [
+        "Eventix.Application/Services/BookingService.cs:104,130-131"
+      ],
+      "evidence": "Check-then-decrement pa concurrency token",
+      "impact": "Me shume bileta te shitura se sa ka.",
+      "recommendation": "xmin concurrency token ose UPDATE atomik."
+    },
+    {
+      "id": "F-06",
+      "title": "Mungojne code reviews formale",
+      "category": "process",
+      "severity": "Medium",
+      "status": "Confirmed",
+      "locations": [
+        "GitHub PR #10,23,40,60,80,95,104 (BE); #8,15,25,35,41 (FE)"
+      ],
+      "evidence": "0 reviews ne 12 PR",
+      "impact": "R15 i pjesshem.",
+      "recommendation": "Branch protection me review te detyrueshem."
+    },
+    {
+      "id": "F-07",
+      "title": "Konfigurime localhost te hardcoded",
+      "category": "production_readiness",
+      "severity": "Medium",
+      "status": "Confirmed",
+      "locations": [
+        "Eventix.Api/Program.cs:193,287",
+        "Eventix.Api/Controllers/AuthController.cs:108"
+      ],
+      "evidence": "Redis localhost:6379; CORS localhost; reset URL localhost:5173",
+      "impact": "Nuk funksionon jashte Development.",
+      "recommendation": "Lexo nga konfigurimi."
+    },
+    {
+      "id": "F-08",
+      "title": "Kerkim i thjeshte, pa pagination",
+      "category": "performance",
+      "severity": "Medium",
+      "status": "Potential",
+      "locations": [
+        "Eventix.Infrastructure/Persistence/Repositories/EventRepository.cs:27-39",
+        "Eventix.Infrastructure/Services/AiService.cs:57,290"
+      ],
+      "evidence": "ToLower().Contains, pa Skip/Take (inferred)",
+      "impact": "Shkallezim i dobet; R20 i pjesshem.",
+      "recommendation": "Filtra, pagination, ILIKE/indekse."
+    },
+    {
+      "id": "F-09",
+      "title": "Endpoint debug-claims ne kod",
+      "category": "security",
+      "severity": "Low",
+      "status": "Confirmed",
+      "locations": [
+        "Eventix.Api/Controllers/AiController.cs:125-134"
+      ],
+      "evidence": "Kthen te gjitha claims",
+      "impact": "Zbulim informacioni i vogel.",
+      "recommendation": "Hiqe."
+    },
+    {
+      "id": "F-10",
+      "title": "Politike e dobet fjalekalimi",
+      "category": "security",
+      "severity": "Low",
+      "status": "Confirmed",
+      "locations": [
+        "Eventix.Api/Controllers/AuthController.cs:126"
+      ],
+      "evidence": "Minimum 6 karaktere",
+      "impact": "Fjalekalime te dobta.",
+      "recommendation": "Rrit kerkesat."
+    },
+    {
+      "id": "F-11",
+      "title": "JWT ne localStorage",
+      "category": "security",
+      "severity": "Low",
+      "status": "Confirmed",
+      "locations": [
+        "Frontend/src/auth/AuthContext.jsx:37"
+      ],
+      "evidence": "localStorage.setItem token",
+      "impact": "Vjedhje me XSS.",
+      "recommendation": "HttpOnly cookie ose CSP e forte."
+    },
+    {
+      "id": "F-12",
+      "title": "Dokumentim jo i sakte",
+      "category": "maintainability",
+      "severity": "Low",
+      "status": "Confirmed",
+      "locations": [
+        "README.md"
+      ],
+      "evidence": "dotnet ef pa --context; env vars te padokumentuara",
+      "impact": "Setup i veshtire.",
+      "recommendation": "Perditeso README."
+    }
+  ],
+  "viva_questions": [
+    "Si e zgjedh TenantMiddleware tenant-in kur ka edhe JWT edhe X-Tenant-Slug, dhe çfare ndodh kur nuk perputhen?",
+    "Pse nevojitet TenantModelCacheKeyFactory?",
+    "Pse Ollama ne vend te OpenAI dhe si do ta nderronit ofruesin?",
+    "Si i ekzekuton TenantJobRunner punet per çdo skeme tenant-i?",
+    "Ku invalidohet cache-i kur ndryshon nje TicketType?",
+    "Çfare ndodh kur dy bleres rezervojne njekohesisht biletën e fundit?",
+    "Si funksionon dhe revokohet impersonation-i?",
+    "Shpjegoni rrjedhen e refresh token-it.",
+    "Pse ka migrime ne dy dosje?",
+    "Si u ndertua MoreEntityPages.jsx (commit a7f08dc08f)?"
+  ],
+  "limitations": [
+    "Asnje build/test nuk u ekzekutua.",
+    "Pa korpus krahasimi per plagjiature.",
+    "Code reviews ne moster 12 PR; Jira board nuk u pa.",
+    "Pa auditim CVE.",
+    "gh CLI mungonte; u perdor GitHub API publik.",
+    "Problem Windows long paths gjate checkout (i zgjidhur)."
+  ]
+}

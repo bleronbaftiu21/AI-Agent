@@ -1,0 +1,109 @@
+{
+  "files_scanned": 86,
+  "total_nonblank_lines": 14189,
+  "files_by_level": {
+    "strong_signals": 0,
+    "several_medium_signals": 0,
+    "weak_or_single_signal": 6,
+    "no_signals": 80
+  },
+  "lines_by_level": {
+    "strong_signals": 0,
+    "several_medium_signals": 0,
+    "weak_or_single_signal": 1083,
+    "no_signals": 13106
+  },
+  "flagged_files": {
+    "src/pages/superadmin/TenantEmailDomainsPage.jsx": {
+      "lines": 299,
+      "signals": [
+        {
+          "name": "placeholder",
+          "strength": "medium",
+          "count": 1,
+          "lines": [
+            241
+          ]
+        }
+      ],
+      "comment_ratio": 0.0,
+      "level": "weak_or_single_signal"
+    },
+    "src/pages/buyer/CheckoutPage.jsx": {
+      "lines": 278,
+      "signals": [
+        {
+          "name": "placeholder",
+          "strength": "medium",
+          "count": 1,
+          "lines": [
+            303
+          ]
+        }
+      ],
+      "comment_ratio": 0.0,
+      "level": "weak_or_single_signal"
+    },
+    "src/pages/public/LoginPage.jsx": {
+      "lines": 161,
+      "signals": [
+        {
+          "name": "placeholder",
+          "strength": "medium",
+          "count": 1,
+          "lines": [
+            116
+          ]
+        }
+      ],
+      "comment_ratio": 0.0,
+      "level": "weak_or_single_signal"
+    },
+    "src/pages/public/Register.jsx": {
+      "lines": 148,
+      "signals": [
+        {
+          "name": "placeholder",
+          "strength": "medium",
+          "count": 1,
+          "lines": [
+            113
+          ]
+        }
+      ],
+      "comment_ratio": 0.0,
+      "level": "weak_or_single_signal"
+    },
+    "src/pages/public/ResetPasswordPage.jsx": {
+      "lines": 127,
+      "signals": [
+        {
+          "name": "placeholder",
+          "strength": "medium",
+          "count": 1,
+          "lines": [
+            78
+          ]
+        }
+      ],
+      "comment_ratio": 0.0,
+      "level": "weak_or_single_signal"
+    },
+    "src/pages/public/ForgotPasswordPage.jsx": {
+      "lines": 70,
+      "signals": [
+        {
+          "name": "placeholder",
+          "strength": "medium",
+          "count": 1,
+          "lines": [
+            60
+          ]
+        }
+      ],
+      "comment_ratio": 0.0,
+      "level": "weak_or_single_signal"
+    }
+  },
+  "note": "Automated indicators only. Combine with git history and manual reading; classify each component as Likely human / Mixed / Likely AI-assisted and report a range with confidence, never a fact."
+}

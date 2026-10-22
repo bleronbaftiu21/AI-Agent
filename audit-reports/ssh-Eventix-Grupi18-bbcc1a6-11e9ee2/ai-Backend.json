@@ -1,0 +1,36 @@
+{
+  "files_scanned": 380,
+  "total_nonblank_lines": 25818,
+  "files_by_level": {
+    "strong_signals": 1,
+    "several_medium_signals": 0,
+    "weak_or_single_signal": 0,
+    "no_signals": 379
+  },
+  "lines_by_level": {
+    "strong_signals": 531,
+    "several_medium_signals": 0,
+    "weak_or_single_signal": 0,
+    "no_signals": 25287
+  },
+  "flagged_files": {
+    "README.md": {
+      "lines": 531,
+      "signals": [
+        {
+          "name": "chat_reference",
+          "strength": "strong",
+          "lines": [
+            7,
+            46,
+            109,
+            153,
+            343
+          ]
+        }
+      ],
+      "level": "strong_signals"
+    }
+  },
+  "note": "Automated indicators only. Combine with git history and manual reading; classify each component as Likely human / Mixed / Likely AI-assisted and report a range with confidence, never a fact."
+}

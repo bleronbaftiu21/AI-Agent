@@ -1,0 +1,226 @@
+{
+  "rev": "HEAD",
+  "commits": 220,
+  "non_merge_commits": 144,
+  "first_commit": {
+    "sha": "f4953dc06b",
+    "author": "bleronbaftiu21",
+    "author_date": "2026-04-07T00:04:29+02:00",
+    "subject": "Initial commit",
+    "added": 1
+  },
+  "last_commit": {
+    "sha": "bbcc1a627d",
+    "author": "bleronbaftiu21",
+    "author_date": "2026-05-30T21:41:30+02:00",
+    "subject": "Fix formatting of included functionality in README"
+  },
+  "active_days": 34,
+  "commits_per_day": {
+    "2026-04-07": 1,
+    "2026-04-12": 1,
+    "2026-04-20": 4,
+    "2026-04-21": 1,
+    "2026-04-23": 4,
+    "2026-04-24": 3,
+    "2026-04-25": 7,
+    "2026-04-26": 9,
+    "2026-04-27": 5,
+    "2026-04-28": 2,
+    "2026-04-30": 3,
+    "2026-05-01": 2,
+    "2026-05-04": 2,
+    "2026-05-06": 1,
+    "2026-05-07": 2,
+    "2026-05-08": 7,
+    "2026-05-10": 1,
+    "2026-05-11": 4,
+    "2026-05-12": 1,
+    "2026-05-14": 3,
+    "2026-05-15": 2,
+    "2026-05-16": 7,
+    "2026-05-17": 1,
+    "2026-05-18": 7,
+    "2026-05-20": 2,
+    "2026-05-21": 3,
+    "2026-05-23": 8,
+    "2026-05-24": 10,
+    "2026-05-25": 5,
+    "2026-05-26": 7,
+    "2026-05-27": 4,
+    "2026-05-28": 3,
+    "2026-05-29": 9,
+    "2026-05-30": 13
+  },
+  "authors": [
+    {
+      "author": "Viola Resyli",
+      "emails": [
+        "121452187+violavv123@users.noreply.github.com",
+        "violaresyli@gmail.com"
+      ],
+      "commits": 60,
+      "lines_added": 35738,
+      "lines_removed": 11219,
+      "share_of_added": 0.322
+    },
+    {
+      "author": "Yllka",
+      "emails": [
+        "yllka.fejzullahu@student.uni-pr.edu"
+      ],
+      "commits": 6,
+      "lines_added": 32459,
+      "lines_removed": 7134,
+      "share_of_added": 0.293
+    },
+    {
+      "author": "Yllka Fejzullahu",
+      "emails": [
+        "yllka.fejzullahu@student.uni-pr.edu"
+      ],
+      "commits": 11,
+      "lines_added": 15572,
+      "lines_removed": 681,
+      "share_of_added": 0.14
+    },
+    {
+      "author": "bleronbaftiu21",
+      "emails": [
+        "bleronbaftiu2@gmail.com"
+      ],
+      "commits": 33,
+      "lines_added": 11375,
+      "lines_removed": 3096,
+      "share_of_added": 0.103
+    },
+    {
+      "author": "oltikrasniqi21",
+      "emails": [
+        "oltkrasn@gmail.com"
+      ],
+      "commits": 22,
+      "lines_added": 10964,
+      "lines_removed": 4531,
+      "share_of_added": 0.099
+    },
+    {
+      "author": "ZubakuRiga",
+      "emails": [
+        "149312710+ZubakuRiga@users.noreply.github.com"
+      ],
+      "commits": 6,
+      "lines_added": 2980,
+      "lines_removed": 717,
+      "share_of_added": 0.027
+    },
+    {
+      "author": "Olti Krasniqi",
+      "emails": [
+        "95415453+oltikrasniqi21@users.noreply.github.com"
+      ],
+      "commits": 2,
+      "lines_added": 1725,
+      "lines_removed": 4,
+      "share_of_added": 0.016
+    },
+    {
+      "author": "RigaZubaku",
+      "emails": [
+        "riga.zubaku@student.uni-pr.edu"
+      ],
+      "commits": 4,
+      "lines_added": 99,
+      "lines_removed": 13,
+      "share_of_added": 0.001
+    }
+  ],
+  "largest_commits": [
+    {
+      "sha": "cc9521bce5",
+      "author": "Yllka",
+      "author_date": "2026-05-24T19:50:12+02:00",
+      "subject": "SCRUM-241 Added port 5174",
+      "files": 300,
+      "added": 27300
+    },
+    {
+      "sha": "3aa522c0f6",
+      "author": "Yllka Fejzullahu",
+      "author_date": "2026-04-27T08:58:07+02:00",
+      "subject": "Feature/eventix 50 event session (#23)",
+      "files": 7,
+      "added": 5927
+    },
+    {
+      "sha": "6ff51e75a1",
+      "author": "Viola Resyli",
+      "author_date": "2026-05-29T00:45:34+02:00",
+      "subject": "fixed audit log logic for superadmin",
+      "files": 21,
+      "added": 5794
+    },
+    {
+      "sha": "8a7d4d1e71",
+      "author": "Yllka",
+      "author_date": "2026-04-24T01:02:20+02:00",
+      "subject": "entitetet",
+      "files": 12,
+      "added": 4450
+    },
+    {
+      "sha": "4fd87e81f1",
+      "author": "Yllka Fejzullahu",
+      "author_date": "2026-04-24T08:46:10+02:00",
+      "subject": "entitetet (#8)",
+      "files": 12,
+      "added": 4450
+    },
+    {
+      "sha": "ad2fd95e44",
+      "author": "oltikrasniqi21",
+      "author_date": "2026-05-30T02:30:38+02:00",
+      "subject": "revert",
+      "files": 6,
+      "added": 3774
+    },
+    {
+      "sha": "eda0a6bd39",
+      "author": "Viola Resyli",
+      "author_date": "2026-05-11T00:36:52+02:00",
+      "subject": "EVENTIX-66 added archive entity and changed some authorization files",
+      "files": 41,
+      "added": 3663
+    },
+    {
+      "sha": "c2a53e145b",
+      "author": "Viola Resyli",
+      "author_date": "2026-05-04T21:55:38+02:00",
+      "subject": "fixed migrations",
+      "files": 5,
+      "added": 3324
+    },
+    {
+      "sha": "1a504838e3",
+      "author": "Yllka Fejzullahu",
+      "author_date": "2026-05-08T09:43:54+02:00",
+      "subject": "Feature/eventix 61 reviewandcheckin (#38)",
+      "files": 18,
+      "added": 1969
+    },
+    {
+      "sha": "9a46fa2c6a",
+      "author": "Viola Resyli",
+      "author_date": "2026-04-23T22:17:03+02:00",
+      "subject": "rregullimi i controllerave",
+      "files": 65,
+      "added": 1949
+    }
+  ],
+  "late_commits": [],
+  "early_commits": [],
+  "flags": [
+    "8 distinct author names — verify they match the submitting student/team."
+  ],
+  "note": "History signals are indicators only; squash merges, uploads and pair programming distort them."
+}

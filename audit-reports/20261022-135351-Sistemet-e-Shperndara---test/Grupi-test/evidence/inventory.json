@@ -1,0 +1,114 @@
+{
+  "frameworks": [
+    "react",
+    "vite"
+  ],
+  "files_by_language": {
+    "JavaScript (JSX)": 44,
+    "JavaScript": 36,
+    "CSS": 4,
+    "HTML": 1
+  },
+  "lines_by_language": {
+    "JavaScript (JSX)": 9302,
+    "CSS": 3126,
+    "JavaScript": 1287,
+    "HTML": 13
+  },
+  "source_lines_total": 13728,
+  "generated_or_migration_files": 1,
+  "endpoints": {
+    "count": 0,
+    "by_kind": {},
+    "by_method": {},
+    "items": []
+  },
+  "models": {
+    "count": 0,
+    "names": [],
+    "locations": {}
+  },
+  "migrations": {
+    "count": 0,
+    "files": []
+  },
+  "tests": {
+    "count": 0,
+    "files": []
+  },
+  "ci_files": [],
+  "ci_has_deploy": false,
+  "docker_files": [],
+  "docs": [
+    "README.md"
+  ],
+  "technology": {
+    "multi_tenancy": {
+      "count": 112,
+      "code_hits": 746,
+      "examples": [
+        "src/index.css:79",
+        "src/index.css:80",
+        "src/index.css:143",
+        "src/api/axios.js:8",
+        "src/api/axios.js:9",
+        "src/api/axios.js:17"
+      ]
+    },
+    "react": {
+      "count": 28,
+      "code_hits": 28,
+      "examples": [
+        "src/main.jsx:1",
+        "src/auth/AuthContext.jsx:2",
+        "src/components/DynamicForm.jsx:2",
+        "src/components/DynamicTable.jsx:1",
+        "src/components/crud/EntityCrudPage.jsx:1",
+        "src/layouts/BuyerLayout.jsx:1"
+      ]
+    },
+    "react_context": {
+      "count": 2,
+      "code_hits": 2,
+      "examples": [
+        "src/auth/AuthContext.jsx:6",
+        "src/auth/AuthContext.jsx:225"
+      ]
+    },
+    "roles_authorization": {
+      "count": 49,
+      "code_hits": 83,
+      "examples": [
+        "src/index.css:167",
+        "src/index.css:3027",
+        "src/auth/AuthContext.jsx:8",
+        "src/auth/AuthContext.jsx:9",
+        "src/auth/AuthContext.jsx:83",
+        "src/components/Alert.jsx:14"
+      ]
+    },
+    "search_filter": {
+      "count": 78,
+      "code_hits": 273,
+      "examples": [
+        "src/index.css:673",
+        "src/index.css:683",
+        "src/index.css:687",
+        "src/api/eventsApi.js:27",
+        "src/api/eventsApi.js:60",
+        "src/api/eventsApi.js:64"
+      ]
+    }
+  },
+  "possible_secrets": [],
+  "notes": [
+    "Endpoint/model counts come from static patterns; verify borderline cases manually.",
+    "DRF ViewSets and Laravel resources expose several routes each; they are counted once here."
+  ],
+  "repos": [
+    {
+      "label": "Grupi18-SSH-Eventix-Frontend",
+      "path": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-135351\\Grupi-test\\ssh-Eventix-Grupi18-SSH-Eventix-Frontend"
+    }
+  ]
+}

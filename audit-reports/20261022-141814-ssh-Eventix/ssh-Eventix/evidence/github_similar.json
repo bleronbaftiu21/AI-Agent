@@ -1,0 +1,43 @@
+{
+  "candidates": [
+    {
+      "full_name": "indestudio/Eventix",
+      "url": "https://github.com/indestudio/Eventix",
+      "code_hits": 0,
+      "matched_lines": [],
+      "name_match": true,
+      "created_at": "2025-07-19T11:41:22Z",
+      "pushed_at": "2025-10-03T19:56:25Z",
+      "stars": 12,
+      "description": "",
+      "reason": "emër/përshkrim i ngjashëm",
+      "dir": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-141814\\ssh-Eventix\\_github\\indestudio-Eventix"
+    },
+    {
+      "full_name": "sholajegede/eventix",
+      "url": "https://github.com/sholajegede/eventix",
+      "code_hits": 0,
+      "matched_lines": [],
+      "name_match": true,
+      "created_at": "2024-12-19T08:09:47Z",
+      "pushed_at": "2024-12-19T08:28:33Z",
+      "stars": 5,
+      "description": "An event management application to demo the use of Convex with Kinde Auth",
+      "reason": "emër/përshkrim i ngjashëm",
+      "dir": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-141814\\ssh-Eventix\\_github\\sholajegede-eventix"
+    },
+    {
+      "full_name": "Eventix/omnipay-first-atlantic-commerce",
+      "url": "https://github.com/Eventix/omnipay-first-atlantic-commerce",
+      "code_hits": 0,
+      "matched_lines": [],
+      "name_match": true,
+      "created_at": "2018-11-27T08:23:09Z",
+      "pushed_at": "2019-03-05T05:22:24Z",
+      "stars": 5,
+      "description": "",
+      "reason": "emër/përshkrim i ngjashëm",
+      "dir": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-141814\\ssh-Eventix\\_github\\Eventix-omnipay-first-atlantic-commerce"
+    }
+  ]
+}

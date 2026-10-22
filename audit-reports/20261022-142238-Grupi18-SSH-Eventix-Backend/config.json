@@ -1,0 +1,25 @@
+{
+  "job_id": "20261022-142238-Grupi18-SSH-Eventix-Backend",
+  "title": "Grupi18-SSH-Eventix-Backend",
+  "created": "2026-10-22T14:22:38",
+  "groups": [
+    {
+      "name": "Grupi18-SSH-Eventix-Backend",
+      "repos": [
+        "https://github.com/ssh-Eventix/Grupi18-SSH-Eventix-Backend"
+      ]
+    }
+  ],
+  "requirements_file": "C:\\Users\\bleron.baftiu\\PycharmProjects\\PythonProject\\audit-reports\\20261022-142238-Grupi18-SSH-Eventix-Backend\\brief.pdf",
+  "requirements_name": "kerkesa_projekti_sistemet_shperndara.pdf",
+  "requirements_text": "",
+  "comparison": [],
+  "base": [],
+  "ai_policy": "unspecified",
+  "deadline": null,
+  "start": null,
+  "language": "shqip",
+  "output_dir": "C:\\Users\\bleron.baftiu\\PycharmProjects\\PythonProject\\audit-reports\\20261022-142238-Grupi18-SSH-Eventix-Backend",
+  "workspace": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-142238",
+  "run_claude": true
+}

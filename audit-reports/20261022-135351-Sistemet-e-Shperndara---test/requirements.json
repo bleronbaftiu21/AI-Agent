@@ -1,0 +1,188 @@
+{
+  "source": "brief.pdf",
+  "characters": 2119,
+  "items": [
+    {
+      "id": "R1",
+      "number": 1,
+      "title": "Arkitektura Klient-Server",
+      "text": "Sistemi duhet te zhvillohet ne menyre qe klienti dhe serveri te jene plotesisht te pavarur dhe te komunikojne vetem permes API.",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R2",
+      "number": 2,
+      "title": "Komunikimi (HTTP/HTTPS)",
+      "text": "Te gjitha komunikimet duhet te realizohen permes HTTP/HTTPS duke ndjekur standardet REST (full).",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R3",
+      "number": 3,
+      "title": "Endpointet (Minimum 20)",
+      "text": "Serveri duhet te permbaje minimum 20 endpoint-e te strukturuara mire.",
+      "mandatory": true,
+      "min_count": 20,
+      "points": null
+    },
+    {
+      "id": "R4",
+      "number": 4,
+      "title": "RESTful API dhe Framework",
+      "text": "Perdorimi i framework si FastAPI, Django (DRF), Node.js, Spring boot ose .NET per krijimin e API.",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R5",
+      "number": 5,
+      "title": "Programimi OOP",
+      "text": "Kodi duhet te shkruhet duke ndjekur paradigmen OOP.",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R6",
+      "number": 6,
+      "title": "Dokumentimi me Swagger",
+      "text": "Te gjitha endpointet duhet te dokumentohen me Swagger UI.",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R7",
+      "number": 7,
+      "title": "ORM dhe Databaza",
+      "text": "Perdorimi i ORM per komunikim me databazen dhe modele te strukturuara mire.",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R8",
+      "number": 8,
+      "title": "Autentikim dhe Autorizim",
+      "text": "Implementimi i login/register dhe role-based authorization.",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R9",
+      "number": 9,
+      "title": "Middleware",
+      "text": "Perdorimi i middleware per logging dhe autentikim.",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R10",
+      "number": 10,
+      "title": "Frontend (React + Context)",
+      "text": "Frontend duhet te implementohet me React dhe Context API.",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R11",
+      "number": 11,
+      "title": "Testimi + CI/CD",
+      "text": "Implementimi i unit testeve dhe API testeve.",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R12",
+      "number": 12,
+      "title": "Modelet dhe Migrimet (Minimum 20)",
+      "text": "Databaza duhet te kete minimum 20 modele dhe migrimet perkatese.",
+      "mandatory": true,
+      "min_count": 20,
+      "points": null
+    },
+    {
+      "id": "R13",
+      "number": 13,
+      "title": "Dokumentimi i Projektit",
+      "text": "Dokumentim i plote i arkitektures, API dhe udhezimeve.",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R14",
+      "number": 14,
+      "title": "Menaxhimi i Projektit",
+      "text": "Perdorimi i Jira, GitHub Projects ose mjete te ngjashme.",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R15",
+      "number": 15,
+      "title": "Git dhe Bashkepunimi",
+      "text": "Perdorimi i GitHub me Pull Requests dhe Code Reviews.",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R16",
+      "number": 16,
+      "title": "Integrimi me OpenAI (LLM)",
+      "text": "Implementimi i nje moduli AI qe komunikon me OpenAI API dhe ekspozon endpoint-e per chatbot ose analiza teksti.",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R17",
+      "number": 17,
+      "title": "Caching (Redis ose e ngjashme)",
+      "text": "Implementimi i caching per optimizimin e performances (p.sh. Redis per ruajtjen e rezultateve te shpeshta).",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R18",
+      "number": 18,
+      "title": "Asynchronous Tasks / Background Jobs",
+      "text": "Implementimi i detyrave ne background (p.sh. dergimi i email-eve, perpunimi i te dhenave, thirrjet ndaj OpenAI API).",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R19",
+      "number": 19,
+      "title": "Multi-Tenancy Architecture",
+      "text": "Sistemi duhet te mbeshtese multi-tenancy (ndarja e te dhenave sipas kompanive ose perdoruesve).",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    },
+    {
+      "id": "R20",
+      "number": 20,
+      "title": "Search dhe Filtering System",
+      "text": "Implementimi i funksionalitetit te kerkimit dhe filtrimit te avancuar ne API.",
+      "mandatory": true,
+      "min_count": null,
+      "points": null
+    }
+  ],
+  "text": "Sistemet e Shperndara 2025/26\n1. Arkitektura Klient-Server\nSistemi duhet te zhvillohet ne menyre qe klienti dhe serveri te jene plotesisht te pavarur\ndhe te komunikojne vetem permes API.\n2. Komunikimi (HTTP/HTTPS)\nTe gjitha komunikimet duhet te realizohen permes HTTP/HTTPS duke ndjekur standardet\nREST (full).\n3. Endpointet (Minimum 20)\nServeri duhet te permbaje minimum 20 endpoint-e te strukturuara mire.\n4. RESTful API dhe Framework\nPerdorimi i framework si FastAPI, Django (DRF), Node.js, Spring boot ose .NET per krijimin\ne API.\n5. Programimi OOP\nKodi duhet te shkruhet duke ndjekur paradigmen OOP.\n6. Dokumentimi me Swagger\nTe gjitha endpointet duhet te dokumentohen me Swagger UI.\n7. ORM dhe Databaza\nPerdorimi i ORM per komunikim me databazen dhe modele te strukturuara mire.\n8. Autentikim dhe Autorizim\nImplementimi i login/register dhe role-based authorization.\n9. Middleware\nPerdorimi i middleware per logging dhe autentikim.\n10. Frontend (React + Context)\nFrontend duhet te implementohet me React dhe Context API.\n11. Testimi + CI/CD\nImplementimi i unit testeve dhe API testeve.\n12. Modelet dhe Migrimet (Minimum 20)\nDatabaza duhet te kete minimum 20 modele dhe migrimet perkatese.\n13. Dokumentimi i Projektit\nDokumentim i plote i arkitektures, API dhe udhezimeve.\n14. Menaxhimi i Projektit\nPerdorimi i Jira, GitHub Projects ose mjete te ngjashme.\n15. Git dhe Bashkepunimi\nPerdorimi i GitHub me Pull Requests dhe Code Reviews.\n16. Integrimi me OpenAI (LLM)\nImplementimi i nje moduli AI qe komunikon me OpenAI API dhe ekspozon endpoint-e per\nchatbot ose analiza teksti.\n17. Caching (Redis ose e ngjashme)\nImplementimi i caching per optimizimin e performances (p.sh. Redis per ruajtjen e\nrezultateve te shpeshta).\n18. Asynchronous Tasks / Background Jobs\nImplementimi i detyrave ne background (p.sh. dergimi i email-eve, perpunimi i te dhenave,\nthirrjet ndaj OpenAI API).\n19. Multi-Tenancy Architecture\nSistemi duhet te mbeshtese multi-tenancy (ndarja e te dhenave sipas kompanive ose\nperdoruesve).\n20. Search dhe Filtering System\nImplementimi i funksionalitetit te kerkimit dhe filtrimit te avancuar ne API.",
+  "note": "Automatic split - check the list against the brief before grading."
+}

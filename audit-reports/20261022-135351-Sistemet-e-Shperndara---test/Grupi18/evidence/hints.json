@@ -1,0 +1,221 @@
+{
+  "hints": [
+    {
+      "id": "R1",
+      "title": "Arkitektura Klient-Server",
+      "rule": "client_server",
+      "status": "likely_met",
+      "evidence": [
+        "repo: Grupi18-SSH-Eventix-Backend, Grupi18-SSH-Eventix-Frontend",
+        "framework-e: ASP.NET Core, Entity Framework Core, react, vite"
+      ],
+      "note": "Verifiko që klienti flet vetëm me API."
+    },
+    {
+      "id": "R2",
+      "title": "Komunikimi (HTTP/HTTPS)",
+      "rule": "http",
+      "status": "likely_met",
+      "evidence": [
+        "145 endpoint-e HTTP",
+        "https: Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:606"
+      ],
+      "note": "Stili REST verifikohet me dorë."
+    },
+    {
+      "id": "R3",
+      "title": "Endpointet (Minimum 20)",
+      "rule": "endpoints",
+      "status": "likely_met",
+      "evidence": [
+        "145 endpoint-e (aspnet-minimal: 1, aspnet: 144)"
+      ],
+      "note": "Kërkohen ≥20."
+    },
+    {
+      "id": "R4",
+      "title": "RESTful API dhe Framework",
+      "rule": "framework",
+      "status": "likely_met",
+      "evidence": [
+        "ASP.NET Core, Entity Framework Core, react, vite"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R5",
+      "title": "Programimi OOP",
+      "rule": "oop",
+      "status": "manual",
+      "evidence": [
+        "gjuhët: C#, JavaScript (JSX), JavaScript, CSS, HTML"
+      ],
+      "note": "OOP gjykohet duke lexuar kodin (klasa, ndërfaqe, trashëgimi)."
+    },
+    {
+      "id": "R6",
+      "title": "Dokumentimi me Swagger",
+      "rule": "swagger",
+      "status": "likely_met",
+      "evidence": [
+        "swagger_openapi: Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:65, Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:599"
+      ],
+      "note": "Verifiko që të gjitha endpoint-et shfaqen."
+    },
+    {
+      "id": "R7",
+      "title": "ORM dhe Databaza",
+      "rule": "orm",
+      "status": "likely_met",
+      "evidence": [
+        "orm: Grupi18-SSH-Eventix-Backend/Eventix.Api/Eventix.Api.csproj:29, Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:21, Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:22"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R8",
+      "title": "Autentikim dhe Autorizim",
+      "rule": "auth",
+      "status": "likely_met",
+      "evidence": [
+        "jwt: Grupi18-SSH-Eventix-Backend/Eventix.Api/Eventix.Api.csproj:28, Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:19, Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:139",
+        "password_hashing: Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:226, Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:226, Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:226",
+        "roles_authorization: Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:158, Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:300, Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:303"
+      ],
+      "note": "Gjetur: jwt/token, hash fjalëkalimi, role/autorizim."
+    },
+    {
+      "id": "R9",
+      "title": "Middleware",
+      "rule": "middleware",
+      "status": "likely_met",
+      "evidence": [
+        "middleware: Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:611, Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:615, Grupi18-SSH-Eventix-Backend/Eventix.Api/Middleware/RequestLoggingMiddleware.cs:5",
+        "logging: Grupi18-SSH-Eventix-Backend/Eventix.Api/Middleware/RequestLoggingMiddleware.cs:8, Grupi18-SSH-Eventix-Backend/Eventix.Api/Middleware/RequestLoggingMiddleware.cs:12"
+      ],
+      "note": "Verifiko logging + auth në middleware."
+    },
+    {
+      "id": "R10",
+      "title": "Frontend (React + Context)",
+      "rule": "react",
+      "status": "likely_met",
+      "evidence": [
+        "react: Grupi18-SSH-Eventix-Frontend/src/main.jsx:1, Grupi18-SSH-Eventix-Frontend/src/auth/AuthContext.jsx:2, Grupi18-SSH-Eventix-Frontend/src/components/DynamicForm.jsx:2",
+        "react_context: Grupi18-SSH-Eventix-Frontend/src/auth/AuthContext.jsx:6, Grupi18-SSH-Eventix-Frontend/src/auth/AuthContext.jsx:225"
+      ],
+      "note": "Context API: po"
+    },
+    {
+      "id": "R11",
+      "title": "Testimi + CI/CD",
+      "rule": "tests",
+      "status": "partial",
+      "evidence": [
+        "36 teste në 12 skedarë",
+        "CI: Grupi18-SSH-Eventix-Backend/.github/workflows/ci.yml",
+        "CD/deploy në CI: jo"
+      ],
+      "note": "Mungon: CD."
+    },
+    {
+      "id": "R12",
+      "title": "Modelet dhe Migrimet (Minimum 20)",
+      "rule": "models",
+      "status": "likely_met",
+      "evidence": [
+        "31 modele: AIRequestLog, ArchiveRecord, AuditLog, Booking, BookingItem, CheckIn, DiscountCoupon, Event, EventCategory, EventSection, EventSession, Notification…",
+        "21 migrime"
+      ],
+      "note": "Kërkohen ≥20 modele me migrime."
+    },
+    {
+      "id": "R13",
+      "title": "Dokumentimi i Projektit",
+      "rule": "docs",
+      "status": "manual",
+      "evidence": [
+        "Grupi18-SSH-Eventix-Backend/README.md, Grupi18-SSH-Eventix-Frontend/README.md"
+      ],
+      "note": "Kontrollo saktësinë e README-së kundrejt kodit."
+    },
+    {
+      "id": "R14",
+      "title": "Menaxhimi i Projektit",
+      "rule": "pm",
+      "status": "likely_met",
+      "evidence": [
+        "84 commit-e me çelës tiketash (EVENTIX, EVENTICX, SCRUM)",
+        "0 GitHub issues"
+      ],
+      "note": "Board-i (Jira/Projects) duhet parë me dorë."
+    },
+    {
+      "id": "R15",
+      "title": "Git dhe Bashkepunimi",
+      "rule": "git",
+      "status": "manual",
+      "evidence": [],
+      "note": "GitHub API: kufiri i kërkesave u arrit - vendos GITHUB_TOKEN."
+    },
+    {
+      "id": "R16",
+      "title": "Integrimi me OpenAI (LLM)",
+      "rule": "llm",
+      "status": "partial",
+      "evidence": [
+        "openai: Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Eventix.Infrastructure.csproj:32",
+        "other_llm: Grupi18-SSH-Eventix-Backend/Eventix.Api/appsettings.json:18, Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:277, Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:277"
+      ],
+      "note": "Paketa OpenAI është e instaluar por nuk përdoret në kod; thirrjet bëhen te një LLM tjetër."
+    },
+    {
+      "id": "R17",
+      "title": "Caching (Redis ose e ngjashme)",
+      "rule": "cache",
+      "status": "likely_met",
+      "evidence": [
+        "redis: Grupi18-SSH-Eventix-Backend/Eventix.Api/Eventix.Api.csproj:33, Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:191, Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Eventix.Infrastructure.csproj:30",
+        "cache: Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/BookingController.cs:17, Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/BookingController.cs:22, Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/DiscountCouponController.cs:17"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R18",
+      "title": "Asynchronous Tasks / Background Jobs",
+      "rule": "background",
+      "status": "likely_met",
+      "evidence": [
+        "background_jobs: Grupi18-SSH-Eventix-Backend/Eventix.Api/Eventix.Api.csproj:23, Grupi18-SSH-Eventix-Backend/Eventix.Api/Eventix.Api.csproj:24, Grupi18-SSH-Eventix-Backend/Eventix.Api/Eventix.Api.csproj:25"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R19",
+      "title": "Multi-Tenancy Architecture",
+      "rule": "tenant",
+      "status": "likely_met",
+      "evidence": [
+        "multi_tenancy: Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:83, Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:85, Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:86"
+      ],
+      "note": "Verifiko izolimin e të dhënave mes tenant-ëve."
+    },
+    {
+      "id": "R20",
+      "title": "Search dhe Filtering System",
+      "rule": "search",
+      "status": "manual",
+      "evidence": [
+        "search_filter: Grupi18-SSH-Eventix-Backend/Eventix.Api/Eventix.Api.csproj:10, Grupi18-SSH-Eventix-Backend/Eventix.Api/Eventix.Api.csproj:12, Grupi18-SSH-Eventix-Backend/Eventix.Api/Eventix.Api.csproj:14"
+      ],
+      "note": "Verifiko filtrimin e avancuar (disa kritere, pagination) me dorë."
+    }
+  ],
+  "counts": {
+    "likely_met": 14,
+    "partial": 2,
+    "not_found": 0,
+    "manual": 4
+  },
+  "note": "Automatic hints only. The final Met/Partially met/Not met decision is made by reading the code."
+}

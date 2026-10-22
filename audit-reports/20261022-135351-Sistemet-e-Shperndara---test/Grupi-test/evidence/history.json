@@ -1,0 +1,240 @@
+{
+  "rev": "HEAD",
+  "repos": [
+    {
+      "label": "Grupi18-SSH-Eventix-Frontend",
+      "commits": 91,
+      "non_merge": 48,
+      "first": {
+        "sha": "c78efccf8b",
+        "author": "bleronbaftiu21",
+        "author_date": "2026-04-06T20:03:15+02:00",
+        "subject": "Initial commit"
+      },
+      "last": {
+        "sha": "11e9ee2656",
+        "author": "bleronbaftiu21",
+        "author_date": "2026-05-30T20:09:34+02:00",
+        "subject": "fixed (#41)"
+      }
+    }
+  ],
+  "commits": 91,
+  "non_merge_commits": 56,
+  "duplicate_commits": 8,
+  "active_days": 17,
+  "first_date": "2026-04-06",
+  "last_date": "2026-05-30",
+  "commits_per_day": {
+    "2026-04-06": 1,
+    "2026-04-11": 2,
+    "2026-04-26": 1,
+    "2026-04-30": 1,
+    "2026-05-07": 3,
+    "2026-05-10": 1,
+    "2026-05-16": 1,
+    "2026-05-17": 2,
+    "2026-05-20": 2,
+    "2026-05-23": 2,
+    "2026-05-24": 4,
+    "2026-05-25": 5,
+    "2026-05-26": 6,
+    "2026-05-27": 2,
+    "2026-05-28": 4,
+    "2026-05-29": 4,
+    "2026-05-30": 7
+  },
+  "identity_map": {
+    "Yllka": "Yllka Fejzullahu"
+  },
+  "authors": [
+    {
+      "author": "bleronbaftiu21",
+      "names": [
+        "bleronbaftiu21"
+      ],
+      "emails": [
+        "bleronbaftiu2@gmail.com"
+      ],
+      "commits": 17,
+      "lines_added": 8868,
+      "lines_removed": 2514,
+      "share_of_added": 0.366,
+      "commits_by_repo": {
+        "Grupi18-SSH-Eventix-Frontend": 17
+      }
+    },
+    {
+      "author": "Viola Resyli",
+      "names": [
+        "Viola Resyli"
+      ],
+      "emails": [
+        "121452187+violavv123@users.noreply.github.com",
+        "violaresyli@gmail.com"
+      ],
+      "commits": 21,
+      "lines_added": 8444,
+      "lines_removed": 2734,
+      "share_of_added": 0.348,
+      "commits_by_repo": {
+        "Grupi18-SSH-Eventix-Frontend": 21
+      }
+    },
+    {
+      "author": "Yllka Fejzullahu",
+      "names": [
+        "Yllka",
+        "Yllka Fejzullahu"
+      ],
+      "emails": [
+        "yllka.fejzullahu@student.uni-pr.edu"
+      ],
+      "commits": 7,
+      "lines_added": 6599,
+      "lines_removed": 1535,
+      "share_of_added": 0.272,
+      "commits_by_repo": {
+        "Grupi18-SSH-Eventix-Frontend": 7
+      }
+    },
+    {
+      "author": "ZubakuRiga",
+      "names": [
+        "ZubakuRiga"
+      ],
+      "emails": [
+        "149312710+ZubakuRiga@users.noreply.github.com"
+      ],
+      "commits": 2,
+      "lines_added": 322,
+      "lines_removed": 16,
+      "share_of_added": 0.013,
+      "commits_by_repo": {
+        "Grupi18-SSH-Eventix-Frontend": 2
+      }
+    },
+    {
+      "author": "oltikrasniqi21",
+      "names": [
+        "oltikrasniqi21"
+      ],
+      "emails": [
+        "oltkrasn@gmail.com"
+      ],
+      "commits": 1,
+      "lines_added": 2,
+      "lines_removed": 2,
+      "share_of_added": 0.0,
+      "commits_by_repo": {
+        "Grupi18-SSH-Eventix-Frontend": 1
+      }
+    }
+  ],
+  "issue_tracker_keys": {
+    "commits_with_key": 27,
+    "projects": {
+      "EVENTIX": 13,
+      "SCRUM": 14
+    }
+  },
+  "largest_commits": [
+    {
+      "repo": "Grupi18-SSH-Eventix-Frontend",
+      "sha": "a7f08dc08f",
+      "author": "Yllka",
+      "author_date": "2026-05-20T16:38:31+02:00",
+      "subject": "Build Eventix frontend dashboards and buyer flow",
+      "files": 39,
+      "added": 4358
+    },
+    {
+      "repo": "Grupi18-SSH-Eventix-Frontend",
+      "sha": "fe8a4e918c",
+      "author": "Viola Resyli",
+      "author_date": "2026-05-24T21:03:49+02:00",
+      "subject": "Fixed superadmin",
+      "files": 15,
+      "added": 1649
+    },
+    {
+      "repo": "Grupi18-SSH-Eventix-Frontend",
+      "sha": "e0d7a9693d",
+      "author": "bleronbaftiu21",
+      "author_date": "2026-05-24T23:06:37+02:00",
+      "subject": "fixed TenantUI",
+      "files": 15,
+      "added": 1482
+    },
+    {
+      "repo": "Grupi18-SSH-Eventix-Frontend",
+      "sha": "0db32490cb",
+      "author": "Yllka",
+      "author_date": "2026-05-25T00:11:24+02:00",
+      "subject": "SCRUM-242 Fixed buyer flow",
+      "files": 18,
+      "added": 1412
+    },
+    {
+      "repo": "Grupi18-SSH-Eventix-Frontend",
+      "sha": "8e3bf70f7a",
+      "author": "Viola Resyli",
+      "author_date": "2026-05-27T01:48:12+02:00",
+      "subject": "Fixed superadmin Overview, added venue and notifications in superadmin",
+      "files": 13,
+      "added": 1085
+    },
+    {
+      "repo": "Grupi18-SSH-Eventix-Frontend",
+      "sha": "f85a980895",
+      "author": "bleronbaftiu21",
+      "author_date": "2026-05-07T16:04:02+02:00",
+      "subject": "EVENTIX-58",
+      "files": 8,
+      "added": 867
+    },
+    {
+      "repo": "Grupi18-SSH-Eventix-Frontend",
+      "sha": "cec7690ec0",
+      "author": "bleronbaftiu21",
+      "author_date": "2026-05-30T00:26:07+02:00",
+      "subject": "fixed tenant added discount coupon",
+      "files": 8,
+      "added": 812
+    },
+    {
+      "repo": "Grupi18-SSH-Eventix-Frontend",
+      "sha": "b977328dc6",
+      "author": "bleronbaftiu21",
+      "author_date": "2026-05-29T17:13:31+02:00",
+      "subject": "fixed",
+      "files": 21,
+      "added": 778
+    },
+    {
+      "repo": "Grupi18-SSH-Eventix-Frontend",
+      "sha": "9371d514e3",
+      "author": "Viola Resyli",
+      "author_date": "2026-05-30T14:50:42+02:00",
+      "subject": "removed unused folders and added readme",
+      "files": 9,
+      "added": 767
+    },
+    {
+      "repo": "Grupi18-SSH-Eventix-Frontend",
+      "sha": "038dd731ad",
+      "author": "bleronbaftiu21",
+      "author_date": "2026-05-24T00:17:21+02:00",
+      "subject": "fixed tenantUI",
+      "files": 7,
+      "added": 697
+    }
+  ],
+  "late_commits": [],
+  "early_commits": [],
+  "flags": [
+    "5 distinct people after merging 6 git identities - verify they match the submitting student/team.",
+    "8 duplicate commit(s) from squash/rebase were counted once."
+  ],
+  "note": "Line counts exclude merges, duplicates, lockfiles, migrations and generated files. Identity merging is heuristic - confirm it. History signals are indicators only."
+}

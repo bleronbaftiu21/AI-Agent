@@ -1,0 +1,9 @@
+{
+  "repo": "ssh-Eventix/Grupi18-SSH-Eventix-Backend",
+  "authenticated": false,
+  "limitations": [
+    "GitHub rate limit reached before any data was read. Set GITHUB_TOKEN and retry.",
+    "GitHub Projects (v2) and Jira boards are not visible through this API; check them manually.",
+    "No GITHUB_TOKEN: unauthenticated API (60 requests/hour), reviews sampled."
+  ]
+}

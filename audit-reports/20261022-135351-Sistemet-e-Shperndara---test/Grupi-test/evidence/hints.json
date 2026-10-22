@@ -1,0 +1,203 @@
+{
+  "hints": [
+    {
+      "id": "R1",
+      "title": "Arkitektura Klient-Server",
+      "rule": "client_server",
+      "status": "not_found",
+      "evidence": [
+        "repo: Grupi18-SSH-Eventix-Frontend",
+        "framework-e: react, vite"
+      ],
+      "note": "Verifiko që klienti flet vetëm me API."
+    },
+    {
+      "id": "R2",
+      "title": "Komunikimi (HTTP/HTTPS)",
+      "rule": "http",
+      "status": "not_found",
+      "evidence": [
+        "0 endpoint-e HTTP"
+      ],
+      "note": "Stili REST verifikohet me dorë."
+    },
+    {
+      "id": "R3",
+      "title": "Endpointet (Minimum 20)",
+      "rule": "endpoints",
+      "status": "not_found",
+      "evidence": [
+        "0 endpoint-e ()"
+      ],
+      "note": "Kërkohen ≥20."
+    },
+    {
+      "id": "R4",
+      "title": "RESTful API dhe Framework",
+      "rule": "framework",
+      "status": "manual",
+      "evidence": [
+        "react, vite"
+      ],
+      "note": ""
+    },
+    {
+      "id": "R5",
+      "title": "Programimi OOP",
+      "rule": "oop",
+      "status": "manual",
+      "evidence": [
+        "gjuhët: JavaScript (JSX), JavaScript, CSS, HTML"
+      ],
+      "note": "OOP gjykohet duke lexuar kodin (klasa, ndërfaqe, trashëgimi)."
+    },
+    {
+      "id": "R6",
+      "title": "Dokumentimi me Swagger",
+      "rule": "swagger",
+      "status": "not_found",
+      "evidence": [],
+      "note": "Verifiko që të gjitha endpoint-et shfaqen."
+    },
+    {
+      "id": "R7",
+      "title": "ORM dhe Databaza",
+      "rule": "orm",
+      "status": "not_found",
+      "evidence": [],
+      "note": ""
+    },
+    {
+      "id": "R8",
+      "title": "Autentikim dhe Autorizim",
+      "rule": "auth",
+      "status": "partial",
+      "evidence": [
+        "roles_authorization: src/index.css:167, src/index.css:3027, src/auth/AuthContext.jsx:8"
+      ],
+      "note": "Gjetur: role/autorizim."
+    },
+    {
+      "id": "R9",
+      "title": "Middleware",
+      "rule": "middleware",
+      "status": "not_found",
+      "evidence": [],
+      "note": "Verifiko logging + auth në middleware."
+    },
+    {
+      "id": "R10",
+      "title": "Frontend (React + Context)",
+      "rule": "react",
+      "status": "likely_met",
+      "evidence": [
+        "react: src/main.jsx:1, src/auth/AuthContext.jsx:2, src/components/DynamicForm.jsx:2",
+        "react_context: src/auth/AuthContext.jsx:6, src/auth/AuthContext.jsx:225"
+      ],
+      "note": "Context API: po"
+    },
+    {
+      "id": "R11",
+      "title": "Testimi + CI/CD",
+      "rule": "tests",
+      "status": "not_found",
+      "evidence": [
+        "0 teste në 0 skedarë",
+        "CI: asnjë",
+        "CD/deploy në CI: jo"
+      ],
+      "note": "Mungon: teste, CI, CD."
+    },
+    {
+      "id": "R12",
+      "title": "Modelet dhe Migrimet (Minimum 20)",
+      "rule": "models",
+      "status": "not_found",
+      "evidence": [
+        "0 modele: ",
+        "0 migrime"
+      ],
+      "note": "Kërkohen ≥20 modele me migrime."
+    },
+    {
+      "id": "R13",
+      "title": "Dokumentimi i Projektit",
+      "rule": "docs",
+      "status": "manual",
+      "evidence": [
+        "README.md"
+      ],
+      "note": "Kontrollo saktësinë e README-së kundrejt kodit."
+    },
+    {
+      "id": "R14",
+      "title": "Menaxhimi i Projektit",
+      "rule": "pm",
+      "status": "likely_met",
+      "evidence": [
+        "27 commit-e me çelës tiketash (EVENTIX, SCRUM)",
+        "0 GitHub issues"
+      ],
+      "note": "Board-i (Jira/Projects) duhet parë me dorë."
+    },
+    {
+      "id": "R15",
+      "title": "Git dhe Bashkepunimi",
+      "rule": "git",
+      "status": "manual",
+      "evidence": [],
+      "note": "GitHub API: kufiri i kërkesave u arrit - vendos GITHUB_TOKEN."
+    },
+    {
+      "id": "R16",
+      "title": "Integrimi me OpenAI (LLM)",
+      "rule": "llm",
+      "status": "not_found",
+      "evidence": [],
+      "note": ""
+    },
+    {
+      "id": "R17",
+      "title": "Caching (Redis ose e ngjashme)",
+      "rule": "cache",
+      "status": "not_found",
+      "evidence": [],
+      "note": ""
+    },
+    {
+      "id": "R18",
+      "title": "Asynchronous Tasks / Background Jobs",
+      "rule": "background",
+      "status": "not_found",
+      "evidence": [],
+      "note": ""
+    },
+    {
+      "id": "R19",
+      "title": "Multi-Tenancy Architecture",
+      "rule": "tenant",
+      "status": "likely_met",
+      "evidence": [
+        "multi_tenancy: src/index.css:79, src/index.css:80, src/index.css:143"
+      ],
+      "note": "Verifiko izolimin e të dhënave mes tenant-ëve."
+    },
+    {
+      "id": "R20",
+      "title": "Search dhe Filtering System",
+      "rule": "search",
+      "status": "manual",
+      "evidence": [
+        "search_filter: src/index.css:673, src/index.css:683, src/index.css:687"
+      ],
+      "note": "Verifiko filtrimin e avancuar (disa kritere, pagination) me dorë."
+    }
+  ],
+  "counts": {
+    "likely_met": 3,
+    "partial": 1,
+    "not_found": 11,
+    "manual": 5
+  },
+  "note": "Automatic hints only. The final Met/Partially met/Not met decision is made by reading the code."
+}

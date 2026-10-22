@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://github.com/ssh-Eventix/Grupi18-SSH-Eventix-Backend",
+    "owner": "ssh-Eventix",
+    "repo": "Grupi18-SSH-Eventix-Backend",
+    "dir": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-135351\\Grupi18\\ssh-Eventix-Grupi18-SSH-Eventix-Backend",
+    "requested_ref": null,
+    "ok": true,
+    "commit": "bbcc1a627d14fd79be8be5bce2a1f66fb34f86e5",
+    "short": "bbcc1a6",
+    "branch": "main",
+    "commits": 220
+  },
+  {
+    "url": "https://github.com/ssh-Eventix/Grupi18-SSH-Eventix-Frontend",
+    "owner": "ssh-Eventix",
+    "repo": "Grupi18-SSH-Eventix-Frontend",
+    "dir": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-135351\\Grupi18\\ssh-Eventix-Grupi18-SSH-Eventix-Frontend",
+    "requested_ref": null,
+    "ok": true,
+    "commit": "11e9ee2656314bb32b83f70f388ea661d7aca5e9",
+    "short": "11e9ee2",
+    "branch": "main",
+    "commits": 91
+  }
+]

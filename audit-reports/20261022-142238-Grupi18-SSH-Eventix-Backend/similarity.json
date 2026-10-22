@@ -1,0 +1,106 @@
+{
+  "mode": "groups",
+  "params": {
+    "k": 12,
+    "window": 8,
+    "min_containment": 0.25,
+    "pair_threshold": 0.05
+  },
+  "groups": {
+    "GitHub: Eventix/omnipay-first-atlantic-commerce": {
+      "files": 7,
+      "fingerprints": 196
+    },
+    "GitHub: indestudio/Eventix": {
+      "files": 54,
+      "fingerprints": 2323
+    },
+    "GitHub: sholajegede/eventix": {
+      "files": 35,
+      "fingerprints": 807
+    },
+    "Grupi18-SSH-Eventix-Backend": {
+      "files": 393,
+      "fingerprints": 5118
+    }
+  },
+  "matrix": {
+    "GitHub: Eventix/omnipay-first-atlantic-commerce": {
+      "GitHub: indestudio/Eventix": 0.0,
+      "GitHub: sholajegede/eventix": 0.0,
+      "Grupi18-SSH-Eventix-Backend": 0.0
+    },
+    "GitHub: indestudio/Eventix": {
+      "GitHub: Eventix/omnipay-first-atlantic-commerce": 0.0,
+      "GitHub: sholajegede/eventix": 0.0,
+      "Grupi18-SSH-Eventix-Backend": 0.012
+    },
+    "GitHub: sholajegede/eventix": {
+      "GitHub: Eventix/omnipay-first-atlantic-commerce": 0.0,
+      "GitHub: indestudio/Eventix": 0.0,
+      "Grupi18-SSH-Eventix-Backend": 0.014
+    },
+    "Grupi18-SSH-Eventix-Backend": {
+      "GitHub: Eventix/omnipay-first-atlantic-commerce": 0.0,
+      "GitHub: indestudio/Eventix": 0.006,
+      "GitHub: sholajegede/eventix": 0.002
+    }
+  },
+  "max_by_group": {
+    "GitHub: Eventix/omnipay-first-atlantic-commerce": 0.0,
+    "GitHub: indestudio/Eventix": 0.012,
+    "GitHub: sholajegede/eventix": 0.014,
+    "Grupi18-SSH-Eventix-Backend": 0.006
+  },
+  "pairs": [
+    {
+      "a": "GitHub: sholajegede/eventix",
+      "b": "Grupi18-SSH-Eventix-Backend",
+      "a_in_b": 0.014,
+      "b_in_a": 0.002,
+      "max": 0.014,
+      "matches": []
+    },
+    {
+      "a": "GitHub: indestudio/Eventix",
+      "b": "Grupi18-SSH-Eventix-Backend",
+      "a_in_b": 0.012,
+      "b_in_a": 0.006,
+      "max": 0.012,
+      "matches": []
+    },
+    {
+      "a": "GitHub: Eventix/omnipay-first-atlantic-commerce",
+      "b": "GitHub: indestudio/Eventix",
+      "a_in_b": 0.0,
+      "b_in_a": 0.0,
+      "max": 0.0,
+      "matches": []
+    },
+    {
+      "a": "GitHub: Eventix/omnipay-first-atlantic-commerce",
+      "b": "GitHub: sholajegede/eventix",
+      "a_in_b": 0.0,
+      "b_in_a": 0.0,
+      "max": 0.0,
+      "matches": []
+    },
+    {
+      "a": "GitHub: Eventix/omnipay-first-atlantic-commerce",
+      "b": "Grupi18-SSH-Eventix-Backend",
+      "a_in_b": 0.0,
+      "b_in_a": 0.0,
+      "max": 0.0,
+      "matches": []
+    },
+    {
+      "a": "GitHub: indestudio/Eventix",
+      "b": "GitHub: sholajegede/eventix",
+      "a_in_b": 0.0,
+      "b_in_a": 0.0,
+      "max": 0.0,
+      "matches": []
+    }
+  ],
+  "note": "Overlap = share of a group's code fingerprints that also appear in the other group. Shared framework boilerplate gives a few percent; inspect pairs above ~20% manually and use --base for starter code."
+}

@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0",
+  "repository": {
+    "url": "https://github.com/ssh-Eventix/Grupi18-SSH-Eventix-Backend",
+    "branch": "main",
+    "commit": "bbcc1a627d14fd79be8be5bce2a1f66fb34f86e5",
+    "is_fork": false,
+    "fork_parent": null,
+    "additional_repositories": [
+      {
+        "url": "https://github.com/ssh-Eventix/Grupi18-SSH-Eventix-Frontend",
+        "branch": "main",
+        "commit": "11e9ee2656314bb32b83f70f388ea661d7aca5e9"
+      }
+    ]
+  },
+  "audit": {
+    "date": "2026-10-22",
+    "language": "sq",
+    "requirements_source": "kerkesa_projekti_sistemet_shperndara.pdf (Sistemet e Shperndara 2025/26, R1-R20)",
+    "ai_policy": "unspecified",
+    "executed_tests": false,
+    "corpus": [
+      "GitHub: indestudio/Eventix",
+      "GitHub: sholajegede/eventix",
+      "GitHub: Eventix/omnipay-first-atlantic-commerce"
+    ]
+  },
+  "scores": {
+    "categories": [
+      {"name": "requirements_compliance", "weight": 0.70, "score": 9.0, "status": "assessed", "justification": "16/19 Met, 3 Partially met (R13, R16, R20); R15 Cannot verify (GitHub API rate-limited). Mandatory compliance 92.1%."},
+      {"name": "code_quality", "weight": 0.07, "score": 6.0, "status": "assessed", "justification": "Controllers use DbContext directly, PaymentRetryJob tenant-scope bug, mismatched cache keys, leftover debug endpoint, Console.WriteLine logging."},
+      {"name": "structure_architecture", "weight": 0.05, "score": 7.0, "status": "assessed", "justification": "Clear Api/Application/Domain/Infrastructure layering with DI; Api depends directly on Infrastructure; migrations split over 3 folders."},
+      {"name": "security", "weight": 0.05, "score": 4.0, "status": "assessed", "justification": "Class-level AllowAnonymous exposes token endpoints; audit log readable by any authenticated user; tenant header not bound to token; committed credentials. Good: BCrypt, hashed tokens, JWT validation."},
+      {"name": "testing", "weight": 0.05, "score": 7.0, "status": "assessed", "justification": "36 tests (unit, PostgreSQL integration, controller-level API) run in GitHub Actions; no HTTP end-to-end or frontend tests."},
+      {"name": "maintainability_documentation", "weight": 0.04, "score": 6.0, "status": "assessed", "justification": "Extensive READMEs with architecture and API tables, but several claims do not match the code and required env variables are undocumented."},
+      {"name": "production_readiness", "weight": 0.02, "score": 7.0, "status": "assessed", "justification": "Env-based config, health endpoint, docker-compose for DB, CI, Hangfire; Redis and reset URL hard-coded to localhost."},
+      {"name": "performance", "weight": 0.01, "score": 6.0, "status": "assessed", "justification": "Distributed cache on frequent GETs; pagination only on audit logs; N+1 in background job (inferred, not measured)."},
+      {"name": "dependencies", "weight": 0.01, "score": 6.0, "status": "assessed", "justification": "Unused OpenAI, FluentValidation, Hangfire.SqlServer packages; mixed versions (net8.0 with Redis 10.x, SDK 9 in CI). No CVE audit run."}
+    ],
+    "weighted": 8.1,
+    "cap": {"applied": false, "value": null, "reason": null},
+    "final": 8.1,
+    "requirements_only": 9.0,
+    "confidence": "Medium"
+  },
+  "requirements": {
+    "items": [
+      {"id": "R1", "text": "Arkitektura klient-server: klienti dhe serveri te pavarur, komunikim vetem permes API.", "mandatory": true, "points": null, "status": "Met", "evidence": ["Grupi18-SSH-Eventix-Frontend/src/api/axios.js:3", "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:283"], "notes": "Two separate repositories; frontend uses only the REST API."},
+      {"id": "R2", "text": "Komunikim HTTP/HTTPS sipas standardeve REST.", "mandatory": true, "points": null, "status": "Met", "evidence": ["Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:604", "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventsController.cs:34"], "notes": "Some RPC-style routes (activate/validate/redeem) and mixed singular/plural naming."},
+      {"id": "R3", "text": "Minimum 20 endpoint-e.", "mandatory": true, "points": null, "status": "Met", "evidence": ["Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/VenueController.cs:34"], "notes": "145 endpoints across 28 controllers."},
+      {"id": "R4", "text": "Framework REST (.NET).", "mandatory": true, "points": null, "status": "Met", "evidence": ["Grupi18-SSH-Eventix-Backend/Eventix.Api/Eventix.Api.csproj:4", "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:61"], "notes": "ASP.NET Core 8 Web API."},
+      {"id": "R5", "text": "Programim OOP.", "mandatory": true, "points": null, "status": "Met", "evidence": ["Grupi18-SSH-Eventix-Backend/Eventix.Domain/Common/BaseEntity.cs:1", "Grupi18-SSH-Eventix-Backend/Eventix.Domain/Common/TenantBaseEntity.cs:1", "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:198"], "notes": "Inheritance, interfaces, repositories/services, DI."},
+      {"id": "R6", "text": "Dokumentim i endpoint-eve me Swagger UI.", "mandatory": true, "points": null, "status": "Met", "evidence": ["Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:65", "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:596"], "notes": "Swagger UI enabled only in Development."},
+      {"id": "R7", "text": "ORM dhe modele te strukturuara mire.", "mandatory": true, "points": null, "status": "Met", "evidence": ["Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/TenantDbContext.cs:48"], "notes": "EF Core with keys, unique indexes, check constraints, FK delete behaviours."},
+      {"id": "R8", "text": "Login/register dhe role-based authorization.", "mandatory": true, "points": null, "status": "Met", "evidence": ["Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuthController.cs:171", "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuthController.cs:253", "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:293", "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Auth/PermissionHandler.cs:16"], "notes": "Authorization defects counted under security (F-01, F-02)."},
+      {"id": "R9", "text": "Middleware per logging dhe autentikim.", "mandatory": true, "points": null, "status": "Met", "evidence": ["Grupi18-SSH-Eventix-Backend/Eventix.Api/Middleware/RequestLoggingMiddleware.cs:18", "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:611"], "notes": ""},
+      {"id": "R10", "text": "Frontend me React dhe Context API.", "mandatory": true, "points": null, "status": "Met", "evidence": ["Grupi18-SSH-Eventix-Frontend/src/auth/AuthContext.jsx:6"], "notes": "Single AuthContext; TenantContext claimed in README does not exist."},
+      {"id": "R11", "text": "Unit teste dhe API teste (+CI).", "mandatory": true, "points": null, "status": "Met", "evidence": ["Grupi18-SSH-Eventix-Backend/Eventix.Tests/Eventix.UnitTests/Services/DiscountCouponServiceTests.cs:12", "Grupi18-SSH-Eventix-Backend/Eventix.Tests/Eventix.ApiTests/Events/EventsControllerApiTests.cs:25", "Grupi18-SSH-Eventix-Backend/.github/workflows/ci.yml:68"], "notes": "36 tests; API tests call controllers directly, not over HTTP. Not executed."},
+      {"id": "R12", "text": "Minimum 20 modele dhe migrimet perkatese.", "mandatory": true, "points": null, "status": "Met", "evidence": ["Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/TenantDbContext.cs:21", "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/PublicDbContext.cs:13"], "notes": "31 entities, 21 migrations spread across 3 folders."},
+      {"id": "R13", "text": "Dokumentim i plote i arkitektures, API dhe udhezimeve.", "mandatory": true, "points": null, "status": "Partially met", "evidence": ["Grupi18-SSH-Eventix-Backend/README.md:54", "Grupi18-SSH-Eventix-Backend/README.md:473", "Grupi18-SSH-Eventix-Backend/README.md:606"], "notes": "Required env variables (Program.cs:31-50) undocumented; several README claims do not match the code (F-07)."},
+      {"id": "R14", "text": "Perdorimi i Jira, GitHub Projects ose te ngjashme.", "mandatory": true, "points": null, "status": "Met", "evidence": ["history.json: 84 commits with Jira keys (EVENTIX 43, SCRUM 40, EVENTICX 1)"], "notes": "Board itself not visible."},
+      {"id": "R15", "text": "GitHub me Pull Requests dhe Code Reviews.", "mandatory": true, "points": null, "status": "Cannot verify", "evidence": ["history.json: 220 backend commits, 130 non-merge; PR numbers in subjects (#14, #39, #41)"], "notes": "GitHub API rate limit reached; reviews could not be inspected."},
+      {"id": "R16", "text": "Modul AI qe komunikon me OpenAI API dhe ekspozon endpoint-e.", "mandatory": true, "points": null, "status": "Partially met", "evidence": ["Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AiController.cs:21", "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Services/OllamaClient.cs:19", "Grupi18-SSH-Eventix-Backend/Eventix.Api/appsettings.json:18", "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Eventix.Infrastructure.csproj:32"], "notes": "AI endpoints exist but call a local Ollama model, not the OpenAI API; the OpenAI package is unused."},
+      {"id": "R17", "text": "Caching (Redis ose e ngjashme).", "mandatory": true, "points": null, "status": "Met", "evidence": ["Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:185", "Grupi18-SSH-Eventix-Backend/Eventix.Api/Helpers/CacheHelper.cs:8", "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventsController.cs:62"], "notes": "Redis only outside Development, hard-coded localhost; some invalidation keys mismatch (F-06)."},
+      {"id": "R18", "text": "Asynchronous tasks / background jobs.", "mandatory": true, "points": null, "status": "Met", "evidence": ["Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:571", "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/BackgroundJobs/JobScheduler.cs:9", "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/BackgroundJobs/TenantJobRunner.cs:69"], "notes": "8 Hangfire recurring jobs; PaymentRetryJob defective (F-05)."},
+      {"id": "R19", "text": "Multi-tenancy (ndarja e te dhenave sipas kompanive/perdoruesve).", "mandatory": true, "points": null, "status": "Met", "evidence": ["Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/TenantDbContext.cs:19", "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/MultiTenancy/TenantMiddleware.cs:16", "Grupi18-SSH-Eventix-Backend/Eventix.Tests/Eventix.IntegrationTests/MultiTenancy/TenantSchemaProvisionerTests.cs:1"], "notes": "Schema-per-tenant. Isolation gaps counted under security (F-02, F-03)."},
+      {"id": "R20", "text": "Kerkim dhe filtrim i avancuar ne API.", "mandatory": true, "points": null, "status": "Partially met", "evidence": ["Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Repositories/AuditLogRepository.cs:19", "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Repositories/EventRepository.cs:19", "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Repositories/PublicEventRepository.cs:150"], "notes": "Multi-criteria filtering and pagination only for audit logs; events/bookings/tickets have text search only."}
+    ],
+    "mandatory_compliance_pct": 92.1,
+    "optional_compliance_pct": null
+  },
+  "integrity": {
+    "originality": {
+      "originality_pct": 100.0,
+      "matches": [
+        {"target_file": "sholajegede-eventix/app/page.tsx", "other_file": "Grupi18-SSH-Eventix-Frontend/src/pages/buyer/BuyerPages.jsx", "containment": 0.344, "target_lines": [[5, 7], [12, 18], [20, 25], [33, 37]], "verdict": "Expected/boilerplate similarity"},
+        {"target_file": "sholajegede-eventix/components/header.tsx", "other_file": "Grupi18-SSH-Eventix-Frontend/src/pages/buyer/BuyerPages.jsx", "containment": 0.329, "target_lines": [[6, 8], [11, 23], [34, 36], [39, 42], [53, 55], [57, 60], [62, 74], [81, 88]], "verdict": "Expected/boilerplate similarity"},
+        {"target_file": "sholajegede-eventix/app/page.tsx", "other_file": "Grupi18-SSH-Eventix-Frontend/src/pages/tenant/DashboardPage.jsx", "containment": 0.312, "target_lines": [[5, 7], [12, 18], [21, 25], [33, 37]], "verdict": "Expected/boilerplate similarity"},
+        {"target_file": "indestudio/Eventix (group)", "other_file": "ssh-Eventix (group)", "containment": 0.013, "target_lines": [], "verdict": "No concern"},
+        {"target_file": "Eventix/omnipay-first-atlantic-commerce (group)", "other_file": "ssh-Eventix (group)", "containment": 0.0, "target_lines": [], "verdict": "No concern"}
+      ],
+      "history_signals": [
+        "311 commits (200 non-merge) over 36 active days, 2026-04-06 to 2026-05-30; steady weekly growth.",
+        "5 people after merging 8 git identities; all appear to be team members.",
+        "last_7_days_share = 52% (below the 60% last-minute threshold); week W21 had 27,752 added lines.",
+        "Commit cc9521bce5 'SCRUM-241 Added port 5174' adds 266 files / 11,049 lines; message does not match size.",
+        "sholajegede/eventix created 2024-12-19 (before project start) but is a different stack (Next.js/Convex/Kinde) with no shared logic; only 1.1% of project fingerprints overlap."
+      ],
+      "external_code": []
+    },
+    "ai_assistance": {
+      "estimate_low_pct": 0,
+      "estimate_high_pct": 30,
+      "confidence": "Low",
+      "components": [
+        {"path": "Grupi18-SSH-Eventix-Backend (C# excluding AiService)", "lines": 14250, "classification": "Likely human", "signals": ["no automated AI signals", "inconsistent indentation and duplicate usings", "iterative history with small Albanian-language commits"]},
+        {"path": "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Services/AiService.cs", "lines": 450, "classification": "Mixed/uncertain", "signals": ["long structured rule-based prompts", "many heuristic helper detectors"]},
+        {"path": "Grupi18-SSH-Eventix-Frontend pages from commit a7f08dc08f", "lines": 4360, "classification": "Mixed/uncertain", "signals": ["39 files / 4,358 lines in a single polished commit", "later iterated"]},
+        {"path": "Grupi18-SSH-Eventix-Frontend CSS", "lines": 3130, "classification": "Mixed/uncertain", "signals": ["full theme added in few large commits"]},
+        {"path": "Grupi18-SSH-Eventix-Frontend (services, routes, layouts, auth)", "lines": 6240, "classification": "Likely human", "signals": ["ad-hoc interceptor rules and irregular formatting in axios.js"]},
+        {"path": "README.md (backend and frontend; documentation, excluded from line estimate)", "lines": 0, "classification": "Likely AI-assisted", "signals": ["uniform templated sections", "generic phrasing", "claims not backed by code: OpenAI, FluentValidation, React Native mobile app, TenantContext.jsx, non-existent service files"]}
+      ],
+      "policy_assessment": "AI policy unspecified; reported without penalty.",
+      "needs_human_review": false
+    },
+    "contributions": [
+      {"author": "Viola Resyli", "commits": 73, "lines_added": 26535, "lines_removed": 10056},
+      {"author": "Yllka Fejzullahu", "commits": 23, "lines_added": 20298, "lines_removed": 3218},
+      {"author": "bleronbaftiu21", "commits": 45, "lines_added": 12805, "lines_removed": 2959},
+      {"author": "RigaZubaku", "commits": 12, "lines_added": 3401, "lines_removed": 746},
+      {"author": "Olti Krasniqi", "commits": 25, "lines_added": 2131, "lines_removed": 747}
+    ]
+  },
+  "findings": [
+    {"id": "F-01", "title": "Class-level [AllowAnonymous] overrides [Authorize] on token-management endpoints", "category": "security", "severity": "High", "status": "Confirmed", "locations": ["Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuthController.cs:17", "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuthController.cs:551", "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuthController.cs:578", "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuthController.cs:605", "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuthController.cs:627"], "evidence": "Controller has [AllowAnonymous]; actions have [Authorize(Policy=...)]. ASP.NET Core skips authorization when IAllowAnonymous is present. Confirmed by static reading, not executed.", "impact": "Unauthenticated callers can list all refresh tokens with user emails and revoke any user's sessions.", "recommendation": "Remove class-level [AllowAnonymous]; apply it only to login, register, refresh, forgot-password, reset-password."},
+    {"id": "F-02", "title": "Global audit log readable by any authenticated user", "category": "security", "severity": "High", "status": "Confirmed", "locations": ["Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuditLogController.cs:11", "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Repositories/AuditLogRepository.cs:26", "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/MultiTenancy/TenantMiddleware.cs:34"], "evidence": "Only [Authorize] without Permission:ViewAuditLogs; repository reads PublicDbContext.AuditLogs without tenant filter unless the client supplies one.", "impact": "A self-registered Buyer can read audit entries (old/new values, emails) of all tenants, breaking tenant isolation.", "recommendation": "Require Permission:ViewAuditLogs and enforce tenant filtering for non-SuperAdmin users."},
+    {"id": "F-03", "title": "Tenant resolved from header without binding to token tenantId", "category": "security", "severity": "Medium", "status": "Needs manual verification", "locations": ["Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/MultiTenancy/TenantMiddleware.cs:41", "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Auth/PermissionHandler.cs:20"], "evidence": "X-Tenant-Slug takes precedence over the tenantId claim; PermissionHandler checks only roles; tenant match is enforced only for impersonation tokens.", "impact": "An admin of tenant A may operate on tenant B's schema by changing the header.", "recommendation": "Reject requests where the token's tenantId differs from the resolved tenant (except SuperAdmin/impersonation)."},
+    {"id": "F-04", "title": "Credentials committed to the repository", "category": "security", "severity": "Medium", "status": "Confirmed", "locations": ["Grupi18-SSH-Eventix-Backend/Eventix.Api/appsettings.Development.json:11", "Grupi18-SSH-Eventix-Backend/docker-compose.yml:9", "Grupi18-SSH-Eventix-Backend/.github/workflows/ci.yml:23", "Grupi18-SSH-Eventix-Backend/.github/workflows/ci.yml:39"], "evidence": "Mailtrap SMTP username/password [REDACTED]; PostgreSQL password [REDACTED] reused in docker-compose and CI; JWT_SECRET_KEY [REDACTED] in CI.", "impact": "Sandbox SMTP credentials are public; local DB password and CI JWT key are known.", "recommendation": "Rotate Mailtrap credentials; use GitHub Secrets and an untracked .env file."},
+    {"id": "F-05", "title": "PaymentRetryJob opens a new scope and loses the tenant context", "category": "code_quality", "severity": "Medium", "status": "Confirmed", "locations": ["Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/BackgroundJobs/PaymentRetryJob.cs:19", "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/BackgroundJobs/TenantJobRunner.cs:80"], "evidence": "TenantJobRunner sets TenantId/SchemaName in its scope, but the job creates a fresh scope where ITenantContext is empty, so TenantDbContext falls back to schema 'public'.", "impact": "Job never processes tenant payments (or fails) and repeats N times on the same schema; it only flips Failed to Pending without a real retry.", "recommendation": "Inject TenantDbContext directly as in BookingCleanupJob."},
+    {"id": "F-06", "title": "Cache invalidation uses keys that are never set", "category": "code_quality", "severity": "Low", "status": "Confirmed", "locations": ["Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventsController.cs:62", "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventsController.cs:118"], "evidence": "Sets 'events:public:search:*' / 'events:public:{id}' but removes 'tenant:{id}:events:search:all' / 'tenant:{id}:event:{id}'.", "impact": "Public event list stays stale for up to 5 minutes after create/update/delete.", "recommendation": "Use one key scheme for set and invalidate."},
+    {"id": "F-07", "title": "README claims features and technologies absent from the code", "category": "documentation", "severity": "Medium", "status": "Confirmed", "locations": ["Grupi18-SSH-Eventix-Backend/README.md:109", "Grupi18-SSH-Eventix-Backend/README.md:343", "Grupi18-SSH-Eventix-Backend/README.md:358", "Grupi18-SSH-Eventix-Backend/README.md:388", "Grupi18-SSH-Eventix-Backend/README.md:575", "Grupi18-SSH-Eventix-Frontend/README.md:158", "Grupi18-SSH-Eventix-Frontend/README.md:445"], "evidence": "OpenAI (code uses Ollama), FluentValidation/Validators (no validators), React Native mobile scanner (not in repos, also listed as future work), TenantContext.jsx/authService.js/reportService.js (missing), 'Pages never call Axios directly' (4 pages do), ports 5001/5000 vs 5225; required env variables not documented.", "impact": "Documentation overstates the project and makes setup harder.", "recommendation": "Align READMEs with the code and add a .env.example."},
+    {"id": "F-08", "title": "Debug endpoint and account-enumerating login messages", "category": "security", "severity": "Low", "status": "Confirmed", "locations": ["Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AiController.cs:125", "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuthController.cs:280"], "evidence": "GET /api/ai/debug-claims returns all claims; tenant login returns 'Tenant user not found.' vs 'Invalid password.'.", "impact": "Information disclosure and user enumeration.", "recommendation": "Remove debug endpoint; use a single generic login error."},
+    {"id": "F-09", "title": "Unused packages and mixed framework versions", "category": "dependencies", "severity": "Low", "status": "Confirmed", "locations": ["Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Eventix.Infrastructure.csproj:32", "Grupi18-SSH-Eventix-Backend/Eventix.Api/Eventix.Api.csproj:22", "Grupi18-SSH-Eventix-Backend/Eventix.Api/Eventix.Api.csproj:27", "Grupi18-SSH-Eventix-Backend/Eventix.Api/Eventix.Api.csproj:33", "Grupi18-SSH-Eventix-Backend/.github/workflows/ci.yml:51"], "evidence": "OpenAI, FluentValidation, Hangfire.SqlServer unused; StackExchangeRedis 10.0.8 on net8.0; CI uses SDK 9.0.x.", "impact": "Larger surface and possible version conflicts.", "recommendation": "Remove unused packages and align versions."},
+    {"id": "F-10", "title": "Unpaginated lists and N+1 queries in background job", "category": "performance", "severity": "Low", "status": "Potential", "locations": ["Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Repositories/EventRepository.cs:19", "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/BackgroundJobs/BookingCleanupJob.cs:37"], "evidence": "No Skip/Take on event lists; per-item TicketType query in loop. Inferred, not measured.", "impact": "Degrades with data growth.", "recommendation": "Add pagination; load ticket types in one query."}
+  ],
+  "viva_questions": [
+    "Pse AuthController ka [AllowAnonymous] ne nivel klase? Cfare ndodh me GET /api/auth/refresh-tokens kur thirret pa token?",
+    "Brief-i kerkon OpenAI API. Pse zgjodhet Ollama dhe pse paketa OpenAI eshte e instaluar pa u perdorur?",
+    "Si siguron TenantMiddleware qe Admin-i i tenant-it A nuk qaset te tenant-i B duke ndryshuar X-Tenant-Slug?",
+    "Kush duhet ta shohe /api/auditlog dhe pse nuk perdoret policy Permission:ViewAuditLogs?",
+    "Shpjegoni TenantModelCacheKeyFactory dhe pse nevojitet per multi-tenancy me skeme per tenant.",
+    "Ne cilen skeme punon TenantDbContext brenda PaymentRetryJob kur hapet scope i ri?",
+    "Cfare permbante commit-i cc9521bce5 'SCRUM-241 Added port 5174' me 266 skedare dhe ~11,000 rreshta?",
+    "Ku ndodhet kodi i aplikacionit mobil React Native/Expo qe pershkruan README?",
+    "Pse celesat qe fshihen ne EventsController.Create/Update/Delete nuk perputhen me ata te PublicSearch?",
+    "Tregoni nje Pull Request me komente code review dhe si i keni organizuar review-t."
+  ],
+  "limitations": [
+    "Project code was not executed (no build, tests or app run); findings are from static reading.",
+    "GitHub API rate limit reached without GITHUB_TOKEN: PRs, reviews, issues and branches not read (R15 Cannot verify); GitHub code search skipped, candidates found by name only.",
+    "Jira/GitHub Projects board not visible; R14 based on commit keys.",
+    "No corpus of other course groups for comparison.",
+    "Commit cc9521bce5 (11k lines) not inspected file by file; code reading was sampled (entry points, auth, tenancy, AI, cache, jobs, tests, frontend auth/API).",
+    "No dependency CVE audit was run.",
+    "AI-assistance estimate is indirect with Low confidence."
+  ]
+}

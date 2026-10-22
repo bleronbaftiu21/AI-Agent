@@ -1,0 +1,200 @@
+{
+  "job_id": "20261022-135351-Sistemet-e-Shperndara---test",
+  "title": "Sistemet e Shperndara - test",
+  "created": "2026-10-22T13:53:51",
+  "groups": [
+    {
+      "name": "Grupi18",
+      "repos": [
+        "https://github.com/ssh-Eventix/Grupi18-SSH-Eventix-Backend",
+        "https://github.com/ssh-Eventix/Grupi18-SSH-Eventix-Frontend"
+      ]
+    },
+    {
+      "name": "Grupi-test",
+      "repos": [
+        "https://github.com/ssh-Eventix/Grupi18-SSH-Eventix-Frontend"
+      ]
+    }
+  ],
+  "requirements_file": "C:\\Users\\bleron.baftiu\\PycharmProjects\\PythonProject\\audit-reports\\20261022-135351-Sistemet-e-Shperndara---test\\brief.pdf",
+  "requirements_name": "kerkesa_projekti_sistemet_shperndara.pdf",
+  "requirements_text": "",
+  "comparison": [],
+  "base": [],
+  "ai_policy": "unspecified",
+  "deadline": "2026-05-31",
+  "start": null,
+  "language": "shqip",
+  "output_dir": "C:\\Users\\bleron.baftiu\\PycharmProjects\\PythonProject\\audit-reports\\20261022-135351-Sistemet-e-Shperndara---test",
+  "workspace": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-135351",
+  "run_claude": false,
+  "status": "evidence_ready",
+  "started": "2026-10-22T13:53:51",
+  "finished": "2026-10-22T13:54:04",
+  "steps": [
+    {
+      "name": "Leximi i kërkesave",
+      "group": null,
+      "status": "done",
+      "started": "2026-10-22T13:53:51",
+      "finished": "2026-10-22T13:53:51",
+      "message": "20 kërkesa"
+    },
+    {
+      "name": "Klonimi i repove",
+      "group": "Grupi18",
+      "status": "done",
+      "started": "2026-10-22T13:53:51",
+      "finished": "2026-10-22T13:53:54",
+      "message": "Grupi18-SSH-Eventix-Backend@bbcc1a6, Grupi18-SSH-Eventix-Frontend@11e9ee2"
+    },
+    {
+      "name": "Inventari (endpoint-e, modele, teste)",
+      "group": "Grupi18",
+      "status": "done",
+      "started": "2026-10-22T13:53:54",
+      "finished": "2026-10-22T13:53:57",
+      "message": ""
+    },
+    {
+      "name": "Historia e git-it",
+      "group": "Grupi18",
+      "status": "done",
+      "started": "2026-10-22T13:53:57",
+      "finished": "2026-10-22T13:53:57",
+      "message": ""
+    },
+    {
+      "name": "Sinjalet e AI-së",
+      "group": "Grupi18",
+      "status": "done",
+      "started": "2026-10-22T13:53:57",
+      "finished": "2026-10-22T13:53:58",
+      "message": ""
+    },
+    {
+      "name": "Procesi në GitHub (PR, review)",
+      "group": "Grupi18",
+      "status": "done",
+      "started": "2026-10-22T13:53:58",
+      "finished": "2026-10-22T13:53:59",
+      "message": ""
+    },
+    {
+      "name": "Lidhja e kërkesave me dëshmitë",
+      "group": "Grupi18",
+      "status": "done",
+      "started": "2026-10-22T13:53:59",
+      "finished": "2026-10-22T13:53:59",
+      "message": ""
+    },
+    {
+      "name": "Klonimi i repove",
+      "group": "Grupi-test",
+      "status": "done",
+      "started": "2026-10-22T13:53:59",
+      "finished": "2026-10-22T13:54:00",
+      "message": "Grupi18-SSH-Eventix-Frontend@11e9ee2"
+    },
+    {
+      "name": "Inventari (endpoint-e, modele, teste)",
+      "group": "Grupi-test",
+      "status": "done",
+      "started": "2026-10-22T13:54:00",
+      "finished": "2026-10-22T13:54:01",
+      "message": ""
+    },
+    {
+      "name": "Historia e git-it",
+      "group": "Grupi-test",
+      "status": "done",
+      "started": "2026-10-22T13:54:01",
+      "finished": "2026-10-22T13:54:01",
+      "message": ""
+    },
+    {
+      "name": "Sinjalet e AI-së",
+      "group": "Grupi-test",
+      "status": "done",
+      "started": "2026-10-22T13:54:01",
+      "finished": "2026-10-22T13:54:01",
+      "message": ""
+    },
+    {
+      "name": "Procesi në GitHub (PR, review)",
+      "group": "Grupi-test",
+      "status": "done",
+      "started": "2026-10-22T13:54:01",
+      "finished": "2026-10-22T13:54:02",
+      "message": ""
+    },
+    {
+      "name": "Lidhja e kërkesave me dëshmitë",
+      "group": "Grupi-test",
+      "status": "done",
+      "started": "2026-10-22T13:54:02",
+      "finished": "2026-10-22T13:54:02",
+      "message": ""
+    },
+    {
+      "name": "Ngjashmëria mes grupeve",
+      "group": null,
+      "status": "done",
+      "started": "2026-10-22T13:54:02",
+      "finished": "2026-10-22T13:54:04",
+      "message": ""
+    },
+    {
+      "name": "Përmbledhja (tabela)",
+      "group": null,
+      "status": "done",
+      "started": "2026-10-22T13:54:04",
+      "finished": "2026-10-22T13:54:04",
+      "message": "2 grupe"
+    }
+  ],
+  "groups_state": {
+    "Grupi18": {
+      "slug": "Grupi18",
+      "dir": "C:\\Users\\bleron.baftiu\\PycharmProjects\\PythonProject\\audit-reports\\20261022-135351-Sistemet-e-Shperndara---test\\Grupi18",
+      "status": "evidence_ready",
+      "repos": [
+        {
+          "url": "https://github.com/ssh-Eventix/Grupi18-SSH-Eventix-Backend",
+          "repo": "Grupi18-SSH-Eventix-Backend",
+          "branch": "main",
+          "commit": "bbcc1a627d14fd79be8be5bce2a1f66fb34f86e5",
+          "short": "bbcc1a6",
+          "dir": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-135351\\Grupi18\\ssh-Eventix-Grupi18-SSH-Eventix-Backend",
+          "commits": 220
+        },
+        {
+          "url": "https://github.com/ssh-Eventix/Grupi18-SSH-Eventix-Frontend",
+          "repo": "Grupi18-SSH-Eventix-Frontend",
+          "branch": "main",
+          "commit": "11e9ee2656314bb32b83f70f388ea661d7aca5e9",
+          "short": "11e9ee2",
+          "dir": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-135351\\Grupi18\\ssh-Eventix-Grupi18-SSH-Eventix-Frontend",
+          "commits": 91
+        }
+      ]
+    },
+    "Grupi-test": {
+      "slug": "Grupi-test",
+      "dir": "C:\\Users\\bleron.baftiu\\PycharmProjects\\PythonProject\\audit-reports\\20261022-135351-Sistemet-e-Shperndara---test\\Grupi-test",
+      "status": "evidence_ready",
+      "repos": [
+        {
+          "url": "https://github.com/ssh-Eventix/Grupi18-SSH-Eventix-Frontend",
+          "repo": "Grupi18-SSH-Eventix-Frontend",
+          "branch": "main",
+          "commit": "11e9ee2656314bb32b83f70f388ea661d7aca5e9",
+          "short": "11e9ee2",
+          "dir": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-135351\\Grupi-test\\ssh-Eventix-Grupi18-SSH-Eventix-Frontend",
+          "commits": 91
+        }
+      ]
+    }
+  }
+}

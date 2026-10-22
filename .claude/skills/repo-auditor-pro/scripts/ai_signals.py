@@ -19,6 +19,8 @@ SOURCE_EXTS = {
     ".ps1", ".vue", ".svelte", ".html", ".css", ".scss",
 }
 DOC_EXTS = {".md", ".rst", ".txt"}
+GENERATED = re.compile(r"(\.Designer\.cs$|ModelSnapshot\.cs$|\.g\.cs$|\.min\.(js|css)$)", re.I)
+MIGRATION_DIR = re.compile(r"/(migrations|alembic/versions|db/migrate)(/|$)", re.I)
 
 STRONG = [
     ("assistant_phrase", re.compile(r"\b(as an ai( language model)?|i'm sorry, but|certainly!|sure! here|here'?s (the|an?) "
@@ -26,12 +28,15 @@ STRONG = [
     ("elision_marker", re.compile(r"(rest of (the|your) code (remains|stays)|existing code (remains|here)|"
                                   r"\.\.\. ?(previous|existing|other) (code|methods|imports)|unchanged code)", re.I)),
     ("markdown_fence_in_source", re.compile(r"^\s*```[a-zA-Z]*\s*$", re.M)),
-    ("chat_reference", re.compile(r"\b(chatgpt|openai|copilot|claude|gemini|as requested in the prompt)\b", re.I)),
+    # only a comment that credits an assistant counts; naming an AI product in code or docs is legitimate
+    ("chat_reference", re.compile(r"(#|//|/\*|\*|<!--)[^\n]*\b((generated|written|created) (by|with|using) "
+                                  r"(chatgpt|gpt-?\d|copilot|claude|gemini|an? ai)|chatgpt|as requested in the prompt)", re.I)),
 ]
 MEDIUM = [
     ("step_comment", re.compile(r"(#|//|--)\s*(step \d+|first,|next,|finally,|now we|let's|we (will|need to|can) )", re.I)),
-    ("placeholder", re.compile(r"(your[_-]?(api[_-]?key|secret|password|token|database|db)[_-]?(here)?|"
-                               r"replace (this|with your)|example\.com|<your[-_ ]\w+>)", re.I)),
+    # skip UI placeholder attributes (placeholder="you@example.com") - those are normal form hints
+    ("placeholder", re.compile(r"^(?![^\n]*placeholder)[^\n]*(your[_-]?(api[_-]?key|secret|password|token|database|db)[_-]?here|"
+                               r"replace (this|with your)|<your[-_ ]\w+>)", re.I | re.M)),
     ("obvious_comment", re.compile(r"(#|//)\s*(import (the )?(necessary|required) (libraries|modules|packages)|"
                                    r"define (the|a) (function|class|variable)|initiali[sz]e (the )?variables?|"
                                    r"return the result|main function|create (an? )?instance)", re.I)),
@@ -42,11 +47,24 @@ DOCSTRING = re.compile(r'(""".*?"""|\'\'\'.*?\'\'\'|/\*\*.*?\*/)', re.S)
 FUNC_DEF = re.compile(r"^\s*(def |async def |function |public |private |protected |static |func |fn )", re.M)
 
 
+def longpath(p):
+    """Absolute path with the Windows extended-length prefix so paths over 260 chars are not skipped."""
+    p = os.path.abspath(p)
+    if os.name == "nt" and not p.startswith("\\\\?\\"):
+        p = "\\\\?\\" + p
+    return p
+
+
 def walk(root):
+    root = longpath(root)
     for dirpath, dirnames, filenames in os.walk(root):
         dirnames[:] = [d for d in dirnames if d not in EXCLUDED_DIRS and not d.startswith(".")]
+        if MIGRATION_DIR.search(dirpath.replace("\\", "/")):
+            continue
         for name in filenames:
             ext = os.path.splitext(name)[1].lower()
+            if GENERATED.search(name):
+                continue
             if ext in SOURCE_EXTS or ext in DOC_EXTS:
                 yield os.path.join(dirpath, name), ext
 
@@ -114,7 +132,7 @@ def main():
     for path, ext in walk(args.repo):
         info = analyze(path, ext)
         if info:
-            files[os.path.relpath(path, args.repo).replace("\\", "/")] = info
+            files[os.path.relpath(path, longpath(args.repo)).replace("\\", "/")] = info
 
     def level(info):
         strong = sum(1 for s in info["signals"] if s["strength"] == "strong")

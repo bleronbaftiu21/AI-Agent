@@ -1,0 +1,32 @@
+{
+  "job_id": "20261022-135351-Sistemet-e-Shperndara---test",
+  "title": "Sistemet e Shperndara - test",
+  "created": "2026-10-22T13:53:51",
+  "groups": [
+    {
+      "name": "Grupi18",
+      "repos": [
+        "https://github.com/ssh-Eventix/Grupi18-SSH-Eventix-Backend",
+        "https://github.com/ssh-Eventix/Grupi18-SSH-Eventix-Frontend"
+      ]
+    },
+    {
+      "name": "Grupi-test",
+      "repos": [
+        "https://github.com/ssh-Eventix/Grupi18-SSH-Eventix-Frontend"
+      ]
+    }
+  ],
+  "requirements_file": "C:\\Users\\bleron.baftiu\\PycharmProjects\\PythonProject\\audit-reports\\20261022-135351-Sistemet-e-Shperndara---test\\brief.pdf",
+  "requirements_name": "kerkesa_projekti_sistemet_shperndara.pdf",
+  "requirements_text": "",
+  "comparison": [],
+  "base": [],
+  "ai_policy": "unspecified",
+  "deadline": "2026-05-31",
+  "start": null,
+  "language": "shqip",
+  "output_dir": "C:\\Users\\bleron.baftiu\\PycharmProjects\\PythonProject\\audit-reports\\20261022-135351-Sistemet-e-Shperndara---test",
+  "workspace": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-135351",
+  "run_claude": false
+}

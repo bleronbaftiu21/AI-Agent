@@ -11,7 +11,8 @@ Conduct an independent, read-only, evidence-based audit of a GitHub repository. 
 
 Accept:
 
-- **Repository** (required): `https://github.com/<owner>/<repository>` plus optional branch or commit SHA.
+- **Repository** (required): `https://github.com/<owner>/<repository>` plus optional branch or commit SHA (`/tree/<ref>` or `@<ref>`). **One project may span several repositories** (e.g. backend + frontend): audit them together as one project with one report and one score.
+- **Batch** (optional): several groups/teams, each with its own repository list, graded against the same brief. Each group gets its own report; all groups are compared with each other for copying, and a summary table (`summary.csv`) is produced.
 - **Requirements** (optional, strongly recommended): pasted text, a local file (PDF, DOCX, MD, TXT), or a URL to the brief/spec/rubric. If absent, infer the intended scope from README/docs and say so — never invent requirements.
 - **Comparison corpus** (optional): other repositories or local folders to check for copying (e.g. other students' submissions, a previous year's projects, a known template).
 - **Template / starter code** (optional): code that was handed out and must not count as copied.
@@ -32,18 +33,20 @@ Rules:
 ## Required workflow
 
 1. Read [audit-method.md](audit-method.md) before starting.
-2. Validate and acquire the repository into a new, empty directory in the scratchpad/temp workspace with `git clone --no-checkout` then `git -c core.hooksPath=/dev/null checkout <rev>` (or equivalent that runs no hooks). Use a full clone, not shallow, so history can be analyzed. Record resolved repository, branch, and exact commit SHA. Acquire comparison repositories the same way, each in its own directory.
-3. Parse the requirements into an atomic, numbered checklist (`R1`, `R2`, …), marking each mandatory/optional and its source location in the brief.
-4. Inventory the entire repository before choosing files for deep review. Exclude generated output, vendored dependencies, binaries, lockfiles, and dependency directories unless directly relevant.
+2. **Collect the automatic evidence with the pipeline** (skip this step when the prompt says evidence was already collected, e.g. by the web app, and use the given files instead). Write a config JSON and run `python -I <skill>/scripts/pipeline.py --config <config.json>` (see the script docstring). It clones every repository safely (no hooks, no LFS, no symlinks, long paths), extracts the requirements from the brief into `requirements.json`, and per group writes `evidence/`: `acquire.json` (commit SHAs), `inventory.json` (frameworks, endpoints, models, migrations, tests, CI, technology markers, possible secrets), `history.json` (merged identities, contributions, flags, Jira keys), `ai-*.json`, `github-*.json` (PRs, reviews, branches, issues), `hints.json` (each requirement linked to evidence with a status hint), `github_similar.json` (public GitHub repositories that may be the source of the code: found by searching distinctive code lines across GitHub when a token is set, and by similar names; the candidates are cloned shallowly). It then writes `similarity.json` (every group and every GitHub candidate against each other; candidate keys start with `GitHub: `) and `summary.csv`. `inventory.json` also lists `template_leftovers` (unchanged starter-template code) and `history.json` has `weekly` work and `last_7_days_share` (last-minute work). The individual scripts can also be run on their own. Set `GITHUB_TOKEN` when available; without it GitHub allows 60 requests/hour.
+3. Check the extracted requirement list against the brief (fix splits or merges the parser got wrong) and mark each item mandatory/optional with its source location.
+4. Use the inventory to orient yourself, then read the code. Exclude generated output, vendored dependencies, binaries, lockfiles, and dependency directories unless directly relevant.
 5. Explain the software's purpose, entry points, architecture, trust boundaries, data stores, external integrations, configuration, build/deployment path, tests, and CI/CD before judging it.
-6. **Requirements compliance**: for every `R*`, find evidence (file:line, route, UI screen, test) and assign `Met`, `Partially met`, `Not met`, or `Cannot verify`.
-7. **Originality**: run `scripts/similarity.py` against the comparison corpus (with the template as `--base`), inspect top matches manually, check git history with `scripts/git_history.py`, and look for unattributed external code (licence headers, tutorial fingerprints, distinctive snippets). See the method for thresholds.
-8. **AI-assistance estimate**: run `scripts/ai_signals.py`, combine with history and manual reading, and produce an estimated percentage range with confidence level per the method. This is an indicator, never proof.
+6. **Requirements compliance**: for every `R*`, start from its hint in `hints.json`, then confirm by reading the code: find evidence (file:line, route, UI screen, test) and assign `Met`, `Partially met`, `Not met`, or `Cannot verify`. A hint is never a verdict: "likely_met" can still be Partially met (e.g. a package is installed but unused), and "not_found" must be confirmed by searching.
+7. **Originality**: review `similarity.json` (or run `scripts/similarity.py` against a corpus, with the template as `--base`), inspect top matches manually, use `history.json` flags, and look for unattributed external code (licence headers, tutorial fingerprints, distinctive snippets). See the method for thresholds.
+8. **AI-assistance estimate**: combine `ai-*.json` with history and manual reading, and produce an estimated percentage range with confidence level per the method. Also compare README claims against the code — documentation that claims features the code does not have is a strong signal of generated text and a finding in itself. This is an indicator, never proof.
 9. Assess the technical categories supported by evidence. Be strict but proportionate: do not penalize a small or educational project for omitting enterprise mechanisms it does not need.
 10. Record findings with specific evidence and avoid duplicate penalties for the same root cause.
 11. Score using the weighted model, integrity caps, and limitations in the audit method.
-12. Read [report-contract.md](report-contract.md), then write `audit-report.md` and `audit-report.json` to an output directory outside the inspected repository (default: `./audit-reports/<owner>-<repo>-<shortsha>/` in the working directory).
+12. Read [report-contract.md](report-contract.md), then write `audit-report.md` and `audit-report.json` to an output directory outside the inspected repository (default: the group's folder created by the pipeline, otherwise `./audit-reports/<owner>-<repo>-<shortsha>/` in the working directory). In batch mode write one report per group folder, then rerun `pipeline.py --config <config> --summary-only` so `summary.csv` includes the final scores.
 13. Present the required terminal summary and explain why the evidence produced the score.
+
+A local web app (`auditor_app/` in the project, started with `run_auditor.bat`) runs the same pipeline from a form, shows progress, evidence, hints, similarity and reports, and can start this skill through the Claude Code CLI for the judgment step.
 
 ## Evidence rules
 

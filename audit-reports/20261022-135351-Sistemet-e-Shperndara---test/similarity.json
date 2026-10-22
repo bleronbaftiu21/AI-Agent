@@ -1,0 +1,283 @@
+{
+  "mode": "groups",
+  "params": {
+    "k": 12,
+    "window": 8,
+    "min_containment": 0.25,
+    "pair_threshold": 0.05
+  },
+  "groups": {
+    "Grupi-test": {
+      "files": 83,
+      "fingerprints": 8265
+    },
+    "Grupi18": {
+      "files": 476,
+      "fingerprints": 13332
+    }
+  },
+  "matrix": {
+    "Grupi-test": {
+      "Grupi18": 1.0
+    },
+    "Grupi18": {
+      "Grupi-test": 0.62
+    }
+  },
+  "max_by_group": {
+    "Grupi-test": 1.0,
+    "Grupi18": 0.62
+  },
+  "pairs": [
+    {
+      "a": "Grupi-test",
+      "b": "Grupi18",
+      "a_in_b": 1.0,
+      "b_in_a": 0.62,
+      "max": 1.0,
+      "matches": [
+        {
+          "target_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/index.css",
+          "corpus": "Grupi18",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/index.css",
+          "containment_target": 1.0,
+          "containment_other": 1.0,
+          "target_fingerprints": 1095,
+          "shared_fingerprints": 1095,
+          "small_file": false,
+          "target_lines": [
+            [
+              2,
+              3063
+            ]
+          ]
+        },
+        {
+          "target_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/tenant/MoreEntityPages.jsx",
+          "corpus": "Grupi18",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/tenant/MoreEntityPages.jsx",
+          "containment_target": 1.0,
+          "containment_other": 1.0,
+          "target_fingerprints": 1059,
+          "shared_fingerprints": 1059,
+          "small_file": false,
+          "target_lines": [
+            [
+              1,
+              1726
+            ]
+          ]
+        },
+        {
+          "target_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/buyer/PaymentPage.jsx",
+          "corpus": "Grupi18",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/buyer/PaymentPage.jsx",
+          "containment_target": 1.0,
+          "containment_other": 1.0,
+          "target_fingerprints": 647,
+          "shared_fingerprints": 647,
+          "small_file": false,
+          "target_lines": [
+            [
+              1,
+              562
+            ]
+          ]
+        },
+        {
+          "target_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/buyer/HomePage.jsx",
+          "corpus": "Grupi18",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/buyer/HomePage.jsx",
+          "containment_target": 1.0,
+          "containment_other": 1.0,
+          "target_fingerprints": 592,
+          "shared_fingerprints": 592,
+          "small_file": false,
+          "target_lines": [
+            [
+              1,
+              531
+            ]
+          ]
+        },
+        {
+          "target_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/tenant/EventsPage.jsx",
+          "corpus": "Grupi18",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/tenant/EventsPage.jsx",
+          "containment_target": 1.0,
+          "containment_other": 1.0,
+          "target_fingerprints": 478,
+          "shared_fingerprints": 478,
+          "small_file": false,
+          "target_lines": [
+            [
+              1,
+              612
+            ]
+          ]
+        },
+        {
+          "target_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/superadmin/SuperAdminVenuesPage.jsx",
+          "corpus": "Grupi18",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/superadmin/SuperAdminVenuesPage.jsx",
+          "containment_target": 1.0,
+          "containment_other": 1.0,
+          "target_fingerprints": 461,
+          "shared_fingerprints": 461,
+          "small_file": false,
+          "target_lines": [
+            [
+              1,
+              734
+            ]
+          ]
+        },
+        {
+          "target_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/buyer/BuyerPages.jsx",
+          "corpus": "Grupi18",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/buyer/BuyerPages.jsx",
+          "containment_target": 1.0,
+          "containment_other": 1.0,
+          "target_fingerprints": 460,
+          "shared_fingerprints": 460,
+          "small_file": false,
+          "target_lines": [
+            [
+              1,
+              425
+            ]
+          ]
+        },
+        {
+          "target_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/buyer/CheckoutPage.jsx",
+          "corpus": "Grupi18",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/buyer/CheckoutPage.jsx",
+          "containment_target": 1.0,
+          "containment_other": 1.0,
+          "target_fingerprints": 446,
+          "shared_fingerprints": 446,
+          "small_file": false,
+          "target_lines": [
+            [
+              1,
+              325
+            ]
+          ]
+        },
+        {
+          "target_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/buyer/EventDetailsPage.jsx",
+          "corpus": "Grupi18",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/buyer/EventDetailsPage.jsx",
+          "containment_target": 1.0,
+          "containment_other": 1.0,
+          "target_fingerprints": 433,
+          "shared_fingerprints": 433,
+          "small_file": false,
+          "target_lines": [
+            [
+              1,
+              326
+            ]
+          ]
+        },
+        {
+          "target_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/superadmin/TenantsPage.jsx",
+          "corpus": "Grupi18",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/superadmin/TenantsPage.jsx",
+          "containment_target": 1.0,
+          "containment_other": 1.0,
+          "target_fingerprints": 382,
+          "shared_fingerprints": 382,
+          "small_file": false,
+          "target_lines": [
+            [
+              1,
+              227
+            ]
+          ]
+        },
+        {
+          "target_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/superadmin/TenantEmailDomainsPage.jsx",
+          "corpus": "Grupi18",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/superadmin/TenantEmailDomainsPage.jsx",
+          "containment_target": 1.0,
+          "containment_other": 1.0,
+          "target_fingerprints": 377,
+          "shared_fingerprints": 377,
+          "small_file": false,
+          "target_lines": [
+            [
+              1,
+              334
+            ]
+          ]
+        },
+        {
+          "target_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/tenant/DashboardPage.jsx",
+          "corpus": "Grupi18",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/tenant/DashboardPage.jsx",
+          "containment_target": 1.0,
+          "containment_other": 1.0,
+          "target_fingerprints": 374,
+          "shared_fingerprints": 374,
+          "small_file": false,
+          "target_lines": [
+            [
+              1,
+              285
+            ]
+          ]
+        },
+        {
+          "target_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/superadmin/SuperAdminDashboardPage.jsx",
+          "corpus": "Grupi18",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/superadmin/SuperAdminDashboardPage.jsx",
+          "containment_target": 1.0,
+          "containment_other": 1.0,
+          "target_fingerprints": 372,
+          "shared_fingerprints": 372,
+          "small_file": false,
+          "target_lines": [
+            [
+              1,
+              537
+            ]
+          ]
+        },
+        {
+          "target_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/tenant/EventSectionsPage.jsx",
+          "corpus": "Grupi18",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/tenant/EventSectionsPage.jsx",
+          "containment_target": 1.0,
+          "containment_other": 1.0,
+          "target_fingerprints": 358,
+          "shared_fingerprints": 358,
+          "small_file": false,
+          "target_lines": [
+            [
+              1,
+              426
+            ]
+          ]
+        },
+        {
+          "target_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/components/crud/EntityCrudPage.jsx",
+          "corpus": "Grupi18",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/components/crud/EntityCrudPage.jsx",
+          "containment_target": 1.0,
+          "containment_other": 1.0,
+          "target_fingerprints": 355,
+          "shared_fingerprints": 355,
+          "small_file": false,
+          "target_lines": [
+            [
+              1,
+              318
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "note": "Overlap = share of a group's code fingerprints that also appear in the other group. Shared framework boilerplate gives a few percent; inspect pairs above ~20% manually and use --base for starter code."
+}

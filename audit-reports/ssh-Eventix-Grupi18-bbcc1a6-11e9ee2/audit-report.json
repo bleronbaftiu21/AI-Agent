@@ -57,7 +57,7 @@
         "weight": 0.05,
         "score": 5,
         "status": "assessed",
-        "justification": "41 teste ne CI; mbulim i holle; FE pa teste."
+        "justification": "36 teste ne CI; mbulim i holle; FE pa teste."
       },
       {
         "name": "maintainability_documentation",
@@ -225,7 +225,7 @@
           "Eventix.Tests/",
           "Backend/.github/workflows/ci.yml"
         ],
-        "notes": "41 teste; pa CD; frontend pa teste."
+        "notes": "36 teste; pa CD; frontend pa teste."
       },
       {
         "id": "R12",

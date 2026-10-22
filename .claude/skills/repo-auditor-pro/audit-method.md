@@ -4,12 +4,17 @@ Follow this method for every audit. Scripts referenced below live in `scripts/` 
 
 ## 1. Acquisition
 
+Prefer `scripts/acquire.py` (called by `pipeline.py`), which validates the URL and clones with hooks disabled, LFS smudge off, symlinks off and `core.longpaths=true` persisted in the clone (Windows paths over 260 characters otherwise break `git log` and file scans). Manual equivalent:
+
 ```bash
 mkdir <workspace>/target && cd <workspace>/target
-git clone --no-checkout https://github.com/<owner>/<repo>.git repo
-git -C repo -c core.hooksPath=/dev/null checkout <branch-or-sha>
+git -c core.longpaths=true clone --no-checkout https://github.com/<owner>/<repo>.git repo
+git -C repo config core.longpaths true
+git -C repo -c core.hooksPath=<empty-dir> checkout <branch-or-sha>
 git -C repo rev-parse HEAD
 ```
+
+Projects split over several repositories (backend, frontend, mobile) are one project: clone all of them, inventory them together, and grade the requirements against the union.
 
 - Use `gh repo view` / `gh api` for metadata (default branch, fork parent, created date, visibility, languages) when `gh` is authenticated. A repository that is a **fork** or was **created from a template** must be recorded — it changes how similarity is interpreted.
 - Never run `npm install`, `pip install`, `make`, `docker`, setup scripts, or Git LFS smudge filters without authorization.
@@ -58,6 +63,10 @@ Interpretation (per file, files with ≥ 30 fingerprints):
 
 Always open the matched ranges side by side before reporting. Downgrade matches that are framework scaffolding, generated code, configuration, textbook algorithms written the only obvious way, or code from the supplied template. Check which side came first using commit dates — similarity alone does not say who copied whom.
 
+### 4a-bis. Search across public GitHub (no corpus needed)
+
+`scripts/find_similar_github.py` (run by the pipeline) picks distinctive lines from the project (long, identifier-rich, not boilerplate, unique in the project) and searches them with GitHub code search (requires `GITHUB_TOKEN`); repositories containing several of these lines are strong candidates. It also searches repositories with a similar name or README title. The project's own organisation and forks of it are excluded. Candidates are cloned shallowly and compared with `similarity.py`. For every candidate above ~20% overlap: open the matching files side by side, and compare the candidate's `created_at` and first commits with the project's first commit to decide who was first. Name-only candidates with low overlap are not evidence of anything. Without a token, say in the limitations that code search was skipped.
+
 ### 4b. Git history
 
 ```bash
@@ -70,6 +79,9 @@ Signals (none is proof on its own):
 - Commit timestamps clustered in an implausible window, commits after the deadline, or dates earlier than the assignment was published.
 - Repository is a fork of, or contains history from, another project.
 - Team projects: contribution share per member (lines added/removed, commits) — report it, but note squash merges and pair programming distort it.
+- Work over time (`weekly`, `last_7_days_share`): a bachelor/semester project normally grows over weeks. When more than ~60% of the code arrives in the final 7 days, flag it as last-minute work and ask about it in the defense questions (it is not proof of copying on its own).
+- Individual (bachelor) projects: every commit author should be the student. Other authors in the history need an explanation (co-supervisor, template, copied repository with history kept).
+- `template_leftovers` in the inventory: unchanged starter code (e.g. `WeatherForecast`, "Edit src/App.jsx and save") is unfinished work and must not be counted as the student's own code.
 
 ### 4c. Unattributed external code
 

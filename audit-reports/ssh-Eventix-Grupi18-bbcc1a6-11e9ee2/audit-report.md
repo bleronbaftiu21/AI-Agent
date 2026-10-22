@@ -15,7 +15,7 @@
 
 ## 2. Përmbledhje ekzekutive
 
-Eventix është platformë multi-tenant për menaxhimin e eventeve. Backend-i është ASP.NET Core 9 + EF Core + PostgreSQL + Hangfire, ndërsa frontend-i është React 19 + Vite. Projekti është i madh dhe serioz për nivelin e lëndës: 144 endpoint-e, 31 entitete, skemë për çdo tenant, 8 punë në background, autorizim me leje (permission policies), cache me çelësa sipas tenant-it, 41 teste dhe CI në GitHub Actions. Përmbushja e kërkesave të detyrueshme është **85%** (14 Met, 6 Partially met, 0 Not met).
+Eventix është platformë multi-tenant për menaxhimin e eventeve. Backend-i është ASP.NET Core 9 + EF Core + PostgreSQL + Hangfire, ndërsa frontend-i është React 19 + Vite. Projekti është i madh dhe serioz për nivelin e lëndës: 144 endpoint-e, 31 entitete, skemë për çdo tenant, 8 punë në background, autorizim me leje (permission policies), cache me çelësa sipas tenant-it, 36 teste dhe CI në GitHub Actions. Përmbushja e kërkesave të detyrueshme është **85%** (14 Met, 6 Partially met, 0 Not met).
 
 **Nota përfundimtare: 7.8 / 10** (pa kufizim, besueshmëria: Mesatare). **Nota vetëm për kërkesat: 8.5 / 10.**
 
@@ -43,7 +43,7 @@ Eventix është platformë multi-tenant për menaxhimin e eventeve. Backend-i ë
 | Cilësia e kodit | 7% | 6 | 27 `throw new Exception(...)` gjenerike pa handler global. DTO të dyfishuara. Program.cs ka mbi 90 regjistrime policy të përsëritura. |
 | Struktura & arkitektura | 5% | 7 | Clean architecture e qartë. Disa kontrollerë/shërbime e anashkalojnë shtresën (DbContext direkt). Migrimet ndahen në dy dosje. |
 | Siguria | 5% | 6 | Sekrete dev/test në repo (konfirmuar). Izolimi mes tenant-ëve është *potencial*, prandaj llogaritet me gjysmë peshe. BCrypt, tokenat e reset-it me hash dhe refresh-token-at janë të mira. |
-| Testimi | 5% | 5 | 41 teste (unit/integration/API) që ekzekutohen në CI. Mbulim i hollë kundrejt 144 endpoint-eve. Frontend pa asnjë test. |
+| Testimi | 5% | 5 | 36 teste (unit/integration/API) që ekzekutohen në CI. Mbulim i hollë kundrejt 144 endpoint-eve. Frontend pa asnjë test. |
 | Mirëmbajtja & dokumentimi | 4% | 6 | README e gjatë (730 rreshta), por me pasaktësi (OpenAI, instruksione migrimi). Commit-e me mesazhe gjenerike. |
 | Gatishmëria për prodhim | 2% | 7 | Për projekt kursi është mjaftueshëm: env vars, health endpoint, CI, migrime. `localhost`-et e shkruara në kod dhe mungesa e CD-së jepen si këshilla. |
 | Performanca (e nxjerrë) | 1% | 6 | Cache prezent. Listat pa pagination. `ToLower().Contains` nuk përdor indekse. |
@@ -78,7 +78,7 @@ Për ta ngritur notën, rruga më e shkurtër është të plotësohen 6 kërkesa
 | R8 | Login/register + role-based authorization | Po | Met | `AuthController.cs:171,253`. Policy-t `Program.cs:293-568`. `PermissionHandler.cs` | Shih F-01 për izolimin e tenant-ëve. |
 | R9 | Middleware për logging dhe autentikim | Po | Met | `RequestLoggingMiddleware.cs`, `TenantMiddleware.cs`, `Program.cs:611-617` | — |
 | R10 | React + Context API | Po | Met | `src/auth/AuthContext.jsx` | Vetëm një context (auth). Minimal, por i mjaftueshëm. |
-| R11 | Unit teste + API teste (+ CI/CD) | Po | Partially met | 41 teste në `Eventix.Tests/*`. CI: `.github/workflows/ci.yml` | Nuk ka CD. Frontend pa teste. Mbulim i vogël. |
+| R11 | Unit teste + API teste (+ CI/CD) | Po | Partially met | 36 teste në `Eventix.Tests/*`. CI: `.github/workflows/ci.yml` | Nuk ka CD. Frontend pa teste. Mbulim i vogël. |
 | R12 | Minimum 20 modele + migrime | Po | Met | 31 entitete në `Eventix.Domain/Entities`, 23 migrime | Migrimet janë të shpërndara në `Migrations/` dhe `Persistence/Migrations/`. |
 | R13 | Dokumentim i arkitekturës, API-së dhe udhëzimeve | Po | Partially met | `README.md` (730 rreshta) | Pretendon OpenAI (`README.md:153,345`). `dotnet ef database update` pa `--context` dështon me 2 DbContext (krahaso `Makefile:13-15`). Env vars e nevojshme (`JWT_*`, `POSTGRES_*`) nuk janë të dokumentuara në Installation. |
 | R14 | Jira / GitHub Projects | Po | Met | 40 commit-e me `SCRUM-<n>` | Vetë board-i Jira nuk u pa. |
@@ -150,6 +150,7 @@ Kujdes: rreshtat përfshijnë migrimet e gjeneruara, merge-t e degëve me histor
 
 **F-03 — Moduli AI përdor Ollama, jo OpenAI, ndërsa README pretendon OpenAI** · Kërkesat / Dokumentimi · *Confirmed*
 - **Vendndodhja:** `Eventix.Infrastructure/Services/OllamaClient.cs:8-40`, `Eventix.Api/appsettings.json:18-21`, `Program.cs:277-281`. `README.md:7,46,109,153,343-345`.
+- **Shtesë (u gjet nga skripti `inventory.py`):** paketa NuGet `OpenAI` 2.10.0 është e deklaruar në `Eventix.Infrastructure/Eventix.Infrastructure.csproj:32`, por nuk përdoret në asnjë skedar `.cs`. Integrimi me OpenAI ka nisur, por nuk është lidhur.
 - **Ndikimi:** kërkesa R16 kërkon shprehimisht OpenAI API. Dokumentimi nuk përputhet me implementimin.
 - **Rekomandimi:** shto një `OpenAiClient : IOllamaClient` (ose riemërto ndërfaqen në `ILlmClient`) dhe zgjidh ofruesin nga konfigurimi. Ose korrigjo README-në dhe arsyetoje zgjedhjen para mësimdhënësit.
 
@@ -198,7 +199,7 @@ Kujdes: rreshtat përfshijnë migrimet e gjeneruara, merge-t e degëve me histor
 - **Arkitektura:** ndarje e mirë e shtresave dhe DI e plotë. Shmangie të shtresave: `AuthController` injekton `PublicDbContext`/`TenantDbContext` direkt (`AuthController.cs:28-29`). `AiService` përdor `TenantDbContext` direkt në vend të repove. DTO-të e login/register janë dyfishuar në `DTOs/Auth` dhe `DTOs/User`.
 - **Cilësia:** kod i lexueshëm, async kudo, `CancellationToken` i përcjellë. `Program.cs` ka mbi 270 rreshta regjistrimesh policy të përsëritura, që mund të gjenerohen me një cikël mbi enum-in `Permission`.
 - **Siguria:** BCrypt për fjalëkalimet, token-at e reset-it ruhen të hash-uar (SHA-256) dhe skadojnë pas 30 min, mesazhi i forgot-password nuk zbulon nëse llogaria ekziston, refresh tokens me revokim, `FallbackPolicy = RequireAuthenticatedUser`. Dobësitë janë te F-01, F-02, F-09, F-10.
-- **Testimi:** 41 teste: unit (auth, cache, check-in, kupona), integration (jobs, event service, provisioner), API (events, email domains). Nuk mbulojnë booking, pagesat ose izolimin mes tenant-ëve.
+- **Testimi:** 36 teste (23 unit, 6 integration, 7 API): unit (auth, cache, check-in, kupona), integration (jobs, event service, provisioner), API (events, email domains). Nuk mbulojnë booking, pagesat ose izolimin mes tenant-ëve.
 - **Varësitë:** paketat NuGet kanë versione të fiksuara. npm përdor `^` me `package-lock.json`. Auditimi i CVE-ve nuk u bë.
 - **Performanca (e nxjerrë, jo e matur):** cache 5-minutësh për lexime të shpeshta, me invalidim. Mungon pagination. Kërkimi me `ToLower()` nuk përdor indekse.
 - **Gatishmëria për prodhim:** ka health endpoint, CI dhe migrime. Mungojnë CD, Dockerfile për API/frontend dhe konfigurimi i jashtëm (F-07).

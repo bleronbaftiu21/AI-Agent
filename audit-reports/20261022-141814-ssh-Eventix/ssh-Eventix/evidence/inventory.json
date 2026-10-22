@@ -1,0 +1,1368 @@
+{
+  "frameworks": [
+    "ASP.NET Core",
+    "Entity Framework Core",
+    "react",
+    "vite"
+  ],
+  "files_by_language": {
+    "C#": 349,
+    "JavaScript (JSX)": 44,
+    "JavaScript": 36,
+    "CSS": 4,
+    "HTML": 1
+  },
+  "lines_by_language": {
+    "C#": 14704,
+    "JavaScript (JSX)": 9302,
+    "CSS": 3126,
+    "JavaScript": 1287,
+    "HTML": 13
+  },
+  "source_lines_total": 28432,
+  "generated_or_migration_files": 45,
+  "endpoints": {
+    "count": 145,
+    "by_kind": {
+      "aspnet-minimal": 1,
+      "aspnet": 144
+    },
+    "by_method": {
+      "GET": 73,
+      "POST": 42,
+      "PUT": 15,
+      "DELETE": 15
+    },
+    "items": [
+      {
+        "kind": "aspnet-minimal",
+        "method": "GET",
+        "route": "/api/health",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:621"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "chat",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AiController.cs:21"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "buyer/chat",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AiController.cs:37"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "recommendations",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AiController.cs:53"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "buyer/recommendations",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AiController.cs:64"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "generate-event-description",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AiController.cs:75"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "review-summary/{eventId:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AiController.cs:88"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "generate-marketing",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AiController.cs:101"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "debug-claims",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AiController.cs:125"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/ArchiveRecordsController.cs:20"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/ArchiveRecordsController.cs:28"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "entity/{entityName}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/ArchiveRecordsController.cs:40"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "year/{year:int}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/ArchiveRecordsController.cs:48"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "stats",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/ArchiveRecordsController.cs:56"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuditLogController.cs:21"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuditLogController.cs:31"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "forgot-password",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuthController.cs:69"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "reset-password",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuthController.cs:115"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "register",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuthController.cs:171"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "login",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuthController.cs:253"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "refresh",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuthController.cs:411"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "logout",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuthController.cs:551"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "revoke-refresh-token",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuthController.cs:578"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "refresh-tokens",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuthController.cs:605"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "revoke-all/{publicUserId:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuthController.cs:627"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/BookingController.cs:30"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/BookingController.cs:37"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "user/{userId:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/BookingController.cs:44"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/BookingController.cs:51"
+      },
+      {
+        "kind": "aspnet",
+        "method": "PUT",
+        "route": "{id:guid}/status",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/BookingController.cs:78"
+      },
+      {
+        "kind": "aspnet",
+        "method": "DELETE",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/BookingController.cs:89"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/CheckInController.cs:19"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "{id}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/CheckInController.cs:24"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/CheckInController.cs:32"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/DiscountCouponController.cs:29"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/DiscountCouponController.cs:46"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "by-event/{eventId:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/DiscountCouponController.cs:64"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/DiscountCouponController.cs:82"
+      },
+      {
+        "kind": "aspnet",
+        "method": "PUT",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/DiscountCouponController.cs:97"
+      },
+      {
+        "kind": "aspnet",
+        "method": "DELETE",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/DiscountCouponController.cs:121"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "validate",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/DiscountCouponController.cs:143"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "redeem",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/DiscountCouponController.cs:152"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventCategoriesController.cs:29"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventCategoriesController.cs:46"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventCategoriesController.cs:60"
+      },
+      {
+        "kind": "aspnet",
+        "method": "PUT",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventCategoriesController.cs:75"
+      },
+      {
+        "kind": "aspnet",
+        "method": "DELETE",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventCategoriesController.cs:94"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventsController.cs:34"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "search",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventsController.cs:45"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "public",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventsController.cs:56"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "public/{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventsController.cs:74"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventsController.cs:96"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventsController.cs:110"
+      },
+      {
+        "kind": "aspnet",
+        "method": "PUT",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventsController.cs:125"
+      },
+      {
+        "kind": "aspnet",
+        "method": "DELETE",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventsController.cs:148"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventSectionController.cs:29"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "event/{eventId:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventSectionController.cs:38"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventSectionController.cs:48"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventSectionController.cs:66"
+      },
+      {
+        "kind": "aspnet",
+        "method": "PUT",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventSectionController.cs:81"
+      },
+      {
+        "kind": "aspnet",
+        "method": "DELETE",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventSectionController.cs:104"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventSessionController.cs:26"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventSessionController.cs:43"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventSessionController.cs:61"
+      },
+      {
+        "kind": "aspnet",
+        "method": "PUT",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventSessionController.cs:79"
+      },
+      {
+        "kind": "aspnet",
+        "method": "DELETE",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventSessionController.cs:102"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "start",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/ImpersonationController.cs:20"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "stop",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/ImpersonationController.cs:84"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/NotificationController.cs:19"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "{id}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/NotificationController.cs:24"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/NotificationController.cs:32"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "user/{userId:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/NotificationController.cs:37"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/PaymentController.cs:29"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/PaymentController.cs:46"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "booking/{bookingId:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/PaymentController.cs:66"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/PaymentController.cs:83"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/PaymentMethodController.cs:20"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/PaymentMethodController.cs:28"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/PaymentMethodController.cs:40"
+      },
+      {
+        "kind": "aspnet",
+        "method": "PUT",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/PaymentMethodController.cs:52"
+      },
+      {
+        "kind": "aspnet",
+        "method": "DELETE",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/PaymentMethodController.cs:67"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "{id:guid}/activate",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/PaymentMethodController.cs:75"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "{id:guid}/deactivate",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/PaymentMethodController.cs:83"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/ReviewController.cs:17"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "{id}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/ReviewController.cs:22"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/ReviewController.cs:30"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/RoleController.cs:28"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/RoleController.cs:37"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/RoleController.cs:48"
+      },
+      {
+        "kind": "aspnet",
+        "method": "PUT",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/RoleController.cs:56"
+      },
+      {
+        "kind": "aspnet",
+        "method": "DELETE",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/RoleController.cs:66"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/SpeakersController.cs:29"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/SpeakersController.cs:46"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/SpeakersController.cs:64"
+      },
+      {
+        "kind": "aspnet",
+        "method": "PUT",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/SpeakersController.cs:79"
+      },
+      {
+        "kind": "aspnet",
+        "method": "DELETE",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/SpeakersController.cs:102"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/StaffController.cs:20"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/StaffController.cs:28"
+      },
+      {
+        "kind": "aspnet",
+        "method": "PUT",
+        "route": "{id:guid}/deactivate",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/StaffController.cs:43"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/TenantAdminsController.cs:19"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/TenantEmailDomainsController.cs:19"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "tenant/{tenantId:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/TenantEmailDomainsController.cs:26"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/TenantEmailDomainsController.cs:33"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/TenantEmailDomainsController.cs:41"
+      },
+      {
+        "kind": "aspnet",
+        "method": "PUT",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/TenantEmailDomainsController.cs:49"
+      },
+      {
+        "kind": "aspnet",
+        "method": "DELETE",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/TenantEmailDomainsController.cs:57"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/TenantsController.cs:19"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/TenantsController.cs:24"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/TenantsController.cs:32"
+      },
+      {
+        "kind": "aspnet",
+        "method": "PUT",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/TenantsController.cs:40"
+      },
+      {
+        "kind": "aspnet",
+        "method": "DELETE",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/TenantsController.cs:48"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/TicketController.cs:18"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/TicketController.cs:26"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "code/{ticketCode}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/TicketController.cs:38"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "validate",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/TicketController.cs:50"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "checkin",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/TicketController.cs:62"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/TicketTypeController.cs:29"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "event/{eventId:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/TicketTypeController.cs:52"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "event/{eventId:guid}/available",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/TicketTypeController.cs:72"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/TicketTypeController.cs:92"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "public/event/{eventId:guid}/available",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/TicketTypeController.cs:115"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/UserController.cs:19"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/UserController.cs:27"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "by-email",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/UserController.cs:38"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/UserController.cs:49"
+      },
+      {
+        "kind": "aspnet",
+        "method": "PUT",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/UserController.cs:60"
+      },
+      {
+        "kind": "aspnet",
+        "method": "DELETE",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/UserController.cs:71"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "by-user/{userId:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/UserRoleController.cs:30"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/UserRoleController.cs:42"
+      },
+      {
+        "kind": "aspnet",
+        "method": "DELETE",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/UserRoleController.cs:58"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "public",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/VenueController.cs:34"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "public/{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/VenueController.cs:46"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/VenueController.cs:58"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/VenueController.cs:74"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/VenueController.cs:92"
+      },
+      {
+        "kind": "aspnet",
+        "method": "PUT",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/VenueController.cs:105"
+      },
+      {
+        "kind": "aspnet",
+        "method": "DELETE",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/VenueController.cs:123"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/VenueSectionController.cs:38"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/VenueSectionController.cs:54"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "venue/{venueId:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/VenueSectionController.cs:72"
+      },
+      {
+        "kind": "aspnet",
+        "method": "POST",
+        "route": "",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/VenueSectionController.cs:90"
+      },
+      {
+        "kind": "aspnet",
+        "method": "PUT",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/VenueSectionController.cs:107"
+      },
+      {
+        "kind": "aspnet",
+        "method": "DELETE",
+        "route": "{id:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/VenueSectionController.cs:132"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "public",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/VenueSectionController.cs:156"
+      },
+      {
+        "kind": "aspnet",
+        "method": "GET",
+        "route": "public/venue/{venueId:guid}",
+        "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/VenueSectionController.cs:168"
+      }
+    ]
+  },
+  "models": {
+    "count": 31,
+    "names": [
+      "AIRequestLog",
+      "ArchiveRecord",
+      "AuditLog",
+      "Booking",
+      "BookingItem",
+      "CheckIn",
+      "DiscountCoupon",
+      "Event",
+      "EventCategory",
+      "EventSection",
+      "EventSession",
+      "Notification",
+      "PasswordResetToken",
+      "Payment",
+      "PaymentMethod",
+      "PublicRole",
+      "PublicUser",
+      "PublicUserRole",
+      "RefreshToken",
+      "Review",
+      "Role",
+      "Speaker",
+      "Tenant",
+      "TenantEmailDomain",
+      "TenantImpersonationLog",
+      "Ticket",
+      "TicketType",
+      "User",
+      "UserRole",
+      "Venue",
+      "VenueSection"
+    ],
+    "locations": {
+      "Tenant": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/PublicDbContext.cs:13"
+      ],
+      "PublicUser": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/PublicDbContext.cs:14"
+      ],
+      "PublicRole": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/PublicDbContext.cs:15"
+      ],
+      "PublicUserRole": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/PublicDbContext.cs:16"
+      ],
+      "PasswordResetToken": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/PublicDbContext.cs:17"
+      ],
+      "RefreshToken": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/PublicDbContext.cs:18"
+      ],
+      "TenantImpersonationLog": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/PublicDbContext.cs:19"
+      ],
+      "ArchiveRecord": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/PublicDbContext.cs:20"
+      ],
+      "TenantEmailDomain": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/PublicDbContext.cs:21"
+      ],
+      "Venue": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/PublicDbContext.cs:22",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/TenantDbContext.cs:25"
+      ],
+      "VenueSection": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/PublicDbContext.cs:23",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/TenantDbContext.cs:26"
+      ],
+      "PaymentMethod": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/PublicDbContext.cs:24",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/TenantDbContext.cs:45"
+      ],
+      "AuditLog": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/PublicDbContext.cs:25"
+      ],
+      "User": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/TenantDbContext.cs:21"
+      ],
+      "Role": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/TenantDbContext.cs:22"
+      ],
+      "UserRole": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/TenantDbContext.cs:23"
+      ],
+      "EventCategory": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/TenantDbContext.cs:28"
+      ],
+      "Event": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/TenantDbContext.cs:29"
+      ],
+      "EventSection": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/TenantDbContext.cs:30"
+      ],
+      "EventSession": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/TenantDbContext.cs:32"
+      ],
+      "Speaker": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/TenantDbContext.cs:33"
+      ],
+      "TicketType": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/TenantDbContext.cs:35"
+      ],
+      "Booking": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/TenantDbContext.cs:36"
+      ],
+      "BookingItem": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/TenantDbContext.cs:37"
+      ],
+      "Ticket": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/TenantDbContext.cs:38"
+      ],
+      "CheckIn": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/TenantDbContext.cs:39"
+      ],
+      "Notification": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/TenantDbContext.cs:41"
+      ],
+      "DiscountCoupon": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/TenantDbContext.cs:42"
+      ],
+      "Review": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/TenantDbContext.cs:43"
+      ],
+      "Payment": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/TenantDbContext.cs:44"
+      ],
+      "AIRequestLog": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Database/TenantDbContext.cs:46"
+      ]
+    }
+  },
+  "migrations": {
+    "count": 21,
+    "files": [
+      "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Migrations/20260420195656_InitialPublic.cs",
+      "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Migrations/20260422234741_AddSpeakerEntity.cs",
+      "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Migrations/20260423215151_Entities.cs",
+      "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Migrations/20260423221822_InitialCreate.cs",
+      "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Migrations/20260427002139_AddEventSession.cs",
+      "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Migrations/20260504144645_InitialPublicU.cs",
+      "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Migrations/20260508080925_PublicUpdate.cs",
+      "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Migrations/Public/20260526201657_AddPasswordResetTokens.cs",
+      "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Migrations/Public/20260528221628_AddAuditLogToPublicDb.cs",
+      "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Migrations/Public/20260528222341_RemoveAuditLogUserForeignKey.cs",
+      "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Migrations/Public/20260529101851_TenantUpdate.cs",
+      "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Migrations/TenantDb/20260504195338_InitialTenantSchema.cs",
+      "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Migrations/TenantDb/20260505124020_TenantUpdate.cs",
+      "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Migrations/TenantDb/20260507230701_FixCheckInDbSet.cs",
+      "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Migrations/TenantDb/20260508000038_FixReviewAndNotification.cs",
+      "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Migrations/Public/20260510222926_AddPublicAuthArchiveEntities.cs",
+      "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Migrations/Public/20260516101930_AddTenantEmailDomains.cs",
+      "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Migrations/Public/20260518190153_RepairTenant.cs",
+      "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Migrations/Tenant/20260510223049_RefreshTokenTenantUpdate.cs",
+      "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Migrations/Tenant/20260516145617_UpdatedTenant.cs",
+      "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Persistence/Migrations/Tenant/20260523195526_FixTicketTypeSoldQuantityConstraint.cs"
+    ]
+  },
+  "tests": {
+    "count": 36,
+    "files": [
+      {
+        "file": "Grupi18-SSH-Eventix-Backend/Eventix.Tests/Eventix.ApiTests/Events/EventsControllerApiTests.cs",
+        "tests": 2
+      },
+      {
+        "file": "Grupi18-SSH-Eventix-Backend/Eventix.Tests/Eventix.ApiTests/TenantEmailDomains/TenantEmailDomainControllerApiTests.cs",
+        "tests": 5
+      },
+      {
+        "file": "Grupi18-SSH-Eventix-Backend/Eventix.Tests/Eventix.IntegrationTests/BackgroundJobs/BackgroundJobIntegrationTests.cs",
+        "tests": 3
+      },
+      {
+        "file": "Grupi18-SSH-Eventix-Backend/Eventix.Tests/Eventix.IntegrationTests/Events/EventServiceIntegrationTests.cs",
+        "tests": 2
+      },
+      {
+        "file": "Grupi18-SSH-Eventix-Backend/Eventix.Tests/Eventix.IntegrationTests/MultiTenancy/TenantSchemaProvisionerTests.cs",
+        "tests": 1
+      },
+      {
+        "file": "Grupi18-SSH-Eventix-Backend/Eventix.Tests/Eventix.UnitTests/Authorization/ImpersonationHandlerTests.cs",
+        "tests": 3
+      },
+      {
+        "file": "Grupi18-SSH-Eventix-Backend/Eventix.Tests/Eventix.UnitTests/Authorization/JwtTokenServiceTests.cs",
+        "tests": 4
+      },
+      {
+        "file": "Grupi18-SSH-Eventix-Backend/Eventix.Tests/Eventix.UnitTests/Authorization/RefreshTokenServiceTests.cs",
+        "tests": 3
+      },
+      {
+        "file": "Grupi18-SSH-Eventix-Backend/Eventix.Tests/Eventix.UnitTests/Authorization/RolePermissionServiceTests.cs",
+        "tests": 5
+      },
+      {
+        "file": "Grupi18-SSH-Eventix-Backend/Eventix.Tests/Eventix.UnitTests/Cache/CacheHelperTests.cs",
+        "tests": 3
+      },
+      {
+        "file": "Grupi18-SSH-Eventix-Backend/Eventix.Tests/Eventix.UnitTests/Services/CheckInServiceTests.cs",
+        "tests": 2
+      },
+      {
+        "file": "Grupi18-SSH-Eventix-Backend/Eventix.Tests/Eventix.UnitTests/Services/DiscountCouponServiceTests.cs",
+        "tests": 3
+      }
+    ]
+  },
+  "ci_files": [
+    "Grupi18-SSH-Eventix-Backend/.github/workflows/ci.yml"
+  ],
+  "ci_has_deploy": false,
+  "docker_files": [
+    "Grupi18-SSH-Eventix-Backend/docker-compose.yml"
+  ],
+  "docs": [
+    "Grupi18-SSH-Eventix-Backend/README.md",
+    "Grupi18-SSH-Eventix-Frontend/README.md"
+  ],
+  "technology": {
+    "background_jobs": {
+      "count": 8,
+      "code_hits": 6,
+      "examples": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Eventix.Api.csproj:23",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Eventix.Api.csproj:24",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Eventix.Api.csproj:25",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:17",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:18",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:571"
+      ]
+    },
+    "cache": {
+      "count": 38,
+      "code_hits": 52,
+      "examples": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/BookingController.cs:17",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/BookingController.cs:22",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/DiscountCouponController.cs:17",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/DiscountCouponController.cs:22",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/DiscountCouponController.cs:36",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventCategoriesController.cs:16"
+      ]
+    },
+    "docker": {
+      "count": 1,
+      "code_hits": 0,
+      "examples": [
+        "Grupi18-SSH-Eventix-Backend/docker-compose.yml:1"
+      ]
+    },
+    "email": {
+      "count": 6,
+      "code_hits": 3,
+      "examples": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/appsettings.Development.json:9",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Application/Eventix.Application.csproj:12",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Application/Services/SmtpEmailSender.cs:2",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Application/Services/SmtpEmailSender.cs:3",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Application/Services/SmtpEmailSender.cs:54",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Eventix.Infrastructure.csproj:21"
+      ]
+    },
+    "https": {
+      "count": 1,
+      "code_hits": 1,
+      "examples": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:606"
+      ]
+    },
+    "jwt": {
+      "count": 6,
+      "code_hits": 6,
+      "examples": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Eventix.Api.csproj:28",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:19",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:139",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:140",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Eventix.Infrastructure.csproj:29",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Auth/ImpersonationTokenValidation.cs:4"
+      ]
+    },
+    "logging": {
+      "count": 2,
+      "code_hits": 2,
+      "examples": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Middleware/RequestLoggingMiddleware.cs:8",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Middleware/RequestLoggingMiddleware.cs:12"
+      ]
+    },
+    "middleware": {
+      "count": 4,
+      "code_hits": 4,
+      "examples": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:611",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:615",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Middleware/RequestLoggingMiddleware.cs:5",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/MultiTenancy/TenantMiddleware.cs:7"
+      ]
+    },
+    "multi_tenancy": {
+      "count": 400,
+      "code_hits": 2476,
+      "examples": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:83",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:85",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:86",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuthController.cs:26",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuthController.cs:26",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuthController.cs:29"
+      ]
+    },
+    "openai": {
+      "count": 1,
+      "code_hits": 0,
+      "examples": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Eventix.Infrastructure.csproj:32"
+      ]
+    },
+    "orm": {
+      "count": 166,
+      "code_hits": 199,
+      "examples": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Eventix.Api.csproj:29",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:21",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:22",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:168",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuthController.cs:9",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuthController.cs:28"
+      ]
+    },
+    "other_llm": {
+      "count": 11,
+      "code_hits": 21,
+      "examples": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/appsettings.json:18",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:277",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:277",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:280",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Application/Interfaces/Services/IOllamaClient.cs:3",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Services/AiService.cs:13"
+      ]
+    },
+    "password_hashing": {
+      "count": 18,
+      "code_hits": 22,
+      "examples": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:226",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:226",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:226",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuthController.cs:22",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AuthController.cs:36",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Application/Interfaces/Common/IPasswordHasher.cs:3"
+      ]
+    },
+    "react": {
+      "count": 28,
+      "code_hits": 28,
+      "examples": [
+        "Grupi18-SSH-Eventix-Frontend/src/main.jsx:1",
+        "Grupi18-SSH-Eventix-Frontend/src/auth/AuthContext.jsx:2",
+        "Grupi18-SSH-Eventix-Frontend/src/components/DynamicForm.jsx:2",
+        "Grupi18-SSH-Eventix-Frontend/src/components/DynamicTable.jsx:1",
+        "Grupi18-SSH-Eventix-Frontend/src/components/crud/EntityCrudPage.jsx:1",
+        "Grupi18-SSH-Eventix-Frontend/src/layouts/BuyerLayout.jsx:1"
+      ]
+    },
+    "react_context": {
+      "count": 2,
+      "code_hits": 2,
+      "examples": [
+        "Grupi18-SSH-Eventix-Frontend/src/auth/AuthContext.jsx:6",
+        "Grupi18-SSH-Eventix-Frontend/src/auth/AuthContext.jsx:225"
+      ]
+    },
+    "redis": {
+      "count": 3,
+      "code_hits": 1,
+      "examples": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Eventix.Api.csproj:33",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:191",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Infrastructure/Eventix.Infrastructure.csproj:30"
+      ]
+    },
+    "roles_authorization": {
+      "count": 173,
+      "code_hits": 373,
+      "examples": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:158",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:300",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:303",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AiController.cs:22",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AiController.cs:54",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/AiController.cs:76"
+      ]
+    },
+    "search_filter": {
+      "count": 134,
+      "code_hits": 358,
+      "examples": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Eventix.Api.csproj:10",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Eventix.Api.csproj:12",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Eventix.Api.csproj:14",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/ArchiveRecordsController.cs:70",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/ArchiveRecordsController.cs:75",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Controllers/EventsController.cs:37"
+      ]
+    },
+    "swagger_openapi": {
+      "count": 2,
+      "code_hits": 2,
+      "examples": [
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:65",
+        "Grupi18-SSH-Eventix-Backend/Eventix.Api/Program.cs:599"
+      ]
+    }
+  },
+  "possible_secrets": [
+    {
+      "location": "Grupi18-SSH-Eventix-Backend/docker-compose.yml:9",
+      "key": "PASSWORD",
+      "value": "[REDACTED]"
+    },
+    {
+      "location": "Grupi18-SSH-Eventix-Backend/.github/workflows/ci.yml:23",
+      "key": "PASSWORD",
+      "value": "[REDACTED]"
+    },
+    {
+      "location": "Grupi18-SSH-Eventix-Backend/.github/workflows/ci.yml:38",
+      "key": "PASSWORD",
+      "value": "[REDACTED]"
+    },
+    {
+      "location": "Grupi18-SSH-Eventix-Backend/Eventix.Api/appsettings.Development.json:12",
+      "key": "Password",
+      "value": "[REDACTED]"
+    }
+  ],
+  "template_leftovers": [],
+  "notes": [
+    "Endpoint/model counts come from static patterns; verify borderline cases manually.",
+    "DRF ViewSets and Laravel resources expose several routes each; they are counted once here."
+  ],
+  "repos": [
+    {
+      "label": "Grupi18-SSH-Eventix-Backend",
+      "path": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-141814\\ssh-Eventix\\ssh-Eventix-Grupi18-SSH-Eventix-Backend"
+    },
+    {
+      "label": "Grupi18-SSH-Eventix-Frontend",
+      "path": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-141814\\ssh-Eventix\\ssh-Eventix-Grupi18-SSH-Eventix-Frontend"
+    }
+  ]
+}

@@ -1,0 +1,302 @@
+{
+  "rev": "HEAD",
+  "repos": [
+    {
+      "label": "Grupi18-SSH-Eventix-Backend",
+      "commits": 220,
+      "non_merge": 130,
+      "first": {
+        "sha": "f4953dc06b",
+        "author": "bleronbaftiu21",
+        "author_date": "2026-04-07T00:04:29+02:00",
+        "subject": "Initial commit"
+      },
+      "last": {
+        "sha": "bbcc1a627d",
+        "author": "bleronbaftiu21",
+        "author_date": "2026-05-30T21:41:30+02:00",
+        "subject": "Fix formatting of included functionality in README"
+      }
+    }
+  ],
+  "commits": 220,
+  "non_merge_commits": 144,
+  "duplicate_commits": 14,
+  "active_days": 34,
+  "first_date": "2026-04-07",
+  "last_date": "2026-05-30",
+  "commits_per_day": {
+    "2026-04-07": 1,
+    "2026-04-12": 1,
+    "2026-04-20": 4,
+    "2026-04-21": 1,
+    "2026-04-23": 4,
+    "2026-04-24": 2,
+    "2026-04-25": 7,
+    "2026-04-26": 8,
+    "2026-04-27": 5,
+    "2026-04-28": 2,
+    "2026-04-30": 3,
+    "2026-05-01": 2,
+    "2026-05-04": 2,
+    "2026-05-06": 1,
+    "2026-05-07": 2,
+    "2026-05-08": 5,
+    "2026-05-10": 1,
+    "2026-05-11": 4,
+    "2026-05-12": 1,
+    "2026-05-14": 3,
+    "2026-05-15": 2,
+    "2026-05-16": 6,
+    "2026-05-17": 1,
+    "2026-05-18": 6,
+    "2026-05-20": 2,
+    "2026-05-21": 2,
+    "2026-05-23": 7,
+    "2026-05-24": 9,
+    "2026-05-25": 4,
+    "2026-05-26": 6,
+    "2026-05-27": 3,
+    "2026-05-28": 3,
+    "2026-05-29": 8,
+    "2026-05-30": 12
+  },
+  "weekly": [
+    {
+      "week": "2026-W15",
+      "commits": 2,
+      "lines_added": 400
+    },
+    {
+      "week": "2026-W17",
+      "commits": 26,
+      "lines_added": 8209
+    },
+    {
+      "week": "2026-W18",
+      "commits": 12,
+      "lines_added": 2467
+    },
+    {
+      "week": "2026-W19",
+      "commits": 11,
+      "lines_added": 2653
+    },
+    {
+      "week": "2026-W20",
+      "commits": 17,
+      "lines_added": 2897
+    },
+    {
+      "week": "2026-W21",
+      "commits": 26,
+      "lines_added": 18458
+    },
+    {
+      "week": "2026-W22",
+      "commits": 36,
+      "lines_added": 5851
+    }
+  ],
+  "last_7_days_share": 0.455,
+  "identity_map": {
+    "Yllka": "Yllka Fejzullahu",
+    "ZubakuRiga": "RigaZubaku",
+    "oltikrasniqi21": "Olti Krasniqi"
+  },
+  "authors": [
+    {
+      "author": "Viola Resyli",
+      "names": [
+        "Viola Resyli"
+      ],
+      "emails": [
+        "121452187+violavv123@users.noreply.github.com",
+        "violaresyli@gmail.com"
+      ],
+      "commits": 52,
+      "lines_added": 18091,
+      "lines_removed": 7322,
+      "share_of_added": 0.442,
+      "commits_by_repo": {
+        "Grupi18-SSH-Eventix-Backend": 52
+      }
+    },
+    {
+      "author": "Yllka Fejzullahu",
+      "names": [
+        "Yllka",
+        "Yllka Fejzullahu"
+      ],
+      "emails": [
+        "yllka.fejzullahu@student.uni-pr.edu"
+      ],
+      "commits": 16,
+      "lines_added": 13699,
+      "lines_removed": 1683,
+      "share_of_added": 0.335,
+      "commits_by_repo": {
+        "Grupi18-SSH-Eventix-Backend": 16
+      }
+    },
+    {
+      "author": "bleronbaftiu21",
+      "names": [
+        "bleronbaftiu21"
+      ],
+      "emails": [
+        "bleronbaftiu2@gmail.com"
+      ],
+      "commits": 28,
+      "lines_added": 3937,
+      "lines_removed": 445,
+      "share_of_added": 0.096,
+      "commits_by_repo": {
+        "Grupi18-SSH-Eventix-Backend": 28
+      }
+    },
+    {
+      "author": "RigaZubaku",
+      "names": [
+        "RigaZubaku",
+        "ZubakuRiga"
+      ],
+      "emails": [
+        "149312710+ZubakuRiga@users.noreply.github.com",
+        "riga.zubaku@student.uni-pr.edu"
+      ],
+      "commits": 10,
+      "lines_added": 3079,
+      "lines_removed": 730,
+      "share_of_added": 0.075,
+      "commits_by_repo": {
+        "Grupi18-SSH-Eventix-Backend": 10
+      }
+    },
+    {
+      "author": "Olti Krasniqi",
+      "names": [
+        "Olti Krasniqi",
+        "oltikrasniqi21"
+      ],
+      "emails": [
+        "95415453+oltikrasniqi21@users.noreply.github.com",
+        "oltkrasn@gmail.com"
+      ],
+      "commits": 24,
+      "lines_added": 2129,
+      "lines_removed": 745,
+      "share_of_added": 0.052,
+      "commits_by_repo": {
+        "Grupi18-SSH-Eventix-Backend": 24
+      }
+    }
+  ],
+  "issue_tracker_keys": {
+    "commits_with_key": 57,
+    "projects": {
+      "EVENTIX": 30,
+      "EVENTICX": 1,
+      "SCRUM": 26
+    }
+  },
+  "largest_commits": [
+    {
+      "repo": "Grupi18-SSH-Eventix-Backend",
+      "sha": "cc9521bce5",
+      "author": "Yllka",
+      "author_date": "2026-05-24T19:50:12+02:00",
+      "subject": "SCRUM-241 Added port 5174",
+      "files": 266,
+      "added": 11049
+    },
+    {
+      "repo": "Grupi18-SSH-Eventix-Backend",
+      "sha": "9a46fa2c6a",
+      "author": "Viola Resyli",
+      "author_date": "2026-04-23T22:17:03+02:00",
+      "subject": "rregullimi i controllerave",
+      "files": 65,
+      "added": 1949
+    },
+    {
+      "repo": "Grupi18-SSH-Eventix-Backend",
+      "sha": "75ecfe1998",
+      "author": "Viola Resyli",
+      "author_date": "2026-05-18T14:54:15+02:00",
+      "subject": "EVENTIX-72 : added caching in controllers and changed permissions",
+      "files": 33,
+      "added": 1487
+    },
+    {
+      "repo": "Grupi18-SSH-Eventix-Backend",
+      "sha": "2a129559da",
+      "author": "Viola Resyli",
+      "author_date": "2026-04-26T00:44:58+02:00",
+      "subject": "added services  (#14)",
+      "files": 60,
+      "added": 1382
+    },
+    {
+      "repo": "Grupi18-SSH-Eventix-Backend",
+      "sha": "6fe11d4736",
+      "author": "ZubakuRiga",
+      "author_date": "2026-05-08T09:44:41+02:00",
+      "subject": "EVENTIX - 9 [Infrastructure] Implement JWT Auth & Authorization (#39)",
+      "files": 92,
+      "added": 1358
+    },
+    {
+      "repo": "Grupi18-SSH-Eventix-Backend",
+      "sha": "584a368e14",
+      "author": "Viola Resyli",
+      "author_date": "2026-04-20T21:09:11+02:00",
+      "subject": "added program, dbconnection in appsettings, publicdbcontext, tenantdbcontext and some entities, repos and controllers",
+      "files": 44,
+      "added": 1144
+    },
+    {
+      "repo": "Grupi18-SSH-Eventix-Backend",
+      "sha": "632eb5947b",
+      "author": "Viola Resyli",
+      "author_date": "2026-05-23T19:15:35+02:00",
+      "subject": "first fixed tests",
+      "files": 39,
+      "added": 1089
+    },
+    {
+      "repo": "Grupi18-SSH-Eventix-Backend",
+      "sha": "c592641448",
+      "author": "Viola Resyli",
+      "author_date": "2026-05-21T16:18:07+02:00",
+      "subject": "SCRUM-237-CI/CD pipeline dhe disa testime",
+      "files": 31,
+      "added": 1084
+    },
+    {
+      "repo": "Grupi18-SSH-Eventix-Backend",
+      "sha": "eda0a6bd39",
+      "author": "Viola Resyli",
+      "author_date": "2026-05-11T00:36:52+02:00",
+      "subject": "EVENTIX-66 added archive entity and changed some authorization files",
+      "files": 35,
+      "added": 830
+    },
+    {
+      "repo": "Grupi18-SSH-Eventix-Backend",
+      "sha": "d64c93d277",
+      "author": "Viola Resyli",
+      "author_date": "2026-05-30T14:49:02+02:00",
+      "subject": "removed unused folders and added readme",
+      "files": 15,
+      "added": 788
+    }
+  ],
+  "late_commits": [],
+  "early_commits": [],
+  "flags": [
+    "5 distinct people after merging 8 git identities - verify they match the submitting student/team.",
+    "14 duplicate commit(s) from squash/rebase were counted once."
+  ],
+  "note": "Line counts exclude merges, duplicates, lockfiles, migrations and generated files. Identity merging is heuristic - confirm it. History signals are indicators only."
+}

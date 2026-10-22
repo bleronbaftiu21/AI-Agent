@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://github.com/indestudio/Eventix",
+    "owner": "indestudio",
+    "repo": "Eventix",
+    "dir": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-142238\\Grupi18-SSH-Eventix-Backend\\_github\\indestudio-Eventix",
+    "requested_ref": null,
+    "ok": true,
+    "commit": "8ebb8c80028302489d61dddceed058d9202da93c",
+    "short": "8ebb8c8",
+    "branch": "main",
+    "commits": 1
+  },
+  {
+    "url": "https://github.com/sholajegede/eventix",
+    "owner": "sholajegede",
+    "repo": "eventix",
+    "dir": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-142238\\Grupi18-SSH-Eventix-Backend\\_github\\sholajegede-eventix",
+    "requested_ref": null,
+    "ok": true,
+    "commit": "0c72a277afa57b0714f5c5fe747ce88329906fcc",
+    "short": "0c72a27",
+    "branch": "main",
+    "commits": 1
+  },
+  {
+    "url": "https://github.com/Eventix/omnipay-first-atlantic-commerce",
+    "owner": "Eventix",
+    "repo": "omnipay-first-atlantic-commerce",
+    "dir": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-142238\\Grupi18-SSH-Eventix-Backend\\_github\\Eventix-omnipay-first-atlantic-commerce",
+    "requested_ref": null,
+    "ok": true,
+    "commit": "3864f69217ac98393a6547308318a55cc8c10d40",
+    "short": "3864f69",
+    "branch": "master",
+    "commits": 1
+  }
+]

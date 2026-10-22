@@ -1,0 +1,551 @@
+{
+  "mode": "groups",
+  "params": {
+    "k": 12,
+    "window": 8,
+    "min_containment": 0.25,
+    "pair_threshold": 0.05
+  },
+  "groups": {
+    "GitHub: Eventix/omnipay-first-atlantic-commerce": {
+      "files": 7,
+      "fingerprints": 196
+    },
+    "GitHub: indestudio/Eventix": {
+      "files": 54,
+      "fingerprints": 2323
+    },
+    "GitHub: sholajegede/eventix": {
+      "files": 35,
+      "fingerprints": 807
+    },
+    "ssh-Eventix": {
+      "files": 476,
+      "fingerprints": 13332
+    }
+  },
+  "matrix": {
+    "GitHub: Eventix/omnipay-first-atlantic-commerce": {
+      "GitHub: indestudio/Eventix": 0.0,
+      "GitHub: sholajegede/eventix": 0.0,
+      "ssh-Eventix": 0.0
+    },
+    "GitHub: indestudio/Eventix": {
+      "GitHub: Eventix/omnipay-first-atlantic-commerce": 0.0,
+      "GitHub: sholajegede/eventix": 0.0,
+      "ssh-Eventix": 0.013
+    },
+    "GitHub: sholajegede/eventix": {
+      "GitHub: Eventix/omnipay-first-atlantic-commerce": 0.0,
+      "GitHub: indestudio/Eventix": 0.0,
+      "ssh-Eventix": 0.18
+    },
+    "ssh-Eventix": {
+      "GitHub: Eventix/omnipay-first-atlantic-commerce": 0.0,
+      "GitHub: indestudio/Eventix": 0.002,
+      "GitHub: sholajegede/eventix": 0.011
+    }
+  },
+  "max_by_group": {
+    "GitHub: Eventix/omnipay-first-atlantic-commerce": 0.0,
+    "GitHub: indestudio/Eventix": 0.013,
+    "GitHub: sholajegede/eventix": 0.18,
+    "ssh-Eventix": 0.011
+  },
+  "pairs": [
+    {
+      "a": "GitHub: sholajegede/eventix",
+      "b": "ssh-Eventix",
+      "a_in_b": 0.18,
+      "b_in_a": 0.011,
+      "max": 0.18,
+      "matches": [
+        {
+          "target_file": "sholajegede-eventix/app/page.tsx",
+          "corpus": "ssh-Eventix",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/buyer/BuyerPages.jsx",
+          "containment_target": 0.344,
+          "containment_other": 0.024,
+          "target_fingerprints": 32,
+          "shared_fingerprints": 11,
+          "small_file": false,
+          "target_lines": [
+            [
+              5,
+              7
+            ],
+            [
+              12,
+              18
+            ],
+            [
+              20,
+              25
+            ],
+            [
+              33,
+              37
+            ]
+          ]
+        },
+        {
+          "target_file": "sholajegede-eventix/components/header.tsx",
+          "corpus": "ssh-Eventix",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/buyer/BuyerPages.jsx",
+          "containment_target": 0.329,
+          "containment_other": 0.052,
+          "target_fingerprints": 73,
+          "shared_fingerprints": 24,
+          "small_file": false,
+          "target_lines": [
+            [
+              6,
+              8
+            ],
+            [
+              11,
+              23
+            ],
+            [
+              34,
+              36
+            ],
+            [
+              39,
+              42
+            ],
+            [
+              53,
+              55
+            ],
+            [
+              57,
+              60
+            ],
+            [
+              62,
+              74
+            ],
+            [
+              81,
+              88
+            ]
+          ]
+        },
+        {
+          "target_file": "sholajegede-eventix/app/page.tsx",
+          "corpus": "ssh-Eventix",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/tenant/DashboardPage.jsx",
+          "containment_target": 0.312,
+          "containment_other": 0.027,
+          "target_fingerprints": 32,
+          "shared_fingerprints": 10,
+          "small_file": false,
+          "target_lines": [
+            [
+              5,
+              7
+            ],
+            [
+              12,
+              18
+            ],
+            [
+              21,
+              25
+            ],
+            [
+              33,
+              37
+            ]
+          ]
+        },
+        {
+          "target_file": "sholajegede-eventix/app/page.tsx",
+          "corpus": "ssh-Eventix",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/buyer/HomePage.jsx",
+          "containment_target": 0.312,
+          "containment_other": 0.017,
+          "target_fingerprints": 32,
+          "shared_fingerprints": 10,
+          "small_file": false,
+          "target_lines": [
+            [
+              5,
+              7
+            ],
+            [
+              12,
+              18
+            ],
+            [
+              21,
+              25
+            ],
+            [
+              33,
+              37
+            ]
+          ]
+        },
+        {
+          "target_file": "sholajegede-eventix/app/page.tsx",
+          "corpus": "ssh-Eventix",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/superadmin/TenantsPage.jsx",
+          "containment_target": 0.312,
+          "containment_other": 0.026,
+          "target_fingerprints": 32,
+          "shared_fingerprints": 10,
+          "small_file": false,
+          "target_lines": [
+            [
+              5,
+              7
+            ],
+            [
+              11,
+              18
+            ],
+            [
+              20,
+              25
+            ],
+            [
+              33,
+              37
+            ]
+          ]
+        },
+        {
+          "target_file": "sholajegede-eventix/app/page.tsx",
+          "corpus": "ssh-Eventix",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/tenant/MoreEntityPages.jsx",
+          "containment_target": 0.312,
+          "containment_other": 0.009,
+          "target_fingerprints": 32,
+          "shared_fingerprints": 10,
+          "small_file": false,
+          "target_lines": [
+            [
+              5,
+              7
+            ],
+            [
+              12,
+              14
+            ],
+            [
+              20,
+              25
+            ],
+            [
+              33,
+              37
+            ]
+          ]
+        },
+        {
+          "target_file": "sholajegede-eventix/app/page.tsx",
+          "corpus": "ssh-Eventix",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/superadmin/SuperAdminDashboardPage.jsx",
+          "containment_target": 0.312,
+          "containment_other": 0.027,
+          "target_fingerprints": 32,
+          "shared_fingerprints": 10,
+          "small_file": false,
+          "target_lines": [
+            [
+              5,
+              7
+            ],
+            [
+              11,
+              14
+            ],
+            [
+              20,
+              25
+            ],
+            [
+              34,
+              37
+            ]
+          ]
+        },
+        {
+          "target_file": "sholajegede-eventix/components/header.tsx",
+          "corpus": "ssh-Eventix",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/superadmin/SuperAdminDashboardPage.jsx",
+          "containment_target": 0.301,
+          "containment_other": 0.059,
+          "target_fingerprints": 73,
+          "shared_fingerprints": 22,
+          "small_file": false,
+          "target_lines": [
+            [
+              6,
+              8
+            ],
+            [
+              11,
+              21
+            ],
+            [
+              39,
+              42
+            ],
+            [
+              49,
+              55
+            ],
+            [
+              57,
+              60
+            ],
+            [
+              65,
+              75
+            ],
+            [
+              81,
+              88
+            ]
+          ]
+        },
+        {
+          "target_file": "sholajegede-eventix/app/page.tsx",
+          "corpus": "ssh-Eventix",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/superadmin/TenantAdminsPage.jsx",
+          "containment_target": 0.281,
+          "containment_other": 0.029,
+          "target_fingerprints": 32,
+          "shared_fingerprints": 9,
+          "small_file": false,
+          "target_lines": [
+            [
+              5,
+              7
+            ],
+            [
+              11,
+              14
+            ],
+            [
+              20,
+              25
+            ],
+            [
+              33,
+              37
+            ]
+          ]
+        },
+        {
+          "target_file": "sholajegede-eventix/app/page.tsx",
+          "corpus": "ssh-Eventix",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/superadmin/TenantEmailDomainsPage.jsx",
+          "containment_target": 0.281,
+          "containment_other": 0.024,
+          "target_fingerprints": 32,
+          "shared_fingerprints": 9,
+          "small_file": false,
+          "target_lines": [
+            [
+              5,
+              7
+            ],
+            [
+              11,
+              18
+            ],
+            [
+              21,
+              25
+            ],
+            [
+              33,
+              37
+            ]
+          ]
+        },
+        {
+          "target_file": "sholajegede-eventix/app/page.tsx",
+          "corpus": "ssh-Eventix",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/superadmin/ImpersonatePage.jsx",
+          "containment_target": 0.281,
+          "containment_other": 0.031,
+          "target_fingerprints": 32,
+          "shared_fingerprints": 9,
+          "small_file": false,
+          "target_lines": [
+            [
+              5,
+              7
+            ],
+            [
+              11,
+              14
+            ],
+            [
+              20,
+              25
+            ],
+            [
+              33,
+              37
+            ]
+          ]
+        },
+        {
+          "target_file": "sholajegede-eventix/components/header.tsx",
+          "corpus": "ssh-Eventix",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/buyer/HomePage.jsx",
+          "containment_target": 0.26,
+          "containment_other": 0.032,
+          "target_fingerprints": 73,
+          "shared_fingerprints": 19,
+          "small_file": false,
+          "target_lines": [
+            [
+              3,
+              8
+            ],
+            [
+              11,
+              21
+            ],
+            [
+              39,
+              40
+            ],
+            [
+              57,
+              60
+            ],
+            [
+              65,
+              75
+            ],
+            [
+              81,
+              88
+            ]
+          ]
+        },
+        {
+          "target_file": "sholajegede-eventix/app/page.tsx",
+          "corpus": "ssh-Eventix",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/superadmin/SuperAdminAuditLogsPage.jsx",
+          "containment_target": 0.25,
+          "containment_other": 0.027,
+          "target_fingerprints": 32,
+          "shared_fingerprints": 8,
+          "small_file": false,
+          "target_lines": [
+            [
+              5,
+              7
+            ],
+            [
+              12,
+              14
+            ],
+            [
+              20,
+              25
+            ],
+            [
+              34,
+              37
+            ]
+          ]
+        },
+        {
+          "target_file": "sholajegede-eventix/app/page.tsx",
+          "corpus": "ssh-Eventix",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/pages/public/Register.jsx",
+          "containment_target": 0.25,
+          "containment_other": 0.06,
+          "target_fingerprints": 32,
+          "shared_fingerprints": 8,
+          "small_file": false,
+          "target_lines": [
+            [
+              5,
+              7
+            ],
+            [
+              12,
+              14
+            ],
+            [
+              20,
+              25
+            ],
+            [
+              34,
+              37
+            ]
+          ]
+        },
+        {
+          "target_file": "sholajegede-eventix/convex/_generated/server.js",
+          "corpus": "ssh-Eventix",
+          "other_file": "ssh-Eventix-Grupi18-SSH-Eventix-Frontend/src/layouts/BuyerLayout.jsx",
+          "containment_target": 0.4,
+          "containment_other": 0.059,
+          "target_fingerprints": 10,
+          "shared_fingerprints": 4,
+          "small_file": true,
+          "target_lines": [
+            [
+              13,
+              21
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "a": "GitHub: indestudio/Eventix",
+      "b": "ssh-Eventix",
+      "a_in_b": 0.013,
+      "b_in_a": 0.002,
+      "max": 0.013,
+      "matches": []
+    },
+    {
+      "a": "GitHub: Eventix/omnipay-first-atlantic-commerce",
+      "b": "GitHub: indestudio/Eventix",
+      "a_in_b": 0.0,
+      "b_in_a": 0.0,
+      "max": 0.0,
+      "matches": []
+    },
+    {
+      "a": "GitHub: Eventix/omnipay-first-atlantic-commerce",
+      "b": "GitHub: sholajegede/eventix",
+      "a_in_b": 0.0,
+      "b_in_a": 0.0,
+      "max": 0.0,
+      "matches": []
+    },
+    {
+      "a": "GitHub: Eventix/omnipay-first-atlantic-commerce",
+      "b": "ssh-Eventix",
+      "a_in_b": 0.0,
+      "b_in_a": 0.0,
+      "max": 0.0,
+      "matches": []
+    },
+    {
+      "a": "GitHub: indestudio/Eventix",
+      "b": "GitHub: sholajegede/eventix",
+      "a_in_b": 0.0,
+      "b_in_a": 0.0,
+      "max": 0.0,
+      "matches": []
+    }
+  ],
+  "note": "Overlap = share of a group's code fingerprints that also appear in the other group. Shared framework boilerplate gives a few percent; inspect pairs above ~20% manually and use --base for starter code."
+}

@@ -1,0 +1,48 @@
+```
+Repo Auditor Pro — ssh-Eventix/Grupi18-SSH-Eventix-Backend @ bbcc1a6 + Grupi18-SSH-Eventix-Frontend @ 11e9ee2
+Nota përfundimtare: 8.1 / 10  (pa kufizim 8.1, besueshmëria: Medium)
+Nota vetëm për kërkesat: 9.0 / 10
+Kërkesat: të detyrueshme 92.1% · opsionale N/A  (Met 16 · Partially met 3 · Not met 0 · Cannot verify 1)
+Origjinaliteti: ~100% · nuk ka shenja kopjimi
+Vlerësimi i ndihmës nga AI: 0–30% (besueshmëria Low)
+Problemet kryesore:
+ 1) [AllowAnonymous] te AuthController i hap pa autentikim endpoint-et refresh-tokens dhe revoke-all
+ 2) /api/auditlog (log-u i të gjithë tenant-ëve) lexohet nga çdo përdorues i kyçur, edhe nga një Buyer
+ 3) R16: moduli AI thërret Ollama lokal, jo OpenAI API; paketa OpenAI është e instaluar por s'përdoret
+Raportet: audit-reports/20261022-141814-ssh-Eventix/ssh-Eventix/audit-report.md, audit-report.json
+```
+
+Nota del aq lart sepse kërkesat peshojnë 70% dhe projekti i plotëson shumicën qartë në kod:
+- 145 endpoint-e
+- 31 modele dhe 21 migrime
+- Swagger, middleware për logging dhe tenant, React Context
+- Hangfire me 8 punë periodike
+- Cache
+- Multi-tenancy me skemë më vete për çdo tenant
+- 36 teste që i ekzekuton CI-ja
+
+Tre kërkesa janë vetëm pjesërisht të plotësuara:
+- **R16:** përdoret Ollama në vend të OpenAI API.
+- **R20:** filtrimi i avancuar dhe pagination ekzistojnë vetëm te audit log-u. Te eventet ka vetëm kërkim me tekst.
+- **R13:** README-të nuk përmendin variablat e mjedisit pa të cilat backend-i nuk niset. Përveç kësaj, pretendojnë gjëra që kodi nuk i ka:
+  - FluentValidation
+  - një aplikacion mobil React Native
+  - `TenantContext.jsx`
+
+R15 (PR dhe code review) është "Cannot verify", prandaj nuk hyn në llogaritje. GitHub API-ja arriti kufirin e kërkesave dhe review-t nuk u panë.
+
+Siguria merr 4/10 dhe e ul notën pak, sepse pesha e saj është vetëm 5%. Arsyet:
+- Dy defekte autorizimi, të konfirmuara nga leximi i kodit, jo nga ekzekutimi.
+- Tenant-i merret nga header-i pa u krahasuar me token-in. Kjo duhet verifikuar me ekzekutim.
+- Kredenciale të Mailtrap-it, fjalëkalimi i DB-së dhe çelësi JWT i CI-së janë në repo.
+
+Kufizimi i notës për sekretet nuk u zbatua, sepse vlen vetëm për projekte prodhimi dhe këto janë mjedise sandbox/test.
+
+Ngjashmëria me `sholajegede/eventix` (25–34% për disa skedarë) vjen vetëm nga struktura e zakonshme JSX. Ai projekt është Next.js me Kinde dhe nuk ndan asnjë logjikë me këtë. Puna e fundit javore është 52%, nën pragun 60%. Megjithatë, commit-i `cc9521bce5` me mesazhin "Added port 5174" shton 266 skedarë dhe rreth 11,000 rreshta, ndaj e kam shtuar si pyetje për mbrojtjen.
+
+Kufizimet kryesore:
+- Asgjë nuk u ekzekutua.
+- Pa `GITHUB_TOKEN` nuk u kërkua kodi në GitHub dhe nuk u panë PR-të.
+- Board-i Jira nuk ishte i dukshëm.
+- Kodi u lexua me mostër, jo i gjithi.
+- `summary.csv` nuk u rifreskua me notën përfundimtare, sepse Python-i nuk gjendet në PATH. Nëse të duhet, ekzekuto `pipeline.py --config config.json --summary-only`.

@@ -1,0 +1,163 @@
+{
+  "job_id": "20261022-141814-ssh-Eventix",
+  "title": "ssh-Eventix",
+  "created": "2026-10-22T14:18:14",
+  "groups": [
+    {
+      "name": "ssh-Eventix",
+      "repos": [
+        "https://github.com/ssh-Eventix/Grupi18-SSH-Eventix-Backend",
+        "https://github.com/ssh-Eventix/Grupi18-SSH-Eventix-Frontend"
+      ]
+    }
+  ],
+  "requirements_file": "C:\\Users\\bleron.baftiu\\PycharmProjects\\PythonProject\\audit-reports\\20261022-141814-ssh-Eventix\\brief.pdf",
+  "requirements_name": "kerkesa_projekti_sistemet_shperndara.pdf",
+  "requirements_text": "",
+  "comparison": [],
+  "base": [],
+  "ai_policy": "unspecified",
+  "deadline": null,
+  "start": null,
+  "language": "shqip",
+  "output_dir": "C:\\Users\\bleron.baftiu\\PycharmProjects\\PythonProject\\audit-reports\\20261022-141814-ssh-Eventix",
+  "workspace": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-141814",
+  "run_claude": false,
+  "status": "evidence_ready",
+  "started": "2026-10-22T14:18:14",
+  "finished": "2026-10-22T14:18:30",
+  "steps": [
+    {
+      "name": "Leximi i kërkesave",
+      "group": null,
+      "status": "done",
+      "started": "2026-10-22T14:18:14",
+      "finished": "2026-10-22T14:18:15",
+      "message": "20 kërkesa"
+    },
+    {
+      "name": "Klonimi i repove",
+      "group": "ssh-Eventix",
+      "status": "done",
+      "started": "2026-10-22T14:18:15",
+      "finished": "2026-10-22T14:18:17",
+      "message": "Grupi18-SSH-Eventix-Backend@bbcc1a6, Grupi18-SSH-Eventix-Frontend@11e9ee2"
+    },
+    {
+      "name": "Inventari (endpoint-e, modele, teste)",
+      "group": "ssh-Eventix",
+      "status": "done",
+      "started": "2026-10-22T14:18:17",
+      "finished": "2026-10-22T14:18:21",
+      "message": ""
+    },
+    {
+      "name": "Historia e git-it",
+      "group": "ssh-Eventix",
+      "status": "done",
+      "started": "2026-10-22T14:18:21",
+      "finished": "2026-10-22T14:18:21",
+      "message": ""
+    },
+    {
+      "name": "Sinjalet e AI-së",
+      "group": "ssh-Eventix",
+      "status": "done",
+      "started": "2026-10-22T14:18:21",
+      "finished": "2026-10-22T14:18:22",
+      "message": ""
+    },
+    {
+      "name": "Procesi në GitHub (PR, review)",
+      "group": "ssh-Eventix",
+      "status": "done",
+      "started": "2026-10-22T14:18:22",
+      "finished": "2026-10-22T14:18:22",
+      "message": ""
+    },
+    {
+      "name": "Kërkimi në GitHub për projekte të ngjashme",
+      "group": "ssh-Eventix",
+      "status": "done",
+      "started": "2026-10-22T14:18:22",
+      "finished": "2026-10-22T14:18:28",
+      "message": "3 kandidatë: indestudio/Eventix, sholajegede/eventix, Eventix/omnipay-first-atlantic-commerce"
+    },
+    {
+      "name": "Lidhja e kërkesave me dëshmitë",
+      "group": "ssh-Eventix",
+      "status": "done",
+      "started": "2026-10-22T14:18:28",
+      "finished": "2026-10-22T14:18:28",
+      "message": ""
+    },
+    {
+      "name": "Ngjashmëria e kodit (grupet + GitHub)",
+      "group": null,
+      "status": "done",
+      "started": "2026-10-22T14:18:28",
+      "finished": "2026-10-22T14:18:30",
+      "message": ""
+    },
+    {
+      "name": "Përmbledhja (tabela)",
+      "group": null,
+      "status": "done",
+      "started": "2026-10-22T14:18:30",
+      "finished": "2026-10-22T14:18:30",
+      "message": "1 grupe"
+    },
+    {
+      "name": "Përmbledhja (tabela)",
+      "group": null,
+      "status": "done",
+      "started": "2026-10-22T14:35:23",
+      "finished": "2026-10-22T14:35:23",
+      "message": "1 grupe"
+    }
+  ],
+  "groups_state": {
+    "ssh-Eventix": {
+      "slug": "ssh-Eventix",
+      "dir": "C:\\Users\\bleron.baftiu\\PycharmProjects\\PythonProject\\audit-reports\\20261022-141814-ssh-Eventix\\ssh-Eventix",
+      "status": "evidence_ready",
+      "repos": [
+        {
+          "url": "https://github.com/ssh-Eventix/Grupi18-SSH-Eventix-Backend",
+          "repo": "Grupi18-SSH-Eventix-Backend",
+          "branch": "main",
+          "commit": "bbcc1a627d14fd79be8be5bce2a1f66fb34f86e5",
+          "short": "bbcc1a6",
+          "dir": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-141814\\ssh-Eventix\\ssh-Eventix-Grupi18-SSH-Eventix-Backend",
+          "commits": 220
+        },
+        {
+          "url": "https://github.com/ssh-Eventix/Grupi18-SSH-Eventix-Frontend",
+          "repo": "Grupi18-SSH-Eventix-Frontend",
+          "branch": "main",
+          "commit": "11e9ee2656314bb32b83f70f388ea661d7aca5e9",
+          "short": "11e9ee2",
+          "dir": "C:\\Users\\bleron.baftiu\\AppData\\Local\\RepoAuditor\\ws\\20261022-141814\\ssh-Eventix\\ssh-Eventix-Grupi18-SSH-Eventix-Frontend",
+          "commits": 91
+        }
+      ],
+      "github_candidates": [
+        {
+          "full_name": "indestudio/Eventix",
+          "reason": "emër/përshkrim i ngjashëm"
+        },
+        {
+          "full_name": "sholajegede/eventix",
+          "reason": "emër/përshkrim i ngjashëm"
+        },
+        {
+          "full_name": "Eventix/omnipay-first-atlantic-commerce",
+          "reason": "emër/përshkrim i ngjashëm"
+        }
+      ],
+      "claude": "done",
+      "claude_started": "2026-10-22T14:28:06",
+      "claude_finished": "2026-10-22T14:35:23"
+    }
+  }
+}
